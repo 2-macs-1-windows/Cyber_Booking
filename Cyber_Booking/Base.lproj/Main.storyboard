@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mcr-OL-BXa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -18,24 +18,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HomePage" translatesAutoresizingMaskIntoConstraints="NO" id="e0G-Zf-9Ts">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="15" y="88" width="384" height="653"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oji-0X-dXP">
-                                <rect key="frame" x="41" y="631" width="129" height="54"/>
+                                <rect key="frame" x="42" y="671" width="129" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Reservar" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgZ-Gp-qBy">
-                                <rect key="frame" x="216" y="631" width="160" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" name="AccentColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Aprender más">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 </buttonConfiguration>
                             </button>
@@ -47,7 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.98550724637687" y="84.375"/>
+            <point key="canvasLocation" x="1663.7681159420292" y="704.46428571428567"/>
         </scene>
         <!--Menu-->
         <scene sceneID="thm-mv-ebx">
@@ -58,9 +49,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainMenuPage" translatesAutoresizingMaskIntoConstraints="NO" id="OFf-BH-KYF">
-                                <rect key="frame" x="0.0" y="84" width="414" height="778"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="658"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0c-lK-tWD">
+                                <rect key="frame" x="7" y="235" width="118" height="153"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Laboratorios">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="tb5-La-ad3" kind="show" id="FAB-RF-x8f"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="o9t-Pr-xuR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -69,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="il4-j4-IMm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1750.7246376811595" y="83.705357142857139"/>
+            <point key="canvasLocation" x="2660.8695652173915" y="703.79464285714278"/>
         </scene>
         <!--ReservationMenu-->
         <scene sceneID="chx-Gw-o2z">
@@ -80,17 +82,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ReservationMenu" translatesAutoresizingMaskIntoConstraints="NO" id="gRn-2d-KFN">
-                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <rect key="frame" x="20" y="88" width="374" height="676"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nF5-3g-1aR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="wQQ-Gi-iv4">
+                        <barButtonItem key="backBarButtonItem" title="Regresar" id="ETX-AD-sBI"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94L-AO-lxz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="976.81159420289862" y="754.6875"/>
+            <point key="canvasLocation" x="2660.8695652173915" y="1427.6785714285713"/>
         </scene>
         <!--ProfilePage-->
         <scene sceneID="XaK-Dz-XTF">
@@ -101,24 +106,116 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ProfilePage" translatesAutoresizingMaskIntoConstraints="NO" id="93K-4a-nW6">
-                                <rect key="frame" x="0.0" y="85" width="414" height="777"/>
+                                <rect key="frame" x="10" y="88" width="394" height="680"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rar-Cj-smb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="y2U-3e-Gue"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAo-5g-yDH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2647.826086956522" y="81.696428571428569"/>
+            <point key="canvasLocation" x="4624.6376811594209" y="703.79464285714278"/>
+        </scene>
+        <!--Inicio-->
+        <scene sceneID="o6H-jg-xAl">
+            <objects>
+                <navigationController id="XO7-Aw-G3e" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Inicio" image="house.fill" catalog="system" id="Rhy-n3-1Zb"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5nn-OI-naS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5iw-jk-Gqw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LuL-Zu-pzS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1664" y="-47"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ngz-H1-6M2">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="mcr-OL-BXa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x50-Qe-sSW">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="XO7-Aw-G3e" kind="relationship" relationship="viewControllers" id="pmz-RQ-lKo"/>
+                        <segue destination="Ao1-OV-cYc" kind="relationship" relationship="viewControllers" id="aiJ-l9-6yR"/>
+                        <segue destination="Mgw-aP-B5r" kind="relationship" relationship="viewControllers" id="nZW-3u-ZPx"/>
+                        <segue destination="Myw-H8-uHc" kind="relationship" relationship="viewControllers" id="j5e-at-xrn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uzx-mb-TM3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2661" y="-766"/>
+        </scene>
+        <!--Explorar-->
+        <scene sceneID="BHa-Wc-Hya">
+            <objects>
+                <navigationController id="Ao1-OV-cYc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Explorar" image="magnifyingglass" catalog="system" id="8MF-x4-8xJ"/>
+                    <navigationItem key="navigationItem" id="zS8-aC-eeT"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Seq-a9-556">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Nox-J5-4cu" kind="relationship" relationship="rootViewController" id="UwU-5W-c15"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dVK-kk-qvx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2661" y="-48"/>
+        </scene>
+        <!--Perfil-->
+        <scene sceneID="b0j-ZA-bCi">
+            <objects>
+                <navigationController id="Mgw-aP-B5r" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Perfil" image="person.fill" catalog="system" id="tE4-Um-2kZ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uav-4I-Ode">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wKd-ea-jrt" kind="relationship" relationship="rootViewController" id="jPM-ws-4Dv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lHX-oe-JF7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4626" y="-48"/>
+        </scene>
+        <!--Reservaciones-->
+        <scene sceneID="3RL-oh-uJQ">
+            <objects>
+                <navigationController id="Myw-H8-uHc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Reservaciones" image="bookmark" catalog="system" id="hDE-uC-GCT"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bBX-YY-fmt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9dG-s4-8TS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3661" y="-48"/>
         </scene>
     </scenes>
     <resources>
-        <image name="HomePage" width="376" height="699"/>
-        <image name="MainMenuPage" width="400" height="744"/>
-        <image name="ProfilePage" width="357.5" height="687"/>
-        <image name="ReservationMenu" width="371" height="706"/>
+        <image name="HomePage" width="345" height="575"/>
+        <image name="MainMenuPage" width="363" height="576"/>
+        <image name="ProfilePage" width="352" height="605"/>
+        <image name="ReservationMenu" width="296" height="540"/>
+        <image name="bookmark" catalog="system" width="112" height="128"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.18799999356269836" blue="0.52899998426437378" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
