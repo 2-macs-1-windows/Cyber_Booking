@@ -55,8 +55,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0c-lK-tWD">
                                 <rect key="frame" x="7" y="235" width="118" height="153"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Laboratorios">
+                                    <backgroundConfiguration key="background" image="doorIcon" imageContentMode="scaleAspectFit"/>
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -213,6 +215,7 @@
         <image name="ProfilePage" width="352" height="605"/>
         <image name="ReservationMenu" width="296" height="540"/>
         <image name="bookmark" catalog="system" width="112" height="128"/>
+        <image name="doorIcon" width="163.5" height="282.5"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
