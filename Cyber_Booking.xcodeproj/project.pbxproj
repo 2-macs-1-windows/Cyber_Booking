@@ -13,6 +13,13 @@
 		3A45F34128B7F45200A7B1AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A45F33F28B7F45200A7B1AC /* Main.storyboard */; };
 		3A45F34328B7F45400A7B1AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A45F34228B7F45400A7B1AC /* Assets.xcassets */; };
 		3A45F34628B7F45400A7B1AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A45F34428B7F45400A7B1AC /* LaunchScreen.storyboard */; };
+		6805014E28C00E5000270A07 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6805014D28C00E5000270A07 /* SignUpViewController.swift */; };
+		6805015028C0128D00270A07 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6805014F28C0128D00270A07 /* VerificationViewController.swift */; };
+		6805015228C03F9A00270A07 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6805015128C03F9A00270A07 /* loginViewController.swift */; };
+		6805015628C0428700270A07 /* AprenderMasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6805015528C0428700270A07 /* AprenderMasViewController.swift */; };
+		6805015828C04A4100270A07 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6805015728C04A4100270A07 /* ExploreViewController.swift */; };
+		6805015A28C04A6E00270A07 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6805015928C04A6E00270A07 /* PerfilViewController.swift */; };
+		6805015C28C04A9500270A07 /* ReservarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6805015B28C04A9500270A07 /* ReservarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		3A45F34228B7F45400A7B1AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A45F34528B7F45400A7B1AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A45F34728B7F45400A7B1AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6805014D28C00E5000270A07 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6805014F28C0128D00270A07 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		6805015128C03F9A00270A07 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		6805015528C0428700270A07 /* AprenderMasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AprenderMasViewController.swift; sourceTree = "<group>"; };
+		6805015728C04A4100270A07 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		6805015928C04A6E00270A07 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		6805015B28C04A9500270A07 /* ReservarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,30 @@
 		3A45F33828B7F45200A7B1AC /* Cyber_Booking */ = {
 			isa = PBXGroup;
 			children = (
+				6805015428C0423800270A07 /* Controllers */,
 				3A45F33928B7F45200A7B1AC /* AppDelegate.swift */,
 				3A45F33B28B7F45200A7B1AC /* SceneDelegate.swift */,
-				3A45F33D28B7F45200A7B1AC /* ViewController.swift */,
 				3A45F33F28B7F45200A7B1AC /* Main.storyboard */,
 				3A45F34228B7F45400A7B1AC /* Assets.xcassets */,
 				3A45F34428B7F45400A7B1AC /* LaunchScreen.storyboard */,
 				3A45F34728B7F45400A7B1AC /* Info.plist */,
 			);
 			path = Cyber_Booking;
+			sourceTree = "<group>";
+		};
+		6805015428C0423800270A07 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6805015128C03F9A00270A07 /* loginViewController.swift */,
+				3A45F33D28B7F45200A7B1AC /* ViewController.swift */,
+				6805014D28C00E5000270A07 /* SignUpViewController.swift */,
+				6805014F28C0128D00270A07 /* VerificationViewController.swift */,
+				6805015528C0428700270A07 /* AprenderMasViewController.swift */,
+				6805015B28C04A9500270A07 /* ReservarViewController.swift */,
+				6805015928C04A6E00270A07 /* PerfilViewController.swift */,
+				6805015728C04A4100270A07 /* ExploreViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +169,13 @@
 			files = (
 				3A45F33E28B7F45200A7B1AC /* ViewController.swift in Sources */,
 				3A45F33A28B7F45200A7B1AC /* AppDelegate.swift in Sources */,
+				6805015228C03F9A00270A07 /* loginViewController.swift in Sources */,
+				6805015A28C04A6E00270A07 /* PerfilViewController.swift in Sources */,
+				6805015C28C04A9500270A07 /* ReservarViewController.swift in Sources */,
+				6805015028C0128D00270A07 /* VerificationViewController.swift in Sources */,
+				6805015828C04A4100270A07 /* ExploreViewController.swift in Sources */,
+				6805014E28C00E5000270A07 /* SignUpViewController.swift in Sources */,
+				6805015628C0428700270A07 /* AprenderMasViewController.swift in Sources */,
 				3A45F33C28B7F45200A7B1AC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
