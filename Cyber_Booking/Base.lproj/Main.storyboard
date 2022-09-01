@@ -157,7 +157,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzx-mb-TM3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2661" y="-766"/>
+            <point key="canvasLocation" x="3180" y="-805"/>
         </scene>
         <!--Explorar-->
         <scene sceneID="BHa-Wc-Hya">
