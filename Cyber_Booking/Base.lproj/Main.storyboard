@@ -9,10 +9,133 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Sign Up View Controller-->
+        <scene sceneID="8p6-7g-wtm">
+            <objects>
+                <viewController id="eba-9r-dUk" customClass="SignUpViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vFs-vo-1GI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SignInMenu" translatesAutoresizingMaskIntoConstraints="NO" id="SB2-ch-AiB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jo-mB-2rg">
+                                <rect key="frame" x="67" y="729" width="289" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <segue destination="9ok-Dj-Jdf" kind="show" id="onW-cG-U7O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bF5-Me-DW4">
+                                <rect key="frame" x="248" y="781" width="108" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="back2Login:" destination="eba-9r-dUk" eventType="touchUpInside" id="byN-6X-yry"/>
+                                    <action selector="returnLogin:" destination="IU4-TP-1Wb" eventType="touchUpInside" id="bkd-UJ-50v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dse-0o-rhV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dse-0o-rhV" firstAttribute="bottom" secondItem="SB2-ch-AiB" secondAttribute="bottom" id="bLX-aq-bHx"/>
+                            <constraint firstItem="SB2-ch-AiB" firstAttribute="top" secondItem="dse-0o-rhV" secondAttribute="top" id="efB-D3-DoO"/>
+                            <constraint firstItem="dse-0o-rhV" firstAttribute="trailing" secondItem="SB2-ch-AiB" secondAttribute="trailing" id="hpE-7v-cw6"/>
+                            <constraint firstItem="SB2-ch-AiB" firstAttribute="leading" secondItem="dse-0o-rhV" secondAttribute="leading" id="qio-j6-2H7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3j4-3p-2Ie"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CGr-g9-a10" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="IU4-TP-1Wb" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-233.33333333333334" y="1443.75"/>
+        </scene>
+        <!--Verification View Controller-->
+        <scene sceneID="4uD-jP-lfH">
+            <objects>
+                <viewController id="9ok-Dj-Jdf" customClass="VerificationViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eQZ-qE-Ssk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VerificationCode" translatesAutoresizingMaskIntoConstraints="NO" id="PEJ-UH-RNx">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tm-pB-qHC">
+                                <rect key="frame" x="57" y="386" width="299" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="back2mainPage:" destination="9ok-Dj-Jdf" eventType="touchUpInside" id="Hm7-jV-RRU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0bi-uR-kur"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0bi-uR-kur" firstAttribute="bottom" secondItem="PEJ-UH-RNx" secondAttribute="bottom" id="4wl-eK-bgZ"/>
+                            <constraint firstItem="0bi-uR-kur" firstAttribute="trailing" secondItem="PEJ-UH-RNx" secondAttribute="trailing" id="8uA-hc-mYB"/>
+                            <constraint firstItem="PEJ-UH-RNx" firstAttribute="leading" secondItem="0bi-uR-kur" secondAttribute="leading" id="Zpp-dL-HP1"/>
+                            <constraint firstItem="PEJ-UH-RNx" firstAttribute="top" secondItem="0bi-uR-kur" secondAttribute="top" id="vuE-BU-TPD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xmW-KF-yB8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pcR-Vs-52Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="659.4202898550725" y="1458.4821428571429"/>
+        </scene>
+        <!--login-->
+        <scene sceneID="ZKo-5s-eTt">
+            <objects>
+                <viewController storyboardIdentifier="login" title="login" id="MOt-lS-Uf7" customClass="loginViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XxY-I1-Qjb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogInMenu" translatesAutoresizingMaskIntoConstraints="NO" id="QWw-cz-g4C">
+                                <rect key="frame" x="20" y="42" width="374" height="813"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovo-ER-HRk">
+                                <rect key="frame" x="38" y="605" width="336" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="Back2Home:" destination="MOt-lS-Uf7" eventType="touchUpInside" id="jxB-8w-4d2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQU-t0-W17">
+                                <rect key="frame" x="136" y="740" width="132" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <segue destination="eba-9r-dUk" kind="show" id="SWV-0r-etV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qdp-1e-t3H"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fD9-1D-5wT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="scZ-NL-veK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="656.52173913043487" y="703.79464285714278"/>
+        </scene>
         <!--MainPage-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="MainPage" id="BYZ-38-t0r" customClass="ViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainPage" title="MainPage" id="BYZ-38-t0r" customClass="ViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,6 +152,21 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Reservar" cornerStyle="large">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="MOt-lS-Uf7" kind="show" id="zY1-9p-g6Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6c3-gj-4Ap">
+                                <rect key="frame" x="215" y="671" width="162" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="tf4-Qo-coR" kind="show" id="0Kq-o1-wAm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -38,12 +176,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1663.7681159420292" y="704.46428571428567"/>
+            <point key="canvasLocation" x="2573.913043478261" y="704.46428571428567"/>
         </scene>
         <!--Menu-->
         <scene sceneID="thm-mv-ebx">
             <objects>
-                <viewController title="Menu" id="Nox-J5-4cu" sceneMemberID="viewController">
+                <viewController title="Menu" id="Nox-J5-4cu" customClass="ExploreViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f4k-9Z-9OB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,12 +211,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="il4-j4-IMm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2660.8695652173915" y="703.79464285714278"/>
+            <point key="canvasLocation" x="3571.0144927536235" y="703.79464285714278"/>
+        </scene>
+        <!--Aprender Mas View Controller-->
+        <scene sceneID="7eh-Ya-SLM">
+            <objects>
+                <viewController id="tf4-Qo-coR" customClass="AprenderMasViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lYq-eC-jKm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PartnersCard" translatesAutoresizingMaskIntoConstraints="NO" id="ukd-AP-Gds">
+                                <rect key="frame" x="0.0" y="388" width="414" height="215"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LearnMoreCard" translatesAutoresizingMaskIntoConstraints="NO" id="sDz-8P-oBY">
+                                <rect key="frame" x="0.0" y="125" width="414" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WorkLines" translatesAutoresizingMaskIntoConstraints="NO" id="hZM-Xh-bXK">
+                                <rect key="frame" x="48" y="638" width="318" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="siC-n0-Bzk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Iy-9h-GH2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g7Z-PN-gUH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1630" y="1465"/>
         </scene>
         <!--ReservationMenu-->
         <scene sceneID="chx-Gw-o2z">
             <objects>
-                <viewController title="ReservationMenu" id="tb5-La-ad3" sceneMemberID="viewController">
+                <viewController title="ReservationMenu" id="tb5-La-ad3" customClass="ReservarViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S1e-4d-VwT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,7 +317,7 @@
         <!--ProfilePage-->
         <scene sceneID="XaK-Dz-XTF">
             <objects>
-                <viewController title="ProfilePage" id="wKd-ea-jrt" sceneMemberID="viewController">
+                <viewController title="ProfilePage" id="wKd-ea-jrt" customClass="PerfilViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qsc-JI-J8q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,7 +340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAo-5g-yDH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4624.6376811594209" y="703.79464285714278"/>
+            <point key="canvasLocation" x="5534.7826086956529" y="703.79464285714278"/>
         </scene>
         <!--Reservaciones-->
         <scene sceneID="NJQ-Qa-5mO">
@@ -199,14 +367,14 @@
         <!--Inicio-->
         <scene sceneID="o6H-jg-xAl">
             <objects>
-                <navigationController id="XO7-Aw-G3e" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="inicio" id="XO7-Aw-G3e" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Inicio" image="house.fill" catalog="system" id="Rhy-n3-1Zb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5nn-OI-naS">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5iw-jk-Gqw"/>
+                        <segue destination="JnI-rY-xou" kind="relationship" relationship="rootViewController" id="5iw-jk-Gqw"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LuL-Zu-pzS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -216,7 +384,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ngz-H1-6M2">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="mcr-OL-BXa" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="mcr-OL-BXa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x50-Qe-sSW">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -286,15 +454,40 @@
             </objects>
             <point key="canvasLocation" x="3661" y="-48"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hl7-UD-KRU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JnI-rY-xou" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="2hN-RC-tFD"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vbf-60-Jqz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mRs-k8-zJG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CBY-o2-3gT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1591" y="704"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ActualReservationMenu" width="357" height="323"/>
         <image name="EditProfile" width="299" height="602"/>
         <image name="HomePage" width="345" height="575"/>
+        <image name="LearnMoreCard" width="363" height="252"/>
+        <image name="LogInMenu" width="306" height="559"/>
         <image name="MainMenuPage" width="363" height="576"/>
+        <image name="PartnersCard" width="358" height="249"/>
         <image name="ProfilePage" width="352" height="605"/>
         <image name="RecordsMenu" width="341" height="328"/>
         <image name="ReservationMenu" width="296" height="540"/>
+        <image name="SignInMenu" width="316" height="685"/>
+        <image name="VerificationCode" width="244" height="447"/>
+        <image name="WorkLines" width="366" height="163"/>
         <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="doorIcon" width="163.5" height="282.5"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
