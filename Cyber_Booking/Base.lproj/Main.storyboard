@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mcr-OL-BXa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MOt-lS-Uf7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -14,29 +14,30 @@
             <objects>
                 <viewController id="eba-9r-dUk" customClass="SignUpViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vFs-vo-1GI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SignInMenu" translatesAutoresizingMaskIntoConstraints="NO" id="SB2-ch-AiB">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jo-mB-2rg">
-                                <rect key="frame" x="67" y="729" width="289" height="44"/>
+                                <rect key="frame" x="67" y="769" width="289" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                                 <connections>
-                                    <segue destination="9ok-Dj-Jdf" kind="show" id="onW-cG-U7O"/>
+                                    <segue destination="9ok-Dj-Jdf" kind="show" id="bKe-Ig-1gF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bF5-Me-DW4">
-                                <rect key="frame" x="248" y="781" width="108" height="32"/>
+                                <rect key="frame" x="262" y="830" width="108" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                                 <connections>
                                     <action selector="back2Login:" destination="eba-9r-dUk" eventType="touchUpInside" id="byN-6X-yry"/>
                                     <action selector="returnLogin:" destination="IU4-TP-1Wb" eventType="touchUpInside" id="bkd-UJ-50v"/>
+                                    <segue destination="MOt-lS-Uf7" kind="show" id="FOp-Bb-fvV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,21 +55,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGr-g9-a10" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="IU4-TP-1Wb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-233.33333333333334" y="1443.75"/>
+            <point key="canvasLocation" x="-20" y="-94"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4uD-jP-lfH">
             <objects>
                 <viewController id="9ok-Dj-Jdf" customClass="ViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eQZ-qE-Ssk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VerificationCode" translatesAutoresizingMaskIntoConstraints="NO" id="PEJ-UH-RNx">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slL-54-zgz">
-                                <rect key="frame" x="57" y="385" width="303" height="51"/>
+                                <rect key="frame" x="56" y="411" width="303" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
@@ -90,14 +91,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pcR-Vs-52Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="659.4202898550725" y="1458.4821428571429"/>
+            <point key="canvasLocation" x="-20" y="583"/>
         </scene>
         <!--Confirmation Controller-->
         <scene sceneID="Imc-MR-VgY">
             <objects>
                 <viewController id="Axk-JZ-Y8E" customClass="confirmationController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y5H-9D-fn5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ConfirmationPage" translatesAutoresizingMaskIntoConstraints="NO" id="zh7-IJ-wg9">
@@ -122,14 +123,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haO-sJ-CPV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="jmu-Mg-zXb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="656.52173913043487" y="2232.5892857142858"/>
+            <point key="canvasLocation" x="-20" y="1294"/>
         </scene>
         <!--login-->
         <scene sceneID="ZKo-5s-eTt">
             <objects>
                 <viewController storyboardIdentifier="login" title="login" id="MOt-lS-Uf7" customClass="loginViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XxY-I1-Qjb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogInMenu" translatesAutoresizingMaskIntoConstraints="NO" id="QWw-cz-g4C">
@@ -143,6 +144,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                                 <connections>
                                     <action selector="Back2Home:" destination="MOt-lS-Uf7" eventType="touchUpInside" id="jxB-8w-4d2"/>
+                                    <segue destination="mcr-OL-BXa" kind="show" id="eNo-6h-szP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQU-t0-W17">
@@ -151,7 +153,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                                 <connections>
-                                    <segue destination="eba-9r-dUk" kind="show" id="SWV-0r-etV"/>
+                                    <segue destination="eba-9r-dUk" kind="show" id="giC-DY-JSz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -162,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scZ-NL-veK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="656.52173913043487" y="703.79464285714278"/>
+            <point key="canvasLocation" x="2632" y="-779"/>
         </scene>
         <!--MainPage-->
         <scene sceneID="tne-QT-ifu">
@@ -177,15 +179,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oji-0X-dXP">
-                                <rect key="frame" x="42" y="671" width="129" height="54"/>
+                                <rect key="frame" x="40" y="671" width="134" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Reservar" cornerStyle="large">
+                                <buttonConfiguration key="configuration" style="filled" title="Iniciar Sesión" cornerStyle="large">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="MOt-lS-Uf7" kind="show" id="zY1-9p-g6Y"/>
+                                    <segue destination="MOt-lS-Uf7" kind="show" id="AyZ-cO-NaT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6c3-gj-4Ap">
@@ -197,7 +199,7 @@
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="tf4-Qo-coR" kind="show" id="0Kq-o1-wAm"/>
+                                    <segue destination="tf4-Qo-coR" kind="show" id="4Ky-7F-t9n"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -208,14 +210,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2573.913043478261" y="704.46428571428567"/>
+            <point key="canvasLocation" x="1718.840579710145" y="-779.46428571428567"/>
         </scene>
         <!--Menu-->
         <scene sceneID="thm-mv-ebx">
             <objects>
                 <viewController title="Menu" id="Nox-J5-4cu" customClass="ExploreViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f4k-9Z-9OB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainMenuPage" translatesAutoresizingMaskIntoConstraints="NO" id="OFf-BH-KYF">
@@ -243,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="il4-j4-IMm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3571.0144927536235" y="703.79464285714278"/>
+            <point key="canvasLocation" x="2661" y="704"/>
         </scene>
         <!--Aprender Mas View Controller-->
         <scene sceneID="7eh-Ya-SLM">
@@ -273,14 +275,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7Z-PN-gUH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1630" y="1465"/>
+            <point key="canvasLocation" x="809" y="-94"/>
         </scene>
         <!--ReservationMenu-->
         <scene sceneID="chx-Gw-o2z">
             <objects>
                 <viewController title="ReservationMenu" id="tb5-La-ad3" customClass="ReservarViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S1e-4d-VwT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ReservationMenu" translatesAutoresizingMaskIntoConstraints="NO" id="gRn-2d-KFN">
@@ -297,14 +299,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94L-AO-lxz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2660.8695652173915" y="1427.6785714285713"/>
+            <point key="canvasLocation" x="2661" y="1418"/>
         </scene>
         <!--Edit Profile-->
         <scene sceneID="ODW-lB-HNU">
             <objects>
                 <viewController title="Edit Profile" id="1Dv-vv-t6E" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TOp-5V-KYs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EditProfile" translatesAutoresizingMaskIntoConstraints="NO" id="4qc-l2-jza">
@@ -319,14 +321,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oag-0z-Eah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5534.7826086956529" y="1443.75"/>
+            <point key="canvasLocation" x="4625" y="1444"/>
         </scene>
         <!--Reservaciones-->
         <scene sceneID="fpl-r3-wwB">
             <objects>
                 <viewController title="Reservaciones" id="ZDr-hn-wcs" customClass="reservacionesController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fss-Gq-vEz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vba-e6-q4b">
@@ -339,7 +341,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ActualReservationMenu" translatesAutoresizingMaskIntoConstraints="NO" id="Oj3-fQ-ckd">
-                                <rect key="frame" x="-30" y="69" width="444" height="323"/>
+                                <rect key="frame" x="-30" y="25" width="444" height="323"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tap-kl-dRA"/>
@@ -354,14 +356,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FvB-ef-bmh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4387" y="1482"/>
+            <point key="canvasLocation" x="3661" y="1444"/>
         </scene>
         <!--ProfilePage-->
         <scene sceneID="XaK-Dz-XTF">
             <objects>
                 <viewController title="ProfilePage" id="wKd-ea-jrt" customClass="PerfilViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qsc-JI-J8q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ProfilePage" translatesAutoresizingMaskIntoConstraints="NO" id="93K-4a-nW6">
@@ -385,14 +387,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAo-5g-yDH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5534.7826086956529" y="703.79464285714278"/>
+            <point key="canvasLocation" x="4625" y="704"/>
         </scene>
         <!--Reservaciones-->
         <scene sceneID="NJQ-Qa-5mO">
             <objects>
                 <viewController title="Reservaciones" id="oB4-7X-uOh" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fb0-OT-A5T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sq-Fn-u6E">
@@ -416,7 +418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFn-62-WE2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4386.9565217391309" y="723.88392857142856"/>
+            <point key="canvasLocation" x="3661" y="704"/>
         </scene>
         <!--Inicio-->
         <scene sceneID="o6H-jg-xAl">
@@ -424,12 +426,9 @@
                 <navigationController storyboardIdentifier="inicio" id="XO7-Aw-G3e" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Inicio" image="house.fill" catalog="system" id="Rhy-n3-1Zb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5nn-OI-naS">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="JnI-rY-xou" kind="relationship" relationship="rootViewController" id="5iw-jk-Gqw"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LuL-Zu-pzS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -440,6 +439,7 @@
             <objects>
                 <tabBarController storyboardIdentifier="mainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="mcr-OL-BXa" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="BHC-CP-iPe"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x50-Qe-sSW">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -454,7 +454,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzx-mb-TM3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2661" y="-766"/>
+            <point key="canvasLocation" x="3571.0144927536235" y="-766.07142857142856"/>
         </scene>
         <!--Explorar-->
         <scene sceneID="BHa-Wc-Hya">
@@ -463,7 +463,7 @@
                     <tabBarItem key="tabBarItem" title="Explorar" image="magnifyingglass" catalog="system" id="8MF-x4-8xJ"/>
                     <navigationItem key="navigationItem" id="zS8-aC-eeT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Seq-a9-556">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -480,7 +480,7 @@
                 <navigationController id="Mgw-aP-B5r" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Perfil" image="person.fill" catalog="system" id="tE4-Um-2kZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uav-4I-Ode">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -497,7 +497,7 @@
                 <navigationController id="Myw-H8-uHc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Reservaciones" image="bookmark" catalog="system" id="hDE-uC-GCT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bBX-YY-fmt">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -509,25 +509,27 @@
             <point key="canvasLocation" x="3661" y="-48"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="hl7-UD-KRU">
+        <scene sceneID="YpA-BA-JD7">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JnI-rY-xou" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lUh-T7-Akn" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="2hN-RC-tFD"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vbf-60-Jqz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3qM-yd-WFg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mRs-k8-zJG"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="F5R-dC-qvg"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CBY-o2-3gT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l77-ie-nXL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1591" y="704"/>
+            <point key="canvasLocation" x="762" y="-779"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="FOp-Bb-fvV"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="ActualReservationMenu" width="357" height="323"/>
         <image name="ConfirmationPage" width="241.5" height="449"/>
