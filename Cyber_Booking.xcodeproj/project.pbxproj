@@ -21,6 +21,7 @@
 		6805015A28C04A6E00270A07 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6805015928C04A6E00270A07 /* PerfilViewController.swift */; };
 		6805015C28C04A9500270A07 /* ReservarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6805015B28C04A9500270A07 /* ReservarViewController.swift */; };
 		D930241D28C1AEB80006A168 /* reservacionesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D930241C28C1AEB80006A168 /* reservacionesController.swift */; };
+		D930242128C1B9750006A168 /* confirmationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D930242028C1B9750006A168 /* confirmationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		6805015928C04A6E00270A07 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		6805015B28C04A9500270A07 /* ReservarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservarViewController.swift; sourceTree = "<group>"; };
 		D930241C28C1AEB80006A168 /* reservacionesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reservacionesController.swift; sourceTree = "<group>"; };
+		D930242028C1B9750006A168 /* confirmationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				6805015928C04A6E00270A07 /* PerfilViewController.swift */,
 				6805015728C04A4100270A07 /* ExploreViewController.swift */,
 				D930241C28C1AEB80006A168 /* reservacionesController.swift */,
+				D930242028C1B9750006A168 /* confirmationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				6805015C28C04A9500270A07 /* ReservarViewController.swift in Sources */,
 				6805015028C0128D00270A07 /* VerificationViewController.swift in Sources */,
 				6805015828C04A4100270A07 /* ExploreViewController.swift in Sources */,
+				D930242128C1B9750006A168 /* confirmationController.swift in Sources */,
 				6805014E28C00E5000270A07 /* SignUpViewController.swift in Sources */,
 				6805015628C0428700270A07 /* AprenderMasViewController.swift in Sources */,
 				3A45F33C28B7F45200A7B1AC /* SceneDelegate.swift in Sources */,
