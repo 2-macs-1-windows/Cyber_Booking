@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mcr-OL-BXa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aSh-Yg-z1c">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -9,165 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sign Up View Controller-->
-        <scene sceneID="8p6-7g-wtm">
-            <objects>
-                <viewController id="eba-9r-dUk" customClass="SignUpViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vFs-vo-1GI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SignInMenu" translatesAutoresizingMaskIntoConstraints="NO" id="SB2-ch-AiB">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jo-mB-2rg">
-                                <rect key="frame" x="67" y="729" width="289" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=""/>
-                                <connections>
-                                    <segue destination="9ok-Dj-Jdf" kind="show" id="onW-cG-U7O"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bF5-Me-DW4">
-                                <rect key="frame" x="248" y="781" width="108" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=""/>
-                                <connections>
-                                    <action selector="back2Login:" destination="eba-9r-dUk" eventType="touchUpInside" id="byN-6X-yry"/>
-                                    <action selector="returnLogin:" destination="IU4-TP-1Wb" eventType="touchUpInside" id="bkd-UJ-50v"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="dse-0o-rhV"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="dse-0o-rhV" firstAttribute="bottom" secondItem="SB2-ch-AiB" secondAttribute="bottom" id="bLX-aq-bHx"/>
-                            <constraint firstItem="SB2-ch-AiB" firstAttribute="top" secondItem="dse-0o-rhV" secondAttribute="top" id="efB-D3-DoO"/>
-                            <constraint firstItem="dse-0o-rhV" firstAttribute="trailing" secondItem="SB2-ch-AiB" secondAttribute="trailing" id="hpE-7v-cw6"/>
-                            <constraint firstItem="SB2-ch-AiB" firstAttribute="leading" secondItem="dse-0o-rhV" secondAttribute="leading" id="qio-j6-2H7"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="3j4-3p-2Ie"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CGr-g9-a10" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="IU4-TP-1Wb" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="-233.33333333333334" y="1443.75"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="4uD-jP-lfH">
-            <objects>
-                <viewController id="9ok-Dj-Jdf" customClass="ViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eQZ-qE-Ssk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VerificationCode" translatesAutoresizingMaskIntoConstraints="NO" id="PEJ-UH-RNx">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slL-54-zgz">
-                                <rect key="frame" x="57" y="385" width="303" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=""/>
-                                <connections>
-                                    <segue destination="Axk-JZ-Y8E" kind="presentation" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="mZg-tx-dts"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="0bi-uR-kur"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="0bi-uR-kur" firstAttribute="bottom" secondItem="PEJ-UH-RNx" secondAttribute="bottom" id="4wl-eK-bgZ"/>
-                            <constraint firstItem="0bi-uR-kur" firstAttribute="trailing" secondItem="PEJ-UH-RNx" secondAttribute="trailing" id="8uA-hc-mYB"/>
-                            <constraint firstItem="PEJ-UH-RNx" firstAttribute="leading" secondItem="0bi-uR-kur" secondAttribute="leading" id="Zpp-dL-HP1"/>
-                            <constraint firstItem="PEJ-UH-RNx" firstAttribute="top" secondItem="0bi-uR-kur" secondAttribute="top" id="vuE-BU-TPD"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="xmW-KF-yB8"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pcR-Vs-52Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="659.4202898550725" y="1458.4821428571429"/>
-        </scene>
-        <!--Confirmation Controller-->
-        <scene sceneID="Imc-MR-VgY">
-            <objects>
-                <viewController id="Axk-JZ-Y8E" customClass="confirmationController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="y5H-9D-fn5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ConfirmationPage" translatesAutoresizingMaskIntoConstraints="NO" id="zh7-IJ-wg9">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNQ-9G-rzU">
-                                <rect key="frame" x="40" y="687" width="335" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=""/>
-                                <connections>
-                                    <action selector="confirm:" destination="jmu-Mg-zXb" eventType="touchUpInside" id="z92-bh-p7Y"/>
-                                    <action selector="confirmButton:" destination="Axk-JZ-Y8E" eventType="touchUpInside" id="F31-bu-TXV"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="dKb-qb-l63"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="haO-sJ-CPV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="jmu-Mg-zXb" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="656.52173913043487" y="2232.5892857142858"/>
-        </scene>
-        <!--login-->
-        <scene sceneID="ZKo-5s-eTt">
-            <objects>
-                <viewController storyboardIdentifier="login" title="login" id="MOt-lS-Uf7" customClass="loginViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XxY-I1-Qjb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogInMenu" translatesAutoresizingMaskIntoConstraints="NO" id="QWw-cz-g4C">
-                                <rect key="frame" x="20" y="42" width="374" height="813"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovo-ER-HRk">
-                                <rect key="frame" x="38" y="605" width="336" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=""/>
-                                <connections>
-                                    <action selector="Back2Home:" destination="MOt-lS-Uf7" eventType="touchUpInside" id="jxB-8w-4d2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQU-t0-W17">
-                                <rect key="frame" x="136" y="740" width="132" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=""/>
-                                <connections>
-                                    <segue destination="eba-9r-dUk" kind="show" id="SWV-0r-etV"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="qdp-1e-t3H"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="fD9-1D-5wT"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="scZ-NL-veK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="656.52173913043487" y="703.79464285714278"/>
-        </scene>
-        <!--MainPage-->
+        <!--MainPage_-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainPage" title="MainPage" id="BYZ-38-t0r" customClass="ViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainPage_" title="MainPage_" id="BYZ-38-t0r" customClass="ViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,9 +29,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Reservar" cornerStyle="large">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="MOt-lS-Uf7" kind="show" id="zY1-9p-g6Y"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6c3-gj-4Ap">
                                 <rect key="frame" x="215" y="671" width="162" height="54"/>
@@ -387,6 +229,22 @@
             </objects>
             <point key="canvasLocation" x="5534.7826086956529" y="703.79464285714278"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aE5-Zd-K60">
+            <objects>
+                <navigationController id="aSh-Yg-z1c" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pbG-z1-B2Q">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CL8-ZW-Tfv" kind="relationship" relationship="rootViewController" id="n9C-6M-lSU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QVg-Hj-kLu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4426" y="627"/>
+        </scene>
         <!--Reservaciones-->
         <scene sceneID="NJQ-Qa-5mO">
             <objects>
@@ -440,6 +298,7 @@
             <objects>
                 <tabBarController storyboardIdentifier="mainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="mcr-OL-BXa" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="7Ky-1f-Pd9"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x50-Qe-sSW">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -454,7 +313,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzx-mb-TM3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3180" y="-805"/>
+            <point key="canvasLocation" x="-507" y="1578"/>
         </scene>
         <!--Explorar-->
         <scene sceneID="BHa-Wc-Hya">
@@ -526,6 +385,234 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CBY-o2-3gT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1591" y="704"/>
+        </scene>
+        <!--MainPage-->
+        <scene sceneID="BVr-Ih-ZGz">
+            <objects>
+                <viewController storyboardIdentifier="MainPage" title="MainPage" id="CL8-ZW-Tfv" customClass="ViewController" customModule="Cyber_Booking" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sjb-da-PNK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HomePage" translatesAutoresizingMaskIntoConstraints="NO" id="TQD-Uq-5de">
+                                <rect key="frame" x="15" y="88" width="384" height="653"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9C-6f-lw7">
+                                <rect key="frame" x="42" y="671" width="129" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Iniciar sesión" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="SXI-J3-5Dn" kind="show" id="SB9-CW-JKu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gK3-di-vmv">
+                                <rect key="frame" x="215" y="671" width="162" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="4km-80-9tL" kind="show" id="rfM-Ay-r47"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JKl-r7-Dnd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6hW-CL-1Su"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bOW-JX-sTA" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3397" y="611"/>
+        </scene>
+        <!--login_-->
+        <scene sceneID="JYz-9S-QEh">
+            <objects>
+                <viewController storyboardIdentifier="login" title="login_" id="SXI-J3-5Dn" customClass="loginViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YIm-Fy-tjR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogInMenu" translatesAutoresizingMaskIntoConstraints="NO" id="4LG-sV-GSC">
+                                <rect key="frame" x="20" y="42" width="374" height="813"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7Q-6g-up3">
+                                <rect key="frame" x="38" y="605" width="336" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="Back2Home:" destination="SXI-J3-5Dn" eventType="touchUpInside" id="b7j-i7-LaR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FL-4C-Ncj">
+                                <rect key="frame" x="136" y="740" width="132" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <segue destination="e9B-80-GvO" kind="show" id="uzN-FP-q7g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QcH-WV-0Dc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LPH-rI-Su8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2E-qO-0ml" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4426" y="1465"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="Kup-Yr-qvA">
+            <objects>
+                <viewController id="e9B-80-GvO" customClass="SignUpViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fRW-sL-AkM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SignInMenu" translatesAutoresizingMaskIntoConstraints="NO" id="BHI-FE-dDJ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFN-F9-E5b">
+                                <rect key="frame" x="67" y="729" width="289" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pg-B8-DqX">
+                                <rect key="frame" x="75" y="781" width="281" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <segue destination="JzV-jV-pX4" kind="show" id="tvf-zo-ppl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HZ7-nS-bwC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BHI-FE-dDJ" firstAttribute="leading" secondItem="HZ7-nS-bwC" secondAttribute="leading" id="1GL-nf-96h"/>
+                            <constraint firstItem="BHI-FE-dDJ" firstAttribute="top" secondItem="HZ7-nS-bwC" secondAttribute="top" id="RfO-5J-jTR"/>
+                            <constraint firstItem="HZ7-nS-bwC" firstAttribute="trailing" secondItem="BHI-FE-dDJ" secondAttribute="trailing" id="e6X-rD-rTF"/>
+                            <constraint firstItem="HZ7-nS-bwC" firstAttribute="bottom" secondItem="BHI-FE-dDJ" secondAttribute="bottom" id="n89-Ry-29b"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="URN-3L-a1G"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RNq-KT-McW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4426" y="2229"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Y4q-my-FYu">
+            <objects>
+                <viewController id="JzV-jV-pX4" customClass="ViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KBo-Uk-KVx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VerificationCode" translatesAutoresizingMaskIntoConstraints="NO" id="jKo-Ec-sp1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2p6-DN-guV">
+                                <rect key="frame" x="56" y="402" width="303" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <segue destination="j31-y4-EUC" kind="push" id="YlF-OT-qB9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iaG-at-NaR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iaG-at-NaR" firstAttribute="bottom" secondItem="jKo-Ec-sp1" secondAttribute="bottom" id="5gs-Cn-pYJ"/>
+                            <constraint firstItem="iaG-at-NaR" firstAttribute="trailing" secondItem="jKo-Ec-sp1" secondAttribute="trailing" id="8g4-BP-5ig"/>
+                            <constraint firstItem="jKo-Ec-sp1" firstAttribute="leading" secondItem="iaG-at-NaR" secondAttribute="leading" id="arH-Jt-Zgb"/>
+                            <constraint firstItem="jKo-Ec-sp1" firstAttribute="top" secondItem="iaG-at-NaR" secondAttribute="top" id="pj1-8M-9mh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ug3-bo-kgf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MT9-9m-LSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3322" y="2229"/>
+        </scene>
+        <!--Confirmation Controller-->
+        <scene sceneID="dVg-TZ-MmX">
+            <objects>
+                <viewController id="j31-y4-EUC" customClass="confirmationController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cnx-Kb-Ova">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ConfirmationPage" translatesAutoresizingMaskIntoConstraints="NO" id="2m0-BX-d3h">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMM-Cj-nSc">
+                                <rect key="frame" x="40" y="687" width="335" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="confirm:" destination="Hmj-aG-YJj" eventType="touchUpInside" id="s6j-j9-V2H"/>
+                                    <action selector="confirmButton:" destination="j31-y4-EUC" eventType="touchUpInside" id="L3a-me-AFT"/>
+                                    <segue destination="mcr-OL-BXa" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="bm2-qd-xbK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pDE-Mq-ePo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7j1-Uq-Rat"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jHk-Wu-Z5i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Hmj-aG-YJj" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1916" y="1578"/>
+        </scene>
+        <!--Aprender Mas View Controller-->
+        <scene sceneID="a3w-s2-Kfu">
+            <objects>
+                <viewController id="4km-80-9tL" customClass="AprenderMasViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7qW-FG-fyK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PartnersCard" translatesAutoresizingMaskIntoConstraints="NO" id="Xzy-4g-Lwx">
+                                <rect key="frame" x="0.0" y="388" width="414" height="215"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LearnMoreCard" translatesAutoresizingMaskIntoConstraints="NO" id="jjv-aq-XyD">
+                                <rect key="frame" x="0.0" y="125" width="414" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WorkLines" translatesAutoresizingMaskIntoConstraints="NO" id="44z-No-jQH">
+                                <rect key="frame" x="48" y="638" width="318" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oW5-VK-ebx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OUx-Fs-Uc6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n3X-LI-gYR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3358" y="1482"/>
         </scene>
     </scenes>
     <resources>
