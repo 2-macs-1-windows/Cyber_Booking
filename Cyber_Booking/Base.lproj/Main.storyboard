@@ -17,12 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HomePage" translatesAutoresizingMaskIntoConstraints="NO" id="e0G-Zf-9Ts">
-                                <rect key="frame" x="15" y="88" width="384" height="653"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HomePageNoLog" translatesAutoresizingMaskIntoConstraints="NO" id="e0G-Zf-9Ts">
+                                <rect key="frame" x="15" y="88" width="384" height="725"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6c3-gj-4Ap">
-                                <rect key="frame" x="215" y="671" width="162" height="54"/>
+                                <rect key="frame" x="126" y="663" width="162" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
@@ -41,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1664" y="704"/>
+            <point key="canvasLocation" x="1663.7681159420292" y="703.79464285714278"/>
         </scene>
         <!--Menu-->
         <scene sceneID="thm-mv-ebx">
@@ -194,11 +194,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ProfilePage" translatesAutoresizingMaskIntoConstraints="NO" id="93K-4a-nW6">
-                                <rect key="frame" x="10" y="88" width="394" height="680"/>
+                                <rect key="frame" x="10" y="84" width="394" height="729"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCT-OD-UAw">
-                                <rect key="frame" x="349" y="84" width="55" height="47"/>
+                                <rect key="frame" x="360" y="96" width="44" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAo-5g-yDH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4625" y="704"/>
+            <point key="canvasLocation" x="4624.6376811594209" y="703.79464285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aE5-Zd-K60">
@@ -294,8 +294,8 @@
                     <connections>
                         <segue destination="XO7-Aw-G3e" kind="relationship" relationship="viewControllers" id="pmz-RQ-lKo"/>
                         <segue destination="Ao1-OV-cYc" kind="relationship" relationship="viewControllers" id="aiJ-l9-6yR"/>
-                        <segue destination="Mgw-aP-B5r" kind="relationship" relationship="viewControllers" id="nZW-3u-ZPx"/>
                         <segue destination="Myw-H8-uHc" kind="relationship" relationship="viewControllers" id="j5e-at-xrn"/>
+                        <segue destination="Mgw-aP-B5r" kind="relationship" relationship="viewControllers" id="nZW-3u-ZPx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzx-mb-TM3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -382,23 +382,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HomePage" translatesAutoresizingMaskIntoConstraints="NO" id="TQD-Uq-5de">
-                                <rect key="frame" x="15" y="88" width="384" height="653"/>
+                                <rect key="frame" x="15" y="88" width="384" height="774"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9C-6f-lw7">
-                                <rect key="frame" x="42" y="671" width="129" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" name="AccentColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Iniciar sesión" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="SXI-J3-5Dn" kind="show" id="SB9-CW-JKu"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gK3-di-vmv">
-                                <rect key="frame" x="215" y="671" width="162" height="54"/>
+                                <rect key="frame" x="215" y="692" width="162" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
@@ -409,6 +397,15 @@
                                     <segue destination="4km-80-9tL" kind="show" id="rfM-Ay-r47"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PrY-TZ-yF0">
+                                <rect key="frame" x="46" y="701" width="125" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <segue destination="SXI-J3-5Dn" kind="show" id="lHH-jQ-dd4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JKl-r7-Dnd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -417,7 +414,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOW-JX-sTA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532" y="-1977"/>
+            <point key="canvasLocation" x="531.8840579710145" y="-1977.4553571428571"/>
+        </scene>
+        <!--password-->
+        <scene sceneID="lGH-oG-qRh">
+            <objects>
+                <viewController title="password" id="vZj-6n-P82" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eef-5n-7Nf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ForgetPassword" translatesAutoresizingMaskIntoConstraints="NO" id="mHx-6F-9XX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WCy-xa-AiC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ngs-o5-n62"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h1C-Mc-bXf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1692.753623188406" y="-1198.6607142857142"/>
         </scene>
         <!--login_-->
         <scene sceneID="JYz-9S-QEh">
@@ -449,6 +468,15 @@
                                     <segue destination="e9B-80-GvO" kind="show" id="uzN-FP-q7g"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pte-AZ-O2u">
+                                <rect key="frame" x="79" y="707" width="236" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <segue destination="vZj-6n-P82" kind="show" id="ngX-bD-vQC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QcH-WV-0Dc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -457,7 +485,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2E-qO-0ml" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-762" y="-1195"/>
+            <point key="canvasLocation" x="-762.31884057971024" y="-1195.3125"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Kup-Yr-qvA">
@@ -470,14 +498,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SignInMenu" translatesAutoresizingMaskIntoConstraints="NO" id="BHI-FE-dDJ">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFN-F9-E5b">
-                                <rect key="frame" x="67" y="729" width="289" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=""/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pg-B8-DqX">
-                                <rect key="frame" x="75" y="781" width="281" height="32"/>
+                                <rect key="frame" x="67" y="806" width="281" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
@@ -605,16 +627,18 @@
     <resources>
         <image name="ActualReservationMenu" width="357" height="323"/>
         <image name="ConfirmationPage" width="241.5" height="449"/>
-        <image name="EditProfile" width="299" height="602"/>
-        <image name="HomePage" width="345" height="575"/>
+        <image name="EditProfile" width="297" height="586"/>
+        <image name="ForgetPassword" width="221" height="474"/>
+        <image name="HomePage" width="262" height="511"/>
+        <image name="HomePageNoLog" width="288" height="511"/>
         <image name="LearnMoreCard" width="363" height="252"/>
         <image name="LogInMenu" width="306" height="559"/>
         <image name="MainMenuPage" width="363" height="576"/>
         <image name="PartnersCard" width="358" height="249"/>
-        <image name="ProfilePage" width="352" height="605"/>
+        <image name="ProfilePage" width="321" height="595"/>
         <image name="RecordsMenu" width="341" height="328"/>
-        <image name="ReservationMenu" width="296" height="540"/>
-        <image name="SignInMenu" width="316" height="685"/>
+        <image name="ReservationMenu" width="281" height="509"/>
+        <image name="SignInMenu" width="292" height="606"/>
         <image name="VerificationCode" width="244" height="447"/>
         <image name="WorkLines" width="366" height="163"/>
         <image name="bookmark" catalog="system" width="112" height="128"/>
