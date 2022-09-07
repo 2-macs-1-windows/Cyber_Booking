@@ -637,7 +637,7 @@
         <image name="PartnersCard" width="358" height="249"/>
         <image name="ProfilePage" width="321" height="595"/>
         <image name="RecordsMenu" width="341" height="328"/>
-        <image name="ReservationMenu" width="281" height="509"/>
+        <image name="ReservationMenu" width="566" height="1080"/>
         <image name="SignInMenu" width="292" height="606"/>
         <image name="VerificationCode" width="244" height="447"/>
         <image name="WorkLines" width="366" height="163"/>
