@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "LogInMenu.png",
+      "filename" : "LogoApp.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "LogInMenu-1.png",
+      "filename" : "LogoApp-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "LogInMenu-2.png",
+      "filename" : "LogoApp-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
