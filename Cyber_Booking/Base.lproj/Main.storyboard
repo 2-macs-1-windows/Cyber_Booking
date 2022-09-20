@@ -284,17 +284,17 @@
                                 </buttonConfiguration>
                             </button>
                             <pickerView contentMode="top" semanticContentAttribute="playback" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sB2-w2-MMt">
-                                <rect key="frame" x="34" y="294" width="346" height="162"/>
+                                <rect key="frame" x="34" y="294" width="343" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="AccentColor"/>
                             </pickerView>
                             <pickerView contentMode="top" semanticContentAttribute="playback" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="exl-ZH-Z90">
-                                <rect key="frame" x="34" y="393" width="346" height="162"/>
+                                <rect key="frame" x="34" y="393" width="343" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="AccentColor"/>
                             </pickerView>
                             <pickerView contentMode="top" semanticContentAttribute="playback" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="saK-51-bzb">
-                                <rect key="frame" x="34" y="181" width="346" height="162"/>
+                                <rect key="frame" x="34" y="181" width="343" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="AccentColor"/>
                             </pickerView>
@@ -807,14 +807,14 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrO-vC-zBH">
                                 <rect key="frame" x="38" y="370" width="339" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eb7-4l-hQH">
                                 <rect key="frame" x="38" y="473" width="339" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -860,42 +860,89 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SignInMenu" translatesAutoresizingMaskIntoConstraints="NO" id="BHI-FE-dDJ">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="SignInMenu" translatesAutoresizingMaskIntoConstraints="NO" id="BHI-FE-dDJ">
                                 <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pg-B8-DqX">
-                                <rect key="frame" x="67" y="806" width="281" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=""/>
-                                <connections>
-                                    <segue destination="JzV-jV-pX4" kind="show" id="tvf-zo-ppl"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gnq-dJ-49f">
-                                <rect key="frame" x="49" y="160" width="209.5" height="57.5"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ero-ns-jQA">
+                                <rect key="frame" x="20" y="92" width="374" height="770"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsd-Bf-fZG">
-                                        <rect key="frame" x="0.0" y="0.0" width="209.5" height="22"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
-                                        <color key="textColor" name="AccentColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="example@email.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vx5-kF-qtI" userLabel="correoIn">
-                                        <rect key="frame" x="0.0" y="22" width="209.5" height="35.5"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
-                                        <textInputTraits key="textInputTraits" textContentType="email"/>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="255" translatesAutoresizingMaskIntoConstraints="NO" id="GPw-z8-XAr">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="770"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Registrarse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZI-Wj-CPf">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="45.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="33"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fup-Em-wQB">
+                                                <rect key="frame" x="0.0" y="300.5" width="374" height="86.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1E3-5Z-a9g">
+                                                        <rect key="frame" x="27" y="8" width="339" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                        <color key="textColor" name="AccentColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresa tu nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gXk-Ac-rTA">
+                                                        <rect key="frame" x="27" y="37" width="339" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XBP-fb-hps">
+                                                <rect key="frame" x="0.0" y="642" width="374" height="128"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pg-B8-DqX">
+                                                        <rect key="frame" x="47" y="42" width="281" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" name="AccentColor"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Continuar">
+                                                            <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <segue destination="JzV-jV-pX4" kind="show" id="tvf-zo-ppl"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="lZI-Wj-CPf" firstAttribute="top" secondItem="GPw-z8-XAr" secondAttribute="top" id="S5T-rm-Has"/>
+                                            <constraint firstItem="fup-Em-wQB" firstAttribute="top" secondItem="lZI-Wj-CPf" secondAttribute="bottom" constant="10" id="fsj-f4-lMF"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="GPw-z8-XAr" firstAttribute="bottom" secondItem="sJ0-xq-lmY" secondAttribute="bottom" id="0XQ-1h-cuK"/>
+                                    <constraint firstItem="GPw-z8-XAr" firstAttribute="leading" secondItem="6a0-tq-uew" secondAttribute="leading" id="2HM-Vk-FJY"/>
+                                    <constraint firstItem="GPw-z8-XAr" firstAttribute="trailing" secondItem="6a0-tq-uew" secondAttribute="trailing" id="3gc-xB-JEG"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="770" id="FQR-AA-E2R"/>
+                                    <constraint firstItem="GPw-z8-XAr" firstAttribute="top" secondItem="6a0-tq-uew" secondAttribute="top" id="Ngx-WA-BMG"/>
+                                    <constraint firstAttribute="trailing" secondItem="GPw-z8-XAr" secondAttribute="trailing" id="Nkh-bj-gnA"/>
+                                    <constraint firstItem="GPw-z8-XAr" firstAttribute="bottom" secondItem="6a0-tq-uew" secondAttribute="bottom" id="fb6-SS-io5"/>
+                                    <constraint firstAttribute="height" constant="770" id="qgR-Ae-8oA"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="sJ0-xq-lmY"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="6a0-tq-uew"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HZ7-nS-bwC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BHI-FE-dDJ" firstAttribute="leading" secondItem="HZ7-nS-bwC" secondAttribute="leading" id="1GL-nf-96h"/>
-                            <constraint firstItem="BHI-FE-dDJ" firstAttribute="top" secondItem="HZ7-nS-bwC" secondAttribute="top" id="RfO-5J-jTR"/>
-                            <constraint firstItem="HZ7-nS-bwC" firstAttribute="trailing" secondItem="BHI-FE-dDJ" secondAttribute="trailing" id="e6X-rD-rTF"/>
-                            <constraint firstItem="HZ7-nS-bwC" firstAttribute="bottom" secondItem="BHI-FE-dDJ" secondAttribute="bottom" id="n89-Ry-29b"/>
+                            <constraint firstItem="Ero-ns-jQA" firstAttribute="bottom" secondItem="BHI-FE-dDJ" secondAttribute="bottom" id="0OE-0m-3LZ"/>
+                            <constraint firstItem="Ero-ns-jQA" firstAttribute="centerX" secondItem="BHI-FE-dDJ" secondAttribute="centerX" id="H2C-zp-Oae"/>
+                            <constraint firstItem="Ero-ns-jQA" firstAttribute="top" secondItem="BHI-FE-dDJ" secondAttribute="top" id="R25-a3-U1b"/>
+                            <constraint firstItem="Ero-ns-jQA" firstAttribute="bottom" secondItem="HZ7-nS-bwC" secondAttribute="bottom" id="Smy-rm-gl2"/>
+                            <constraint firstItem="HZ7-nS-bwC" firstAttribute="trailing" secondItem="Ero-ns-jQA" secondAttribute="trailing" constant="20" id="UPm-J8-gfd"/>
+                            <constraint firstItem="Ero-ns-jQA" firstAttribute="top" secondItem="HZ7-nS-bwC" secondAttribute="top" id="ibw-Wc-MyO"/>
+                            <constraint firstItem="Ero-ns-jQA" firstAttribute="leading" secondItem="HZ7-nS-bwC" secondAttribute="leading" constant="20" id="wvn-Hw-y7j"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="URN-3L-a1G"/>
