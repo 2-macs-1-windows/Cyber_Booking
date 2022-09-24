@@ -9,15 +9,15 @@ import UIKit
 
 class loginViewController: UIViewController {
 
+    // iniciar sesión 
     @IBAction func Back2Home(_ sender: Any) {
         let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "mainTabBarController") as! UITabBarController
         
         nextViewController.modalPresentationStyle = .fullScreen
         // self es la vista 1, sobre ella presenta "siguienteVista"
         self.present(nextViewController, animated:true, completion:nil)
-
-
     }
+     
     override func viewDidLoad() {
         super.viewDidLoad()
 

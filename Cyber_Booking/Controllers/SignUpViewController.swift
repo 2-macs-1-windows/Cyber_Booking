@@ -9,6 +9,9 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    // Fix keyboard issues
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
