@@ -17,6 +17,11 @@ class loginViewController: UIViewController {
         // self es la vista 1, sobre ella presenta "siguienteVista"
         self.present(nextViewController, animated:true, completion:nil)
     }
+    
+    // función que cierra el teclado al apretar "intro"
+    @IBAction func textFieldDoneEditing(sender:UITextField){
+        sender.resignFirstResponder()
+    }
      
     override func viewDidLoad() {
         super.viewDidLoad()
