@@ -53,7 +53,7 @@ class ReservarViewController: UIViewController {
         toolbar.sizeToFit()
         
         // done button
-        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
         toolbar.setItems([doneBtn], animated: true)
         
         return toolbar
@@ -63,6 +63,16 @@ class ReservarViewController: UIViewController {
         fechaHoraPicker.preferredDatePickerStyle = .wheels
         fechaHoraTextField.inputView = fechaHoraPicker
         fechaHoraTextField.inputAccessoryView = createToolbar()
+    }
+    
+    @objc func donePressed() {
+        // formato de la fecha
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .medium
+        
+        self.fechaHoraTextField.text = dateFormatter.string(from: fechaHoraPicker.date)
+        self.view.endEditing(true)
     }
 }
 
