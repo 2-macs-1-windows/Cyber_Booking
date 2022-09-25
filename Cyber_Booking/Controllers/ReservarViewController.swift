@@ -11,8 +11,8 @@ class ReservarViewController: UIViewController {
     
     // --- TextField outlets ---
     @IBOutlet weak var salonTextField: UITextField!
-    // FALTA FECHA Y HORA
     @IBOutlet weak var duracionTextField: UITextField!
+    @IBOutlet weak var fechaHoraTextField: UITextField!
     
     // --- lista de opciones ---
     // FALTA CONECTAR CON DB
@@ -21,11 +21,14 @@ class ReservarViewController: UIViewController {
     
     // --- PickerViews de las opciones ---
     var salonPickerView = UIPickerView()
-    // FALTA FECHA Y HORA
     var duracionPickerView = UIPickerView()
+    let fechaHoraPicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Fecha y hora
+        createDatepicker()
         
         // tomar las opciones del pickView en el textField visualmente
         salonTextField.inputView = salonPickerView
@@ -43,6 +46,24 @@ class ReservarViewController: UIViewController {
         duracionPickerView.tag = 2
     }
 
+    // --- Fecha y hora ---
+    func createToolbar() -> UIToolbar {
+        // toolbar
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        // done button
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
+        toolbar.setItems([doneBtn], animated: true)
+        
+        return toolbar
+    }
+    
+    func createDatepicker() {
+        fechaHoraPicker.preferredDatePickerStyle = .wheels
+        fechaHoraTextField.inputView = fechaHoraPicker
+        fechaHoraTextField.inputAccessoryView = createToolbar()
+    }
 }
 
 // extension UIPickerViewDelegate

@@ -310,6 +310,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="duracionTextField" destination="aeb-L3-127" id="3CM-2x-b1a"/>
+                        <outlet property="fechaHoraTextField" destination="HCb-iE-QPx" id="7sa-uZ-507"/>
                         <outlet property="salonTextField" destination="n2x-UD-m5c" id="Y9u-bb-Tsb"/>
                     </connections>
                 </viewController>
