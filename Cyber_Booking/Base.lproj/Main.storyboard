@@ -638,7 +638,7 @@ Cybersecurity Hub</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aF2-hL-6Ij">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aF2-hL-6Ij">
                                 <rect key="frame" x="20" y="263" width="374" height="174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">El Hub de Ciberseguridad del
@@ -670,7 +670,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Si te encuentras registrado, obtendrás una contrasaña temporal para iniciar sesión y restablecerla desde tu perfil." translatesAutoresizingMaskIntoConstraints="NO" id="YBJ-TA-vxG">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Si te encuentras registrado, obtendrás una contrasaña temporal para iniciar sesión y restablecerla desde tu perfil." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBJ-TA-vxG">
                                 <rect key="frame" x="29" y="169" width="357" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -1159,7 +1159,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Se te envió un código al correo con el que te registraste." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6Nh-Up-KP6">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Se te envió un código al correo con el que te registraste." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nh-Up-KP6">
                                 <rect key="frame" x="32" y="216" width="312" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1216,7 +1216,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Desde ahora puedes reservar salas y software." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sLM-ul-aSz">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Desde ahora puedes reservar salas y software." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLM-ul-aSz">
                                 <rect key="frame" x="20" y="173" width="349" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
