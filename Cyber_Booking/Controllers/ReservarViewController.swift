@@ -121,7 +121,7 @@ extension ReservarViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             salonTextField.text = salones[row]
             salonTextField.resignFirstResponder()
         case 2:
-            duracionTextField.text = salones[row]
+            duracionTextField.text = duraciones[row]
             duracionTextField.resignFirstResponder()
         default:
             return
