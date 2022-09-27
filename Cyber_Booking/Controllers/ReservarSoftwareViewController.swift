@@ -5,7 +5,11 @@
 //  Created by Sofía Hernandez on 25/09/22.
 //
 
-// TODO arreglar los pickers
+/*
+ TODO
+ - Alerta después de apretar el botón
+ - Arreglar los pickers
+ */
 
 import UIKit
 

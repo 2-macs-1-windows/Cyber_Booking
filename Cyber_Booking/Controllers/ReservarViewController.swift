@@ -5,6 +5,11 @@
 //  Created by Victoria Estefania Vazquez Morales on 31/8/22.
 //
 
+/*
+ TODO
+ - Alerta después de apretar el botón
+ */
+
 import UIKit
 
 class ReservarViewController: UIViewController {
