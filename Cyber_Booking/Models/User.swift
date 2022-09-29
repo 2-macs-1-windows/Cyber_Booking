@@ -26,8 +26,8 @@ struct User {
 
 extension User {
     // función que regresa un arreglo de User
-    static func listaUsers()->[User] {
-        return [
+    static func listaUsers()->User {
+        return
             // Datos dummie FALTA BD
             User(name: "Zachary",
                  last_name: "Joyce",
@@ -39,7 +39,7 @@ extension User {
                  verified_email: true,
                  is_Tec: true,
                  date_created: "Oct 25, 2022",
-                 is_active: true),
-        ]
+                 is_active: true)
+        
     }
 }
