@@ -39,18 +39,23 @@ class UsuarioTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        // Datos que se podrán editar
+        return 5
     }
 
-    /*
+    // Método que construye visualmente la tabla
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "zelda", for: indexPath)
 
         // Configure the cell...
+        
+        var content = cell.defaultContentConfiguration()
+        content.text = "\(usuario.name)"
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
