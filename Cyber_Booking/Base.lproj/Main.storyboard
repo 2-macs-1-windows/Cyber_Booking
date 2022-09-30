@@ -407,7 +407,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oag-0z-Eah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4625" y="1444"/>
+            <point key="canvasLocation" x="5438" y="1415"/>
         </scene>
         <!--ProfilePage-->
         <scene sceneID="XaK-Dz-XTF">
@@ -426,7 +426,7 @@
                                     <imageReference key="image" image="pencil" catalog="system" symbolScale="large"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="1Dv-vv-t6E" kind="show" id="dv4-ln-kxa"/>
+                                    <segue destination="1Dv-vv-t6E" kind="show" id="0zl-3a-0Tc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tv4-6k-Otd">
@@ -512,7 +512,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAo-5g-yDH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4624.6376811594209" y="703.79464285714278"/>
+            <point key="canvasLocation" x="4677" y="704"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aE5-Zd-K60">
@@ -533,15 +533,45 @@
         <!--Reservaciones-->
         <scene sceneID="NJQ-Qa-5mO">
             <objects>
-                <viewController title="Reservaciones" id="oB4-7X-uOh" customClass="reservacionesController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Reservaciones" id="oB4-7X-uOh" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fb0-OT-A5T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RecordsMenu" translatesAutoresizingMaskIntoConstraints="NO" id="FD3-JI-4E4">
-                                <rect key="frame" x="-62" y="58" width="502" height="356"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Historial de reservaciones" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20q-TU-9oV">
+                                <rect key="frame" x="20" y="92" width="374" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cN2-Cx-6r2">
+                                <rect key="frame" x="20" y="215" width="360" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Hardware">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNn-Mz-SmU">
+                                <rect key="frame" x="20" y="288" width="360" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Software">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJa-jY-GnO">
+                                <rect key="frame" x="20" y="360" width="360" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Espacios">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OXb-Km-6af"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -550,7 +580,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFn-62-WE2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3661" y="704"/>
+            <point key="canvasLocation" x="3660.8695652173915" y="714.50892857142856"/>
         </scene>
         <!--Inicio-->
         <scene sceneID="o6H-jg-xAl">
@@ -619,12 +649,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="wKd-ea-jrt" kind="relationship" relationship="rootViewController" id="jPM-ws-4Dv"/>
+                        <segue destination="wKd-ea-jrt" kind="relationship" relationship="rootViewController" id="xOM-iY-NBg"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHX-oe-JF7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4626" y="-48"/>
+            <point key="canvasLocation" x="4677" y="-48"/>
         </scene>
         <!--Reservaciones-->
         <scene sceneID="3RL-oh-uJQ">
@@ -636,7 +666,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="oB4-7X-uOh" kind="relationship" relationship="rootViewController" id="iEL-ow-VcN"/>
+                        <segue destination="oB4-7X-uOh" kind="relationship" relationship="rootViewController" id="FmD-dS-uq2"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dG-s4-8TS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1491,10 +1521,9 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
         </scene>
     </scenes>
     <resources>
-        <image name="Deloitte" width="2560" height="557"/>
+        <image name="Deloitte" width="1280" height="278.5"/>
         <image name="EditProfile" width="297" height="586"/>
         <image name="Logo" width="313.5" height="310.5"/>
-        <image name="RecordsMenu" width="341" height="328"/>
         <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="computoIcon" width="287.5" height="225.5"/>
         <image name="door.left.hand.closed" catalog="system" width="108" height="128"/>
