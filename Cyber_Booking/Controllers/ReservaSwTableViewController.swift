@@ -10,10 +10,12 @@ import UIKit
 class ReservaSwTableViewController: UITableViewController {
 
     var reservas = ReserveSw.listaReserveSw()
+    var reserva:ReserveSw?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
     }
 
@@ -42,21 +44,9 @@ class ReservaSwTableViewController: UITableViewController {
         reservas.insert(movedEmoji, at: to.row)
     }
 
-    @IBSegueAction func addEditReserva(_ coder: NSCoder, sender: Any?) -> AddEditReservaTableViewController? {
-        
-        if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
-            // Editing Emoji
-            let reservaToEdit = reservas[indexPath.row]
-            return AddEditReservaTableViewController(coder: coder, r: reservaToEdit)
-        } else {
-            // Adding Emoji
-            return AddEditReservaTableViewController(coder: coder, r: nil)
-        }
-        
-    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "zelda", for: indexPath) as! ReservaTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReservSwCell", for: indexPath) as! ReserveSwTableViewCell
 
         // Configure the cell...
         let indice = indexPath.row

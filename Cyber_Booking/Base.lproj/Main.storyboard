@@ -409,16 +409,16 @@
             </objects>
             <point key="canvasLocation" x="6471" y="1070"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Reserva Sw Table View Controller-->
         <scene sceneID="jFJ-XZ-mUF">
             <objects>
-                <tableViewController id="2KX-T3-p70" sceneMemberID="viewController">
+                <tableViewController id="2KX-T3-p70" customClass="ReservaSwTableViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="5nL-VW-k1v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="S8i-YI-VyO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReservSwCell" rowHeight="80" id="S8i-YI-VyO" customClass="ReserveSwTableViewCell" customModule="Cyber_Booking" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S8i-YI-VyO" id="ENo-t3-pXd">
@@ -440,7 +440,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AbC-cd-UBB">
                                                     <rect key="frame" x="70" y="0.0" width="304" height="58"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z06-7P-fjZ">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z06-7P-fjZ">
                                                             <rect key="frame" x="0.0" y="0.0" width="304" height="20.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="8WK-Dg-WbM"/>
@@ -450,14 +450,17 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwU-GV-tib">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwU-GV-tib">
                                                             <rect key="frame" x="0.0" y="20.5" width="304" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ym-So-4SD">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ym-So-4SD">
                                                             <rect key="frame" x="0.0" y="41" width="304" height="17"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="17" id="qbs-Xt-4iJ"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -476,6 +479,12 @@
                                         <constraint firstItem="Fhe-qb-acJ" firstAttribute="top" secondItem="ENo-t3-pXd" secondAttribute="topMargin" id="ncd-YL-joS"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="Book_E" destination="2Ym-So-4SD" id="oJt-iv-qJC"/>
+                                    <outlet property="Book_S" destination="HwU-GV-tib" id="ZS6-2F-wjC"/>
+                                    <outlet property="Service" destination="z06-7P-fjZ" id="cSa-4h-PR7"/>
+                                    <outlet property="icono" destination="GLi-X0-Dg8" id="7VB-ez-nLL"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -483,7 +492,13 @@
                             <outlet property="delegate" destination="2KX-T3-p70" id="sA9-t7-KUv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Xee-kR-sC2"/>
+                    <navigationItem key="navigationItem" id="Xee-kR-sC2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="zzM-Zt-9Uv">
+                            <connections>
+                                <action selector="EditAction:" destination="2KX-T3-p70" id="twI-ch-f66"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrK-S6-JeN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -613,7 +628,7 @@
         <!--Reservaciones-->
         <scene sceneID="NJQ-Qa-5mO">
             <objects>
-                <viewController title="Reservaciones" id="oB4-7X-uOh" sceneMemberID="viewController">
+                <viewController title="Reservaciones" id="oB4-7X-uOh" customClass="HiswtorialViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fb0-OT-A5T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
