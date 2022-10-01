@@ -1,20 +1,19 @@
 //
-//  VerificationViewController.swift
+//  OlvidarContraViewController.swift
 //  Cyber_Booking
 //
-//  Created by Victoria Estefania Vazquez Morales on 31/8/22.
+//  Created by Sofía Hernandez on 24/09/22.
 //
 
 import UIKit
 
-class VerificationViewController: UIViewController {
-
+class OlvidarContraViewController: UIViewController {
     
     // función que cierra el teclado al apretar "intro"
     @IBAction func textFieldDoneEditing(sender:UITextField){
         sender.resignFirstResponder()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
