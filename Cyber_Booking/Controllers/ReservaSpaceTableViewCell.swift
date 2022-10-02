@@ -16,9 +16,18 @@ class ReservaSpaceTableViewCell: UITableViewCell {
 
     func update(r:ReserveSpace){
         labelIcono.text = "🚪"
-        labelLugar.text = String(r.serviceId)
+        labelLugar.text = String(r.nameService)
         labelFecha.text = r.booking_start
-        labelEstatus.text = String(r.active)
+        // labelEstatus.text = String(r.active)
+        
+        if r.active{
+            labelEstatus.text = "Activa"
+            labelEstatus.textColor = UIColor.green
+        }
+        else {
+            labelEstatus.text = "Inactiva"
+            labelEstatus.textColor = UIColor.red
+        }
     }
 
     override func awakeFromNib() {

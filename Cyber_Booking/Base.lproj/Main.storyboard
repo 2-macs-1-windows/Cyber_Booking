@@ -458,7 +458,7 @@
             </objects>
             <point key="canvasLocation" x="5516" y="-1029"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Historial de espacios-->
         <scene sceneID="9AC-gF-LXX">
             <objects>
                 <tableViewController id="dFx-PN-ZH8" customClass="ReservasHistorialTableViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
@@ -477,12 +477,12 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="TcP-8B-m3D">
                                             <rect key="frame" x="20" y="11" width="374" height="65"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2d-Gm-GCy">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🚪" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2d-Gm-GCy">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="65"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="YAA-2p-wAX"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="44"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -491,7 +491,7 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TqX-iA-tpU">
                                                             <rect key="frame" x="0.0" y="0.0" width="262" height="24"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -500,7 +500,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20.5" id="6NN-bW-GgU"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -509,7 +509,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20.5" id="kzz-pL-3gg"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -538,7 +538,7 @@
                             <outlet property="delegate" destination="dFx-PN-ZH8" id="zJr-ZA-Sy1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="8zY-9q-2AF">
+                    <navigationItem key="navigationItem" title="Historial de espacios" id="8zY-9q-2AF">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="5Mc-KI-qQr">
                             <connections>
                                 <action selector="editButtonTapped:" destination="dFx-PN-ZH8" id="sSZ-nR-ObP"/>
