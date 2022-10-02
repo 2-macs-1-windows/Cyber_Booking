@@ -27,6 +27,9 @@ extension ReserveSw {
             // Datos dummie FALTA BD
             [ReserveSw(id: 1, userId: 1, serviceId: 1, created_at: "Oct 25, 2022", booking_start: "Oct 27, 2022", booking_end: "Oct 29, 2022", active: true),
              ReserveSw(id: 2, userId: 1, serviceId: 2, created_at: "Oct 30, 2022", booking_start: "Oct 30, 2022", booking_end: "Nov 2, 2022", active: true),
+             ReserveSw(id: 3, userId: 1, serviceId: 3, created_at: "Oct 30, 2022", booking_start: "Oct 30, 2022", booking_end: "Nov 2, 2022", active: true),
+             ReserveSw(id: 4, userId: 1, serviceId: 4, created_at: "Oct 30, 2022", booking_start: "Oct 30, 2022", booking_end: "Nov 2, 2022", active: true),
+             ReserveSw(id: 5, userId: 1, serviceId: 2, created_at: "Oct 30, 2022", booking_start: "Oct 30, 2022", booking_end: "Nov 2, 2022", active: true),
                 ]
     }
 }
