@@ -16,8 +16,6 @@ class ReservasHistorialTableViewController: UITableViewController {
 
     // DATA SOURCE
     // se inicializan las reservas
-    var reservasHw = ReserveHw.listaReserveHw()
-    var reservasSw = ReserveSw.listaReserveSw()
     var reservasSpaces = ReserveSpace.listaReserveSpace()
     
     
@@ -41,22 +39,40 @@ class ReservasHistorialTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        // CADA SECCIÓN TENGA # DE RESERVAS POR TIPO
-        var totalReservas = reservasHw.count + reservasSw.count + reservasSpaces.count
-        
-        return totalReservas
+        return reservasSpaces.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "zelda", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "zelda", for: indexPath) as! ReservaSpaceTableViewCell
         
-        var content = cell.defaultContentConfiguration()
-        // content.text = "\(.name)"
-
-
+        // Configure the cell...
+        let indice = indexPath.row
+        let reserva = reservasSpaces[indice]
+        cell.update(r: reserva)
+        
+        cell.showsReorderControl = true
+        
         return cell
+    }
+    
+    @IBAction func editButtonTapped(_ sender: UIBarButtonItem) {
+        let tableViewEditingMode = tableView.isEditing
+            tableView.setEditing(!tableViewEditingMode, animated: true)
+    }
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+        let movedEmoji = reservasSpaces.remove(at: fromIndexPath.row)
+        reservasSpaces.insert(movedEmoji, at: to.row)
+    }
+    
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            reservasSpaces.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
     }
 
     /*
