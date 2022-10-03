@@ -21,7 +21,7 @@ class SpaceController {
             throw SpaceError.itemNotFound
         }
         let jsonDecoder = JSONDecoder()
-        let reservas = try? jsonDecoder.decode(Spaces.self, from: data)
-        return reservas!
+        let spaces = try? jsonDecoder.decode(Spaces.self, from: data)
+        return spaces!
     }
 }

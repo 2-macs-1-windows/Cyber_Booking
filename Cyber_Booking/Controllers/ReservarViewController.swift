@@ -21,7 +21,8 @@ class ReservarViewController: UIViewController {
     
     // --- lista de opciones ---
     // FALTA CONECTAR CON DB
-    let salones = ["S-1", "S-2", "S-3", "S-4"]
+    
+    var salones = [Space]()
     let duraciones = ["1 hora", "2 horas", "3 horas", "4 horas"]
     
     // --- PickerViews de las opciones ---
@@ -59,6 +60,19 @@ class ReservarViewController: UIViewController {
         
         duracionPickerView.delegate = self
         duracionPickerView.dataSource = self
+        
+        // salones
+        let url = URL(string: "http://127.0.0.1:8000/api/spaces/")
+        
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+              if error == nil {
+            do {
+                self.salones = try JSONDecoder().decode([Space].self, from: data!)
+            } catch {
+                print("Parse error")
+            }
+        }
+        }.resume()
         
         // --- Agregar tag a los pickerView ---
         salonPickerView.tag = 1
@@ -123,7 +137,7 @@ extension ReservarViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         // va a regresar dependiendo del tag el dato de la lista
         switch pickerView.tag {
         case 1:
-            return salones[row]
+            return salones[row].name
         case 2:
             return duraciones[row]
         default:
@@ -137,7 +151,7 @@ extension ReservarViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         // va a regresar dependiendo del tag el dato de la lista
         switch pickerView.tag {
         case 1:
-            salonTextField.text = salones[row]
+            salonTextField.text = salones[row].name
             salonTextField.resignFirstResponder()
         case 2:
             duracionTextField.text = duraciones[row]
