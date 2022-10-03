@@ -8,14 +8,40 @@
 import UIKit
 
 class ReservasHardwareTableViewController: UITableViewController {
-
     
-    var reservasHw = ReserveHw.listaReserveHw()
+    var reservaControlador = ReservaHwController()
+    var reservas = ReservasHw()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        Task{
+            do{
+                let reservas = try await reservaControlador.fetchReservas()
+                updateUI(with: reservas)
+            }catch{
+                displayError(ReservaError.itemNotFound, title: "No se pudo acceder a las reservas")
+            }
+            
+            
+        }
     }
+    
+    func updateUI(with reservas:ReservasHw){
+        DispatchQueue.main.async {
+            self.reservas = reservas
+            self.tableView.reloadData()
+        }
+    }
+    
+    func displayError(_ error: Error, title: String) {
+            DispatchQueue.main.async {
+                let alert = UIAlertController(title: title, message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+
 
     // MARK: - Table view data source
 
@@ -26,7 +52,7 @@ class ReservasHardwareTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return reservasHw.count
+        return reservas.count
     }
 
     
@@ -35,7 +61,7 @@ class ReservasHardwareTableViewController: UITableViewController {
 
         // Configure the cell...
         let indice = indexPath.row
-        let reserva = reservasHw[indice]
+        let reserva = reservas[indice]
         cell.update(r: reserva)
         
         cell.showsReorderControl = true
@@ -56,7 +82,7 @@ class ReservasHardwareTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            reservasHw.remove(at: indexPath.row)
+            reservas.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -67,8 +93,8 @@ class ReservasHardwareTableViewController: UITableViewController {
     
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        let movedEmoji = reservasHw.remove(at: fromIndexPath.row)
-        reservasHw.insert(movedEmoji, at: to.row)
+        let movedEmoji = reservas.remove(at: fromIndexPath.row)
+        reservas.insert(movedEmoji, at: to.row)
 
     }
     
