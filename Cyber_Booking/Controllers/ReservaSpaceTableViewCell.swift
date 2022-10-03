@@ -32,7 +32,7 @@ class ReservaSpaceTableViewCell: UITableViewCell {
         labelFecha.text = r.booking_start
         // labelEstatus.text = String(r.active)
         
-        if r.active{
+        if r.active == 1{
             labelEstatus.text = "Activa"
             labelEstatus.textColor = myGreen
         }
