@@ -31,6 +31,7 @@
 		6805015C28C04A9500270A07 /* ReservarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6805015B28C04A9500270A07 /* ReservarViewController.swift */; };
 		6815F04A28EA0FFF00A9DE41 /* RservacionesSwTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815F04928EA0FFF00A9DE41 /* RservacionesSwTableViewController.swift */; };
 		6815F04C28EA13C300A9DE41 /* ResvSwTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815F04B28EA13C300A9DE41 /* ResvSwTableViewCell.swift */; };
+		6815F04E28EA373300A9DE41 /* ResvSwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815F04D28EA373300A9DE41 /* ResvSwController.swift */; };
 		D930242128C1B9750006A168 /* confirmationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D930242028C1B9750006A168 /* confirmationController.swift */; };
 		D944992928EA452D0000E186 /* ReservasHardwareTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944992828EA452D0000E186 /* ReservasHardwareTableViewController.swift */; };
 		D944992B28EA46130000E186 /* ReservacionesHardwareTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944992A28EA46130000E186 /* ReservacionesHardwareTableViewCell.swift */; };
@@ -63,6 +64,7 @@
 		6805015B28C04A9500270A07 /* ReservarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservarViewController.swift; sourceTree = "<group>"; };
 		6815F04928EA0FFF00A9DE41 /* RservacionesSwTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RservacionesSwTableViewController.swift; sourceTree = "<group>"; };
 		6815F04B28EA13C300A9DE41 /* ResvSwTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResvSwTableViewCell.swift; sourceTree = "<group>"; };
+		6815F04D28EA373300A9DE41 /* ResvSwController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResvSwController.swift; sourceTree = "<group>"; };
 		D930242028C1B9750006A168 /* confirmationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmationController.swift; sourceTree = "<group>"; };
 		D944992828EA452D0000E186 /* ReservasHardwareTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservasHardwareTableViewController.swift; sourceTree = "<group>"; };
 		D944992A28EA46130000E186 /* ReservacionesHardwareTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservacionesHardwareTableViewCell.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				3A29182628E69ACC0083585E /* ReservaSpaceTableViewCell.swift */,
 				6815F04928EA0FFF00A9DE41 /* RservacionesSwTableViewController.swift */,
 				6815F04B28EA13C300A9DE41 /* ResvSwTableViewCell.swift */,
+				6815F04D28EA373300A9DE41 /* ResvSwController.swift */,
 				D944992828EA452D0000E186 /* ReservasHardwareTableViewController.swift */,
 				D944992A28EA46130000E186 /* ReservacionesHardwareTableViewCell.swift */,
 			);
@@ -241,6 +244,7 @@
 				6805015628C0428700270A07 /* AprenderMasViewController.swift in Sources */,
 				3A45F33C28B7F45200A7B1AC /* SceneDelegate.swift in Sources */,
 				3AD196F128E5F288003CE871 /* ReserveSpace.swift in Sources */,
+				6815F04E28EA373300A9DE41 /* ResvSwController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

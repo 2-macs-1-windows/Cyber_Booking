@@ -17,7 +17,7 @@ class ResvSwTableViewCell: UITableViewCell {
     
     func update(r:ReserveSw){
         icon.text = "💾"
-        service.text = String(r.serviceId)
+        service.text = r.serviceId
         bookinS.text = r.booking_start
         BookingE.text = r.booking_end
     }

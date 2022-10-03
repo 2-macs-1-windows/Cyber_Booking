@@ -16,6 +16,8 @@ class ReservasHistorialTableViewController: UITableViewController {
 
     // DATA SOURCE
     // se inicializan las reservas
+    //var reservasHw = ReserveHw.listaReserveHw()
+    //var reservasSw = ReserveSw.listaReserveSw()
     var reservasSpaces = ReserveSpace.listaReserveSpace()
     
     
@@ -44,17 +46,17 @@ class ReservasHistorialTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "zelda", for: indexPath) as! ReservaSpaceTableViewCell
-        
+
         // Configure the cell...
         let indice = indexPath.row
         let reserva = reservasSpaces[indice]
         cell.update(r: reserva)
-        
+
         cell.showsReorderControl = true
-        
+
         return cell
     }
-    
+
     @IBAction func editButtonTapped(_ sender: UIBarButtonItem) {
         let tableViewEditingMode = tableView.isEditing
             tableView.setEditing(!tableViewEditingMode, animated: true)
@@ -63,7 +65,7 @@ class ReservasHistorialTableViewController: UITableViewController {
         let movedEmoji = reservasSpaces.remove(at: fromIndexPath.row)
         reservasSpaces.insert(movedEmoji, at: to.row)
     }
-    
+
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
