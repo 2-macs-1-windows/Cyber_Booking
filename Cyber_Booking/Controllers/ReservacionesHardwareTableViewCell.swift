@@ -31,7 +31,7 @@ class ReservacionesHardwareTableViewCell: UITableViewCell {
         nombreLabel.text = r.serviceId
         fechaEndLabel.text = r.booking_end
         
-        if r.active{
+        if r.active == 1{
             statusLabel.text = "Activa"
             statusLabel.textColor = myGreen
         }

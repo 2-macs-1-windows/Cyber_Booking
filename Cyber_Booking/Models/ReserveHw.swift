@@ -9,18 +9,20 @@ import Foundation
 
 // Estructura de información de ReservaHardware
 
-struct ReserveHw {
+struct ReserveHw:Codable {
     var id: Int
     var userId: Int
     var serviceId: String
     var created_at: String
     var booking_start: String
     var booking_end: String
-    var active: Bool
+    var active: Int
 }
 
 // Funciones de la clase User
+typealias ReservasHw = [ReserveHw]
 
+/*
 extension ReserveHw {
     static func listaReserveHw()->[ReserveHw] {
         return
@@ -29,4 +31,4 @@ extension ReserveHw {
              ReserveHw(id: 2, userId: 1, serviceId: "iPod 6", created_at: "Oct 30, 2022", booking_start: "Oct 30, 2022", booking_end: "Nov 2, 2022", active: true),
                 ]
     }
-}
+} */

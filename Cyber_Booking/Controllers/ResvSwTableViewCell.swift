@@ -32,7 +32,7 @@ class ResvSwTableViewCell: UITableViewCell {
         service.text = r.serviceId
         bookinS.text = r.booking_end
 
-        if r.active{
+        if r.active == 1{
             BookingE.text = "Activa"
             BookingE.textColor = myGreen
         }
