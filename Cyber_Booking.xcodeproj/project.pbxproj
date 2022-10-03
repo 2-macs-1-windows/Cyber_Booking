@@ -18,6 +18,7 @@
 		3A45F34628B7F45400A7B1AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A45F34428B7F45400A7B1AC /* LaunchScreen.storyboard */; };
 		3A6F848128EA9060006EDD30 /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6F848028EA9060006EDD30 /* Space.swift */; };
 		3A6F848528EA9DFB006EDD30 /* Software.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6F848428EA9DFB006EDD30 /* Software.swift */; };
+		3A6F848728EA9F3F006EDD30 /* Hardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6F848628EA9F3F006EDD30 /* Hardware.swift */; };
 		3AA748E828E53C6B00B1DDE6 /* UsuarioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA748E728E53C6B00B1DDE6 /* UsuarioTableViewController.swift */; };
 		3AB7108028E3B66600479909 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB7107F28E3B66600479909 /* User.swift */; };
 		3AD196EF28E5F0FC003CE871 /* ReserveHw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD196EE28E5F0FC003CE871 /* ReserveHw.swift */; };
@@ -51,6 +52,7 @@
 		3A45F34728B7F45400A7B1AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A6F848028EA9060006EDD30 /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
 		3A6F848428EA9DFB006EDD30 /* Software.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Software.swift; sourceTree = "<group>"; };
+		3A6F848628EA9F3F006EDD30 /* Hardware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hardware.swift; sourceTree = "<group>"; };
 		3AA748E728E53C6B00B1DDE6 /* UsuarioTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioTableViewController.swift; sourceTree = "<group>"; };
 		3AB7107F28E3B66600479909 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3AD196EE28E5F0FC003CE871 /* ReserveHw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveHw.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				3AD196F228E5F405003CE871 /* ReserveSw.swift */,
 				3A6F848028EA9060006EDD30 /* Space.swift */,
 				3A6F848428EA9DFB006EDD30 /* Software.swift */,
+				3A6F848628EA9F3F006EDD30 /* Hardware.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				6805015628C0428700270A07 /* AprenderMasViewController.swift in Sources */,
 				3A45F33C28B7F45200A7B1AC /* SceneDelegate.swift in Sources */,
 				3AD196F128E5F288003CE871 /* ReserveSpace.swift in Sources */,
+				3A6F848728EA9F3F006EDD30 /* Hardware.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,8 +22,7 @@ class ReservarHardwareViewController: UIViewController {
     @IBOutlet weak var fechaFinTextField: UITextField!
     
     // --- lista de opciones ---
-    // FALTA CONECTAR CON DB
-    let hardware = ["Raspberry Pi", "Sensor de distancia", "Arduino"]
+    var hardware = [Hardware]()
     
     // --- PickerViews de las opciones ---
     var hardwarePickerView = UIPickerView()
@@ -57,6 +56,19 @@ class ReservarHardwareViewController: UIViewController {
         // obtener las opciones internamente
         hardwarePickerView.delegate = self
         hardwarePickerView.dataSource = self
+        
+        // hardwares
+        let url = URL(string: "http://127.0.0.1:8000/api/hardware/")
+        
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+              if error == nil {
+            do {
+                self.hardware = try JSONDecoder().decode([Hardware].self, from: data!)
+            } catch {
+                print("Parse error")
+            }
+        }
+        }.resume()
         
         
         // --- Agregar tag a los pickerView ---
@@ -133,7 +145,7 @@ extension ReservarHardwareViewController: UIPickerViewDelegate, UIPickerViewData
     // Obtener las opciones para el pickView
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
-        return hardware[row]
+        return hardware[row].name
         /*
         // va a regresar dependiendo del tag el dato de la lista
         switch pickerView.tag {
@@ -148,7 +160,7 @@ extension ReservarHardwareViewController: UIPickerViewDelegate, UIPickerViewData
     // Que hacer con la opción selecionada
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        hardwareTextField.text = hardware[row]
+        hardwareTextField.text = hardware[row].name
         hardwareTextField.resignFirstResponder()
         
         /*
