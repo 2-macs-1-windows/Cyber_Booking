@@ -17,7 +17,7 @@ class ReservasHistorialTableViewController: UITableViewController {
     // DATA SOURCE
     // se inicializan las reservas
     var reservasHw = ReserveHw.listaReserveHw()
-    var reservasSw = ReserveSw.listaReserveSw()
+    //var reservasSw = ReserveSw.listaReserveSw()
     var reservasSpaces = ReserveSpace.listaReserveSpace()
     
     
@@ -42,7 +42,7 @@ class ReservasHistorialTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         
         // CADA SECCIÓN TENGA # DE RESERVAS POR TIPO
-        var totalReservas = reservasHw.count + reservasSw.count + reservasSpaces.count
+        var totalReservas = reservasHw.count + reservasSpaces.count
         
         return totalReservas
     }
@@ -52,7 +52,7 @@ class ReservasHistorialTableViewController: UITableViewController {
 
         // Configure the cell...
         
-        var content = cell.defaultContentConfiguration()
+        //var content = cell.defaultContentConfiguration()
         // content.text = "\(.name)"
 
 
