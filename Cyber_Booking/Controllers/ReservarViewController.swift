@@ -20,8 +20,6 @@ class ReservarViewController: UIViewController {
     @IBOutlet weak var fechaHoraTextField: UITextField!
     
     // --- lista de opciones ---
-    // FALTA CONECTAR CON DB
-    
     var salones = [Space]()
     let duraciones = ["1 hora", "2 horas", "3 horas", "4 horas"]
     
