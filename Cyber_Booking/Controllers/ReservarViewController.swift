@@ -29,6 +29,22 @@ class ReservarViewController: UIViewController {
     var duracionPickerView = UIPickerView()
     let fechaHoraPicker = UIDatePicker()
     
+    // Botón de reservar
+    @IBAction func didTapButton() {
+        showAlert()
+    }
+    
+    // mostrar alerta
+    func showAlert() {
+        let alert = UIAlertController(title: "Reservación registrada", message: "Se guardo la información de tu reservación", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Hecho", style: .cancel, handler: { action in print("tapped Dismiss")
+            
+        }))
+        
+        present(alert, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

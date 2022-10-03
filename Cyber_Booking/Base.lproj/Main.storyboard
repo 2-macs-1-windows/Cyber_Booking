@@ -286,6 +286,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Reservar">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapButton" destination="tb5-La-ad3" eventType="touchUpInside" id="xu7-yP-Dqf"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccione el salón" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n2x-UD-m5c">
                                 <rect key="frame" x="31" y="244" width="346" height="34"/>
@@ -1608,6 +1611,9 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                 <buttonConfiguration key="configuration" style="filled" title="Reservar">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapButton" destination="M5W-6w-1xx" eventType="touchUpInside" id="QCD-sC-5qD"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccione el salón" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ab8-FP-5Iu">
                                 <rect key="frame" x="31" y="244" width="346" height="34"/>
@@ -1688,6 +1694,9 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                 <buttonConfiguration key="configuration" style="filled" title="Reservar">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapButton" destination="F8i-rK-o53" eventType="touchUpInside" id="1Eb-gi-XlJ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccione el salón" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wvV-g5-ugP">
                                 <rect key="frame" x="31" y="244" width="346" height="34"/>
