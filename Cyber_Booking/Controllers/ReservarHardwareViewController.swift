@@ -40,9 +40,7 @@ class ReservarHardwareViewController: UIViewController {
     func showAlert() {
         let alert = UIAlertController(title: "Reservación registrada", message: "Se guardo la información de tu reservación", preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Hecho", style: .cancel, handler: { action in print("tapped Dismiss")
-            
-        }))
+        alert.addAction(UIAlertAction(title: "Hecho", style: .cancel))
         
         present(alert, animated: true)
     }
