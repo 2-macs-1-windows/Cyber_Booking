@@ -2,14 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db488051-cdae-4a87-b748-aa9b52e11750" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Cyber_Booking/Controllers/ReservaSpaceTableViewCell.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cyber_Booking/Controllers/ReservacionesHardwareTableViewCell.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Cyber_Booking.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cyber_Booking/Controllers/ReservaSpacesController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cyber_Booking/Controllers/ResvHwController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cyber_Booking/Controllers/ResvSwController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cyber_Booking.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Cyber_Booking.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cyber_Booking.xcodeproj/project.xcworkspace/xcuserdata/Estefy.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Cyber_Booking.xcodeproj/project.xcworkspace/xcuserdata/Estefy.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cyber_Booking/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/Cyber_Booking/Base.lproj/Main.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cyber_Booking/Controllers/ReservasHistorialTableViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Cyber_Booking/Controllers/ReservasHardwareTableViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cyber_Booking/Controllers/ReservaSpaceTableViewCell.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Cyber_Booking/Controllers/ReservaSpaceTableViewCell.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cyber_Booking/Controllers/ReservacionesHardwareTableViewCell.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Cyber_Booking/Controllers/ReservacionesHardwareTableViewCell.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cyber_Booking/Controllers/ReservasHardwareTableViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Cyber_Booking/Controllers/ReservasHardwareTableViewController.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cyber_Booking/Controllers/ReservasSpacesTableViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Cyber_Booking/Controllers/ReservasSpacesTableViewController.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cyber_Booking/Controllers/ResvSwTableViewCell.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Cyber_Booking/Controllers/ResvSwTableViewCell.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cyber_Booking/Controllers/RservacionesSwTableViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Cyber_Booking/Controllers/RservacionesSwTableViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cyber_Booking/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Cyber_Booking/Info.plist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cyber_Booking/Models/ReserveHw.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Cyber_Booking/Models/ReserveHw.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cyber_Booking/Models/ReserveSpace.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Cyber_Booking/Models/ReserveSpace.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cyber_Booking/Models/ReserveSw.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Cyber_Booking/Models/ReserveSw.swift" afterDir="false" />
