@@ -9,19 +9,18 @@ import Foundation
 
 // Estructura de información de ReservaSpace
 
-struct ReserveSpace:Codable {
+struct ReserveSpace {
     var id: Int
     var userId: Int
     var nameService: String
     var created_at: String
     var booking_start: String
     var booking_end: String
-    var active: Int
+    var active: Bool
 }
 
-typealias ReservasSpaces = [ReserveSpace]
 // Funciones de la clase User
-/*
+
 extension ReserveSpace {
     static func listaReserveSpace()->[ReserveSpace] {
         return
@@ -30,4 +29,4 @@ extension ReserveSpace {
              ReserveSpace(id: 2, userId: 1, nameService: "Sala de juntas", created_at: "Oct 30, 2022", booking_start: "Oct 30, 2022", booking_end: "Nov 2, 2022", active: false),
                 ]
     }
-} */
+}

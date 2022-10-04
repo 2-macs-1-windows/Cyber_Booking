@@ -535,92 +535,6 @@
             </objects>
             <point key="canvasLocation" x="5516" y="-1029"/>
         </scene>
-        <!--Historial de Hardware-->
-        <scene sceneID="q0p-mh-Roz">
-            <objects>
-                <tableViewController id="sf1-eM-xy8" customClass="ReservasHardwareTableViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="D3g-TM-X1n">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="zeldaHw" rowHeight="80" id="Sfu-IC-f0m" customClass="ReservacionesHardwareTableViewCell" customModule="Cyber_Booking" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="414" height="80"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sfu-IC-f0m" id="X2I-7X-kYk">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="hSa-bk-juS">
-                                            <rect key="frame" x="20" y="7" width="160" height="67"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="📱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mul-Zn-VBE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="67"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="60" id="Qlm-aD-HTE"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="44"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HHU-A2-fdG">
-                                                    <rect key="frame" x="112" y="0.0" width="48" height="67"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrV-Ry-T5K">
-                                                            <rect key="frame" x="0.0" y="0.0" width="48" height="26"/>
-                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VR-r5-PEa">
-                                                            <rect key="frame" x="0.0" y="26" width="48" height="20.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="20.5" id="iyn-qO-hVO"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tii-x0-CaB">
-                                                            <rect key="frame" x="0.0" y="46.5" width="48" height="20.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="20.5" id="95Y-9c-h9X"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="fechaEndLabel" destination="1VR-r5-PEa" id="uPg-9x-d0B"/>
-                                    <outlet property="iconoLabel" destination="mul-Zn-VBE" id="Rhc-DC-r1q"/>
-                                    <outlet property="nombreLabel" destination="QrV-Ry-T5K" id="Csb-MG-Ggl"/>
-                                    <outlet property="statusLabel" destination="Tii-x0-CaB" id="8lu-tU-apI"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="sf1-eM-xy8" id="Vd0-RZ-x4L"/>
-                            <outlet property="delegate" destination="sf1-eM-xy8" id="zvf-dE-Z4w"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Historial de Hardware" id="TV0-3P-l1c">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="AsN-12-idF">
-                            <connections>
-                                <action selector="editButtonTapped:" destination="sf1-eM-xy8" id="W9d-qr-dI8"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Oqw-HP-fzz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5811.594202898551" y="666.96428571428567"/>
-        </scene>
         <!--Historial de espacios-->
         <scene sceneID="9AC-gF-LXX">
             <objects>
@@ -752,9 +666,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Hardware">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="sf1-eM-xy8" kind="show" id="PeQ-1X-h9G"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNn-Mz-SmU">
                                 <rect key="frame" x="20" y="288" width="360" height="54"/>
