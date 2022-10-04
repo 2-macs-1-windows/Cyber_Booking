@@ -23,13 +23,28 @@ class ReservarSoftwareViewController: UIViewController {
     
     // --- lista de opciones ---
     // FALTA CONECTAR CON DB
-    let software = ["Adobe photo", "Packet Tracer", "Andorid Studio"]
+    // let software = ["Adobe photo", "Packet Tracer", "Andorid Studio"]
+    var software = [Software]()
     
     // --- PickerViews de las opciones ---
     var softwarePickerView = UIPickerView()
     
     let fechaInicioPicker = UIDatePicker()
     let fechaFinPicker = UIDatePicker()
+    
+    // Botón de reservar
+    @IBAction func didTapButton() {
+        showAlert()
+    }
+    
+    // mostrar alerta
+    func showAlert() {
+        let alert = UIAlertController(title: "Reservación registrada", message: "Se guardo la información de tu reservación", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Hecho", style: .cancel))
+        
+        present(alert, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +58,19 @@ class ReservarSoftwareViewController: UIViewController {
         // obtener las opciones internamente
         softwarePickerView.delegate = self
         softwarePickerView.dataSource = self
+        
+        // software
+        let url = URL(string: "http://127.0.0.1:8000/api/software/")
+        
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+              if error == nil {
+            do {
+                self.software = try JSONDecoder().decode([Software].self, from: data!)
+            } catch {
+                print("Parse error")
+            }
+        }
+        }.resume()
         
         
         // --- Agregar tag a los pickerView ---
@@ -119,7 +147,7 @@ extension ReservarSoftwareViewController: UIPickerViewDelegate, UIPickerViewData
     // Obtener las opciones para el pickView
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
-        return software[row]
+        return software[row].name
         /*
         // va a regresar dependiendo del tag el dato de la lista
         switch pickerView.tag {
@@ -134,7 +162,7 @@ extension ReservarSoftwareViewController: UIPickerViewDelegate, UIPickerViewData
     // Que hacer con la opción selecionada
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        softwareTextField.text = software[row]
+        softwareTextField.text = software[row].name
         softwareTextField.resignFirstResponder()
         
         /*
