@@ -15,6 +15,10 @@
 		3A45F34128B7F45200A7B1AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A45F33F28B7F45200A7B1AC /* Main.storyboard */; };
 		3A45F34328B7F45400A7B1AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A45F34228B7F45400A7B1AC /* Assets.xcassets */; };
 		3A45F34628B7F45400A7B1AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A45F34428B7F45400A7B1AC /* LaunchScreen.storyboard */; };
+		3A68F0F328ECDB4C001B0D75 /* ReservarHardwareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A68F0F228ECDB4C001B0D75 /* ReservarHardwareViewController.swift */; };
+		3A68F0F528ECDC58001B0D75 /* Hardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A68F0F428ECDC58001B0D75 /* Hardware.swift */; };
+		3A68F0F728ECDC72001B0D75 /* Software.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A68F0F628ECDC72001B0D75 /* Software.swift */; };
+		3A68F0F928ECDC91001B0D75 /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A68F0F828ECDC91001B0D75 /* Space.swift */; };
 		3AA748E828E53C6B00B1DDE6 /* UsuarioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA748E728E53C6B00B1DDE6 /* UsuarioTableViewController.swift */; };
 		3AB7108028E3B66600479909 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB7107F28E3B66600479909 /* User.swift */; };
 		3AD196EF28E5F0FC003CE871 /* ReserveHw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD196EE28E5F0FC003CE871 /* ReserveHw.swift */; };
@@ -50,6 +54,10 @@
 		3A45F34228B7F45400A7B1AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A45F34528B7F45400A7B1AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A45F34728B7F45400A7B1AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A68F0F228ECDB4C001B0D75 /* ReservarHardwareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservarHardwareViewController.swift; sourceTree = "<group>"; };
+		3A68F0F428ECDC58001B0D75 /* Hardware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hardware.swift; sourceTree = "<group>"; };
+		3A68F0F628ECDC72001B0D75 /* Software.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Software.swift; sourceTree = "<group>"; };
+		3A68F0F828ECDC91001B0D75 /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
 		3AA748E728E53C6B00B1DDE6 /* UsuarioTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioTableViewController.swift; sourceTree = "<group>"; };
 		3AB7107F28E3B66600479909 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3AD196EE28E5F0FC003CE871 /* ReserveHw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveHw.swift; sourceTree = "<group>"; };
@@ -123,6 +131,9 @@
 				3AD196EE28E5F0FC003CE871 /* ReserveHw.swift */,
 				3AD196F028E5F288003CE871 /* ReserveSpace.swift */,
 				3AD196F228E5F405003CE871 /* ReserveSw.swift */,
+				3A68F0F428ECDC58001B0D75 /* Hardware.swift */,
+				3A68F0F628ECDC72001B0D75 /* Software.swift */,
+				3A68F0F828ECDC91001B0D75 /* Space.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -151,6 +162,7 @@
 				D944992828EA452D0000E186 /* ReservasHardwareTableViewController.swift */,
 				D944992A28EA46130000E186 /* ReservacionesHardwareTableViewCell.swift */,
 				680BE6DB28EB8D1D00646BD7 /* ReservaSpacesController.swift */,
+				3A68F0F228ECDB4C001B0D75 /* ReservarHardwareViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -228,9 +240,12 @@
 			files = (
 				680BE6DA28EB885200646BD7 /* ResvHwController.swift in Sources */,
 				3A45F33E28B7F45200A7B1AC /* ViewController.swift in Sources */,
+				3A68F0F328ECDB4C001B0D75 /* ReservarHardwareViewController.swift in Sources */,
 				3A45F33A28B7F45200A7B1AC /* AppDelegate.swift in Sources */,
+				3A68F0F928ECDC91001B0D75 /* Space.swift in Sources */,
 				6805015228C03F9A00270A07 /* loginViewController.swift in Sources */,
 				D944992928EA452D0000E186 /* ReservasHardwareTableViewController.swift in Sources */,
+				3A68F0F728ECDC72001B0D75 /* Software.swift in Sources */,
 				3AD196EF28E5F0FC003CE871 /* ReserveHw.swift in Sources */,
 				3AD855CA28DEC7F2001DB2F9 /* OlvidarContraViewController.swift in Sources */,
 				3AA748E828E53C6B00B1DDE6 /* UsuarioTableViewController.swift in Sources */,
@@ -243,6 +258,7 @@
 				3AD196F528E5F846003CE871 /* ReservasSpacesTableViewController.swift in Sources */,
 				D944992B28EA46130000E186 /* ReservacionesHardwareTableViewCell.swift in Sources */,
 				3AB7108028E3B66600479909 /* User.swift in Sources */,
+				3A68F0F528ECDC58001B0D75 /* Hardware.swift in Sources */,
 				6805015828C04A4100270A07 /* ExploreViewController.swift in Sources */,
 				D930242128C1B9750006A168 /* confirmationController.swift in Sources */,
 				6805014E28C00E5000270A07 /* SignUpViewController.swift in Sources */,

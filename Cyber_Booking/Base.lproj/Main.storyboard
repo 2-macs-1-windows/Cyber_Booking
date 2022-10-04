@@ -76,7 +76,7 @@
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <size key="titleShadowOffset" width="3" height="3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Laboratorios">
+                                <buttonConfiguration key="configuration" style="gray" title="🚪 Espacios">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -89,7 +89,7 @@
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <size key="titleShadowOffset" width="3" height="3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Software">
+                                <buttonConfiguration key="configuration" style="gray" title="💾 Software">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -102,9 +102,12 @@
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <size key="titleShadowOffset" width="3" height="3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Equipos electrónicos">
+                                <buttonConfiguration key="configuration" style="gray" title="📟 Equipos electrónicos">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="1C9-SI-wrC" kind="show" id="ze6-kv-q6p"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hola USUARIO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3q6-Ao-9Bp">
                                 <rect key="frame" x="25" y="90" width="325" height="45"/>
@@ -120,14 +123,6 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="laboratoriosIcos" translatesAutoresizingMaskIntoConstraints="NO" id="Sdj-3o-eb1">
-                                <rect key="frame" x="166" y="247" width="83" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="electronicoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="yvO-h9-z2Q">
-                                <rect key="frame" x="142" y="593" width="129" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AyG-tZ-vq0">
                                 <rect key="frame" x="358" y="94" width="35" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -137,10 +132,6 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
                                 </buttonConfiguration>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="softwareIcon" translatesAutoresizingMaskIntoConstraints="NO" id="dQN-Yh-Kr1">
-                                <rect key="frame" x="146" y="419" width="123" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="o9t-Pr-xuR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -295,6 +286,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Reservar">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapButton" destination="tb5-La-ad3" eventType="touchUpInside" id="nm8-lB-lrK"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccione el salón" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n2x-UD-m5c">
                                 <rect key="frame" x="31" y="244" width="346" height="34"/>
@@ -421,7 +415,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7n-4R-eKQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4518.840579710145" y="1453.7946428571429"/>
+            <point key="canvasLocation" x="4825" y="761"/>
         </scene>
         <!--Edit Profile-->
         <scene sceneID="ODW-lB-HNU">
@@ -569,7 +563,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="hSa-bk-juS">
                                             <rect key="frame" x="20" y="7" width="160" height="67"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="📱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mul-Zn-VBE">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="📟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mul-Zn-VBE">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="67"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="Qlm-aD-HTE"/>
@@ -1706,6 +1700,9 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                 <buttonConfiguration key="configuration" style="filled" title="Reservar">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapButton" destination="M5W-6w-1xx" eventType="touchUpInside" id="V3m-Sz-UwE"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccione el salón" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ab8-FP-5Iu">
                                 <rect key="frame" x="31" y="244" width="346" height="34"/>
@@ -1742,6 +1739,89 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
             </objects>
             <point key="canvasLocation" x="3428" y="1444"/>
         </scene>
+        <!--ReservationMenu-->
+        <scene sceneID="Nsw-XG-mAm">
+            <objects>
+                <viewController title="ReservationMenu" id="1C9-SI-wrC" customClass="ReservarHardwareViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JUI-i5-SHt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reservar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRr-Jq-cbi">
+                                <rect key="frame" x="34" y="128" width="346" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hardware" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agC-UI-sYg">
+                                <rect key="frame" x="34" y="201" width="346" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha de inicio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSf-UW-U0W">
+                                <rect key="frame" x="34" y="304" width="346" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha de fin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lcp-fA-xPM">
+                                <rect key="frame" x="34" y="414" width="346" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGj-8m-TEw">
+                                <rect key="frame" x="59" y="557" width="296" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Reservar">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapButton" destination="1C9-SI-wrC" eventType="touchUpInside" id="9L2-HT-1yK"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccione el salón" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qot-kz-x3Y">
+                                <rect key="frame" x="31" y="244" width="346" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccione la fecha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YVT-ic-xym">
+                                <rect key="frame" x="31" y="357" width="346" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccione la fecha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ogA-f1-DLT">
+                                <rect key="frame" x="31" y="458" width="346" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Mpp-Pj-YTs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kWG-0q-vte">
+                        <barButtonItem key="backBarButtonItem" title="Regresar" id="7d4-o1-Ott"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="fechaFinTextField" destination="ogA-f1-DLT" id="zzz-61-dfK"/>
+                        <outlet property="fechaInicioTextField" destination="YVT-ic-xym" id="dKq-Ef-LU9"/>
+                        <outlet property="hardwareTextField" destination="qot-kz-x3Y" id="6dj-1D-6bD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NIM-tx-taH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3428" y="704"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Deloitte" width="1280" height="278.5"/>
@@ -1749,16 +1829,13 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
         <image name="Logo" width="313.5" height="310.5"/>
         <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="door.left.hand.closed" catalog="system" width="108" height="128"/>
-        <image name="electronicoIcon" width="269.5" height="248.5"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="hubImageMain" width="450" height="300"/>
-        <image name="laboratoriosIcos" width="151" height="231"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="softwareIcon" width="241" height="199"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.18799999356269836" blue="0.52899998426437378" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

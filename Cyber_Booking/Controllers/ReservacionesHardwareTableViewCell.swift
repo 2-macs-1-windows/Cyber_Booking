@@ -27,7 +27,7 @@ class ReservacionesHardwareTableViewCell: UITableViewCell {
         alpha:1.0)
     
     func update(r:ReserveHw){
-        iconoLabel.text = "📱"
+        iconoLabel.text = "📟"
         nombreLabel.text = r.serviceId
         fechaEndLabel.text = r.booking_end
         
