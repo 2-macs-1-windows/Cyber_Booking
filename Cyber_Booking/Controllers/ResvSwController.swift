@@ -34,8 +34,18 @@ class ReservaSwController{
             throw ReservaError.decodeError
         }
         
+    }
+    
+    func deleteReserva(registroID:Int) async throws -> Void{
+        let baseString = "http://127.0.0.1:8000/delteHistResvSw/"
         
+        let deleteString = baseString + String(registroID) + "/"
+        let deleteURL = URL(string: deleteString)!
+        var request = URLRequest(url: deleteURL)
+        request.httpMethod = "DELETE"
         
+        let (data, response) = try await URLSession.shared.data(for: request)
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else { throw ReservaError.itemNotFound}
     }
     
 
