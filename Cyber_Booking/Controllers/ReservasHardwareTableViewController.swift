@@ -1,16 +1,16 @@
 //
-//  RservacionesSwTableViewController.swift
+//  ReservasHardwareTableViewController.swift
 //  Cyber_Booking
 //
-//  Created by Victoria Estefania Vazquez Morales on 2/10/22.
+//  Created by user224407 on 10/2/22.
 //
 
 import UIKit
 
-class RservacionesSwTableViewController: UITableViewController {
+class ReservasHardwareTableViewController: UITableViewController {
     
-    var reservaControlador = ReservaSwController()
-    var reservas = ReservasSw()
+    var reservaControlador = ReservaHwController()
+    var reservas = ReservasHw()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +25,9 @@ class RservacionesSwTableViewController: UITableViewController {
             
             
         }
-        
     }
     
-    func updateUI(with reservas:ReservasSw){
+    func updateUI(with reservas:ReservasHw){
         DispatchQueue.main.async {
             self.reservas = reservas
             self.tableView.reloadData()
@@ -56,47 +55,66 @@ class RservacionesSwTableViewController: UITableViewController {
         return reservas.count
     }
 
-    @IBAction func editButtonRSw(_ sender: UIBarButtonItem) {
-        let tableViewEditingMode = tableView.isEditing
-        
-        tableView.setEditing(!tableViewEditingMode,animated:true)
-    }
-    
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        let movedRow = reservas.remove(at: fromIndexPath.row)
-        reservas.insert(movedRow, at: to.row)
-    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ResSwCell", for: indexPath) as! ResvSwTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "zeldaHw", for: indexPath) as! ReservacionesHardwareTableViewCell
 
         // Configure the cell...
         let indice = indexPath.row
-        
         let reserva = reservas[indice]
         cell.update(r: reserva)
-        /*
-        var content = cell.defaultContentConfiguration()
-        content.text = reservas[indice].nombre
-        content.secondaryText = reservas[indice].descripcion
-        cell.contentConfiguration = content */
-        cell.showsReorderControl = true
         
+        cell.showsReorderControl = true
+
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-            return .delete
-        }
+    @IBAction func editButtonTapped(_ sender: UIBarButtonItem) {
+        let tableViewEditingMode = tableView.isEditing
+            tableView.setEditing(!tableViewEditingMode, animated: true)
+        
+    }
     
+    
+
+    
+    // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
             reservas.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
-            
-        }
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }    
     }
+    
+
+    
+    // Override to support rearranging the table view.
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+        let movedEmoji = reservas.remove(at: fromIndexPath.row)
+        reservas.insert(movedEmoji, at: to.row)
+
+    }
+    
+
+    /*
+    // Override to support conditional rearranging of the table view.
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the item to be re-orderable.
+        return true
+    }
+    */
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }
