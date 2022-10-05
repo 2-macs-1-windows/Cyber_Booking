@@ -1240,6 +1240,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                                         <textInputTraits key="textInputTraits" textContentType="tel"/>
                                                         <connections>
                                                             <action selector="textFieldDoneEditingWithSender:" destination="o44-RJ-jr7" eventType="editingDidEndOnExit" id="bXF-hD-0HN"/>
+                                                            <action selector="verificarTel:" destination="o44-RJ-jr7" eventType="editingDidEnd" id="dE9-G9-7X6"/>
                                                         </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teléfono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDr-CL-Phg">
@@ -1269,6 +1270,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                                         <connections>
+                                                            <action selector="checkEmailTextField:" destination="o44-RJ-jr7" eventType="editingDidEnd" id="RDO-Px-8ys"/>
                                                             <action selector="textFieldDoneEditingWithSender:" destination="o44-RJ-jr7" eventType="editingDidEndOnExit" id="5gj-Aj-elh"/>
                                                         </connections>
                                                     </textField>
@@ -1296,8 +1298,10 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresa tu contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X4p-Ym-GHg">
                                                         <rect key="frame" x="8" y="32.5" width="367" height="34"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="Contra"/>
+                                                        <string key="toolTip">Debe tener por lo menos 10 caracteres de longitud, incluir 1 mayúscula, 1 minúscula, 1 número y un caracter especial (#?¿!¡@$ %^&amp;*-_)</string>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="name"/>
                                                         <connections>
                                                             <action selector="textFieldDoneEditingWithSender:" destination="o44-RJ-jr7" eventType="editingDidEndOnExit" id="5Uc-QL-lys"/>
                                                         </connections>
@@ -1326,8 +1330,9 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresa tu contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hpw-aS-Y52">
                                                         <rect key="frame" x="8" y="32.5" width="367" height="34"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="confContra"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="name"/>
                                                         <connections>
                                                             <action selector="textFieldDoneEditingWithSender:" destination="o44-RJ-jr7" eventType="editingDidEndOnExit" id="FkY-1p-YP6"/>
                                                         </connections>
@@ -1388,7 +1393,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                                             <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="19"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <segue destination="JzV-jV-pX4" kind="show" id="t30-uj-BHN"/>
+                                                            <action selector="verificarYmandar:" destination="o44-RJ-jr7" eventType="touchUpInside" id="5cH-TU-IZx"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1431,7 +1436,14 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                     </view>
                     <navigationItem key="navigationItem" id="4om-pf-00R"/>
                     <connections>
+                        <outlet property="aceptaPoliticas" destination="fSe-XP-vOb" id="SUW-Hq-U7o"/>
+                        <outlet property="apellido_U" destination="hcX-jr-LmZ" id="Wng-Y4-6do"/>
+                        <outlet property="correo_U" destination="ck0-pI-ugX" id="LF5-3P-TDN"/>
+                        <outlet property="nombre_U" destination="ChA-Ir-D1C" id="aM6-NF-luG"/>
+                        <outlet property="password_U" destination="X4p-Ym-GHg" id="kT2-jd-fCk"/>
+                        <outlet property="password_U2" destination="hpw-aS-Y52" id="XMB-NT-dV3"/>
                         <outlet property="scrollView" destination="N7L-a6-C22" id="M7j-1S-LGZ"/>
+                        <outlet property="telefono_U" destination="old-Pe-eAC" id="urZ-hV-XBG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P8s-82-Aob" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1441,7 +1453,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
         <!--Verification View Controller-->
         <scene sceneID="Y4q-my-FYu">
             <objects>
-                <viewController id="JzV-jV-pX4" customClass="VerificationViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="verificaCorreo" id="JzV-jV-pX4" customClass="VerificationViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KBo-Uk-KVx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1507,14 +1519,14 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MT9-9m-LSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="531.8840579710145" y="-1028.5714285714284"/>
+            <point key="canvasLocation" x="-819" y="-431"/>
         </scene>
         <!--Confirmation Controller-->
         <scene sceneID="dVg-TZ-MmX">
             <objects>
                 <viewController id="j31-y4-EUC" customClass="confirmationController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cnx-Kb-Ova">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMM-Cj-nSc">
