@@ -8,9 +8,78 @@
 import UIKit
 
 class loginViewController: UIViewController {
+    
+    @IBOutlet weak var correoTextField: UITextField!
+    @IBOutlet weak var passTextField: UITextField!
+    
+    struct logUser:Codable{
+        var correo:String
+        var contra:String
+    }
+    
+    struct answer: Codable {
+        var msg: String
+    }
+    
+    let userListURL = "http://127.0.0.1:8000/getUsuariosApp"
+    let userLog = "http://127.0.0.1:8000/LoginApp"
+    
+    func getTodosUsuarios() async throws->answer{
+        let insertURL = URL(string: userListURL)!
+        var request = URLRequest(url: insertURL)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let jsonEncoder = JSONEncoder()
+        let jsonData = try? jsonEncoder.encode(["email":correoTextField.text])
+        request.httpBody = jsonData
+        let (data, response) = try await URLSession.shared.data(for: request)
 
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else { throw ReservaError.itemNotFound}
+        
+        let jsonDecoder = JSONDecoder()
+        do{
+        
+            let reservas = try jsonDecoder.decode(answer.self, from: data)
+            
+            return reservas
+            
+        }catch let jsonError as NSError{
+            
+            print("JSON decode failed: \(jsonError)")
+            throw ReservaError.decodeError
+        }
+        
+    }
+    
+    func sendLoginData() async throws->answer{
+        let insertURL = URL(string: userLog)!
+        var request = URLRequest(url: insertURL)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let jsonEncoder = JSONEncoder()
+        let jsonData = try? jsonEncoder.encode(logUser(correo: correoTextField.text ?? " ", contra: passTextField.text ?? " "))
+        request.httpBody = jsonData
+        let (data, response) = try await URLSession.shared.data(for: request)
+
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else { throw ReservaError.itemNotFound}
+        
+        let jsonDecoder = JSONDecoder()
+        do{
+        
+            let reservas = try jsonDecoder.decode(answer.self, from: data)
+            
+            return reservas
+            
+        }catch let jsonError as NSError{
+            
+            print("JSON decode failed: \(jsonError)")
+            throw ReservaError.decodeError
+        }
+        
+    }
+    
     // iniciar sesión 
-    @IBAction func Back2Home(_ sender: Any) {
+func Back2Home() {
         let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "mainTabBarController") as! UITabBarController
         
         nextViewController.modalPresentationStyle = .fullScreen
@@ -30,6 +99,69 @@ class loginViewController: UIViewController {
     }
     
 
+    @IBAction func makeLogin(_ sender: UIButton) {
+        
+        if correoTextField.text == "" || passTextField.text == "" {
+            
+            let alert = UIAlertController(title: "Campos vacíos", message: "Favor de llenar todos los campos", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler:  nil))
+            
+            self.present(alert, animated: true, completion: nil)
+            
+            
+        } else {
+            
+            Task{
+                do{
+                    let is_registered = try await getTodosUsuarios()
+                    
+                    print(is_registered.msg)
+                    
+                    if is_registered.msg == "registrado"{
+                        Task{
+                            do{
+                                let is_logIn = try await sendLoginData()
+                                
+                                if is_logIn.msg == "Accesado"{
+                                    Back2Home()
+                                    
+                                } else {
+                                    let alert = UIAlertController(title: "Verifique sus datos", message: "El correo o la contraseña son incorrectos", preferredStyle: .alert)
+                                    
+                                    alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler:  nil))
+                                    
+                                    self.present(alert, animated: true, completion: nil)
+                                }
+                                
+                            }catch let jsonError as NSError{
+                                print("JSON decode failed: \(jsonError)")
+                                let alert = UIAlertController(title: "Error de conexión", message: "No fue posible obtener la lista de usuarios", preferredStyle: .alert)
+                                
+                                alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler:  nil))
+                                
+                                self.present(alert, animated: true, completion: nil)            }
+                        }
+                        
+                    } else {
+                        let alert = UIAlertController(title: "Usuario no registrado", message: "Favor de realizar el registro", preferredStyle: .alert)
+                        
+                        alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler:  nil))
+                        
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                    
+                }catch let jsonError as NSError{
+                    print("JSON decode failed: \(jsonError)")
+                    let alert = UIAlertController(title: "Error de conexión", message: "No fue posible obtener la lista de usuarios", preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler:  nil))
+                    
+                    self.present(alert, animated: true, completion: nil)            }
+            }
+        }
+        
+    }
     /*
     // MARK: - Navigation
 

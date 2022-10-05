@@ -1054,7 +1054,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="Back2Home:" destination="SXI-J3-5Dn" eventType="touchUpInside" id="b7j-i7-LaR"/>
+                                    <action selector="makeLogin:" destination="SXI-J3-5Dn" eventType="touchUpInside" id="dJ0-6j-zPo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pte-AZ-O2u">
@@ -1136,6 +1136,10 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="LPH-rI-Su8"/>
+                    <connections>
+                        <outlet property="correoTextField" destination="w2x-VU-Pab" id="Qnp-g2-syS"/>
+                        <outlet property="passTextField" destination="SQT-Fy-iLt" id="DJg-Tb-WXX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2E-qO-0ml" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
