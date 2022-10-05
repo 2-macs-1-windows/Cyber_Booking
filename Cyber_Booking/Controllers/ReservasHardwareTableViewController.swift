@@ -75,18 +75,32 @@ class ReservasHardwareTableViewController: UITableViewController {
         
     }
     
-    
-
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+            return .delete
+        }
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
         if editingStyle == .delete {
             // Delete the row from the data source
+            
+            Task{
+                do{
+                    let registroEliminar = reservas[indexPath.row].id
+                    try await self.reservaControlador.deleteReserva(registroID: registroEliminar)
+                    // self.updateUI()
+                }catch{
+                    displayError(ReservaError.itemNotFound, title: "No se puede eliminar")
+                }
+            }
+            
             reservas.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            
         } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            
+        }
     }
     
 
