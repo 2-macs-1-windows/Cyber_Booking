@@ -8,7 +8,7 @@
 import Foundation
 
 // Estructura de información del Usuario
-struct User {
+struct User:Codable {
     var name: String
     var last_name: String
     var email: String
