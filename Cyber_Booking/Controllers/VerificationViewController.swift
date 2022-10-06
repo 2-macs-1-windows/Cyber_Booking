@@ -9,10 +9,14 @@ import UIKit
 
 
 class VerificationViewController: UIViewController{
-
+    
     var code2verify:Int = 0
     let sendEmail = "http://127.0.0.1:8000/enviarMail"
+    let baseString = "http://127.0.0.1:8000/registrarUsApp"
+    
     var email:String = " "
+    
+    var user:User = User(name: "", last_name: "", email: "", phone: 1, is_admin: false, is_superadmin: false, password: "12345", verified_email: false, is_Tec: false, date_created: "", is_active: true)
 
     
     @IBOutlet weak var codeTextF: UITextField!
@@ -21,7 +25,7 @@ class VerificationViewController: UIViewController{
         var msg: String
     }
     
-    
+    // Enviar correo con código --------------------------------------
     func enviarCorreo() async throws->answer{
         let insertURL = URL(string: sendEmail)!
         var request = URLRequest(url: insertURL)
@@ -48,6 +52,20 @@ class VerificationViewController: UIViewController{
         }
         
     }
+    
+    // INSERTAR USUARIO --------------------------------------
+    func insertUsuario(nuevousuario:User)async throws->Void{
+        let insertURL = URL(string: baseString)!
+        var request = URLRequest(url: insertURL)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let jsonEncoder = JSONEncoder()
+        let jsonData = try? jsonEncoder.encode(nuevousuario)
+        request.httpBody = jsonData
+        let (data, response) = try await URLSession.shared.data(for: request)
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else { throw ReservaError.itemNotFound}
+    }
+    
     
     // función que cierra el teclado al apretar "intro"
     @IBAction func textFieldDoneEditing(sender:UITextField){
@@ -94,15 +112,34 @@ class VerificationViewController: UIViewController{
         
         
         if String(code2verify) == codeTextF.text && codeTextF.text != ""{
-            let storyboard = UIStoryboard(name:"Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "confView") as UIViewController
-            self.navigationController?.pushViewController(vc, animated: true)
+            
+            Task{
+                do{
+                    
+                    try await insertUsuario(nuevousuario: user)
+                    
+                    let storyboard = UIStoryboard(name:"Main", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "confView") as UIViewController
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    
+                }catch let jsonError as NSError{
+                    print("JSON decode failed: \(jsonError)")
+                    let alert = UIAlertController(title: "Error de conexión", message: "No fue posible obtener la lista de usuarios", preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler:  nil))
+                    
+                    self.present(alert, animated: true, completion: nil)
+                    
+                }
+            }
+            
 
         } else {
             
             let alert = UIAlertController(title: "Verifique en su correo", message: "El código no corresponde", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Hecho", style: .cancel, handler:  nil))
+            self.present(alert, animated: true, completion: nil)
         }
         
     }
