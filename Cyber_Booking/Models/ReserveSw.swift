@@ -16,15 +16,7 @@ struct ReserveSw:Codable {
     var created_at: String
     var booking_start: String
     var booking_end: String
-    var active: Int //Bool ps no sé como decirle al Json decoder que el int lo haga bool
-    
-    /*
-     "user_id": null,
-         "active": false,
-         "booking_end": null,
-         "service_id": null,
-         "booking_start": null
-     */
+    var active: Int 
     
     
     init(service_id:String, booking_start: String, booking_end:String){

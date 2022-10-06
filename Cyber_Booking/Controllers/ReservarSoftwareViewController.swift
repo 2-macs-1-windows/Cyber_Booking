@@ -5,11 +5,6 @@
 //  Created by Sofía Hernandez on 25/09/22.
 //
 
-/*
- TODO
- - Alerta después de apretar el botón
- - Arreglar los pickers
- */
 
 import UIKit
 
@@ -42,8 +37,9 @@ class ReservarSoftwareViewController: UIViewController {
     @IBAction func didTapButton() {
                 
         // nueva reserva
-        var reservaNueva = ReserveSw(service_id: service_id, booking_start: fechaInicio, booking_end: fechaFin)
+        let reservaNueva = ReserveSw(service_id: service_id, booking_start: fechaInicio, booking_end: fechaFin)
         
+        // Insertar la nueva reserva en el servidor
         Task{
             do{
                 try await reservaControlador.insertReserva(nuevareserva: reservaNueva)
@@ -77,7 +73,7 @@ class ReservarSoftwareViewController: UIViewController {
         softwarePickerView.delegate = self
         softwarePickerView.dataSource = self
         
-        // software
+        // Opciones de software desde el servidor
         let url = URL(string: "http://127.0.0.1:8000/api/software/")
         
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
@@ -111,7 +107,7 @@ class ReservarSoftwareViewController: UIViewController {
     
     func createDatepicker() {
         
-        // USAR LOS SWITCH TAL VEZ
+        // Mostrar los Datepicker como calendario y asignar la opción en textField
         fechaInicioPicker.preferredDatePickerStyle = .inline
         fechaInicioTextField.inputView = fechaInicioPicker
         fechaInicioTextField.inputAccessoryView = createToolbar()
@@ -122,7 +118,7 @@ class ReservarSoftwareViewController: UIViewController {
     }
     
     @objc func donePressed() {
-        // formato de la fecha
+        // formato de la fecha para Django
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         
@@ -156,30 +152,13 @@ extension ReservarSoftwareViewController: UIPickerViewDelegate, UIPickerViewData
         
         return software.count
         
-        // va a regresar dependiendo del tag el número de row
-        /*
-        switch pickerView.tag {
-        case 1:
-            return software.count
-        default:
-            return 1
-        }
-         */
     }
     
     // Obtener las opciones para el pickView
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         return software[row].name
-        /*
-        // va a regresar dependiendo del tag el dato de la lista
-        switch pickerView.tag {
-        case 1:
-            return software[row]
-        default:
-            return "Data not found"
-        }
-         */
+
     }
     
     // Que hacer con la opción selecionada
@@ -187,21 +166,13 @@ extension ReservarSoftwareViewController: UIPickerViewDelegate, UIPickerViewData
         
         softwareTextField.text = software[row].name
         
+        // asignar el service_id como el row para la nueva reserva
         service_id = String(row)
         softwareTextField.resignFirstResponder()
         
-        /*
-        // va a regresar dependiendo del tag el dato de la lista
-        switch pickerView.tag {
-        case 1:
-            softwareTextField.text = software[row]
-            softwareTextField.resignFirstResponder()
-        default:
-            return
-        }
-         */
     }
     
+    // Alerta de error
     func displayError(_ error: Error, title: String) {
         DispatchQueue.main.async {
             let alert = UIAlertController(title: title, message: error.localizedDescription, preferredStyle: .alert)
