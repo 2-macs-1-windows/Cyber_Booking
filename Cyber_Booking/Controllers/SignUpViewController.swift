@@ -10,7 +10,13 @@ import UIKit
 class SignUpViewController: UIViewController {
     let baseString = "http://127.0.0.1:8000/registrarUsApp"
     let userListURL = "http://127.0.0.1:8000/getUsuariosApp"
-
+    let sendEmail = "http://127.0.0.1:8000/enviarMail"
+    
+    let code:Int = Int.random(in: 100000..<999999)
+    
+    struct answer: Codable {
+        var msg: String
+    }
     
     // Outlet del ScrollView
     @IBOutlet weak var scrollView: UIScrollView!
@@ -40,17 +46,47 @@ class SignUpViewController: UIViewController {
         registerForKeyboardNotifications()
     }
     
-    func insertUsuario(nuevousuario:User)async throws->Void{
-        let insertURL = URL(string: baseString)!
+    func emailPattern()->Bool{
+        let pat = "^[a-zA-Z0-9]+(?:[.][a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:[.][a-zA-Z0-9]+)*$"
+        
+        if (correo_U.text?.range(of: pat, options: .regularExpression) == nil){
+            
+            return false
+            
+        } else {
+            
+            return true
+        }
+        
+    }
+    
+    func enviarCorreo() async throws->answer{
+        let insertURL = URL(string: sendEmail)!
         var request = URLRequest(url: insertURL)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         let jsonEncoder = JSONEncoder()
-        let jsonData = try? jsonEncoder.encode(nuevousuario)
+        let jsonData = try? jsonEncoder.encode(["email":correo_U.text, "code":String(code)])
         request.httpBody = jsonData
         let (data, response) = try await URLSession.shared.data(for: request)
+
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else { throw ReservaError.itemNotFound}
+        
+        let jsonDecoder = JSONDecoder()
+        do{
+        
+            let reservas = try jsonDecoder.decode(answer.self, from: data)
+            
+            return reservas
+            
+        }catch let jsonError as NSError{
+            
+            print("JSON decode failed: \(jsonError)")
+            throw ReservaError.decodeError
+        }
+        
     }
+    
     
     func getTodosUsuarios() async throws->emailCheck{
         let insertURL = URL(string: userListURL)!
@@ -206,17 +242,38 @@ class SignUpViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler:  nil))
             
             self.present(alert, animated: true, completion: nil)
+        } else if !emailPattern(){
+            let alert = UIAlertController(title: "Correo inválido", message: "Revise la dirección de correo", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler:  nil))
+            
+            self.present(alert, animated: true, completion: nil)
         } else {
             // registrar usuario
             let newUser = User(name: nombre_U.text ?? "no", last_name: apellido_U.text ?? "no", email: correo_U.text ?? "no@no.com", phone: Int(String(telefono_U.text ?? "1111111")) ?? 0, is_admin: false, is_superadmin: false, password: password_U.text ?? "12345", verified_email: false, is_Tec: false, date_created: "", is_active: true)
             
+
             Task{
                 do{
-                    try await insertUsuario(nuevousuario: newUser)
+                    let ans = try await enviarCorreo()
                     
-                    let storyboard = UIStoryboard(name:"Main", bundle: nil)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "verificaCorreo") as UIViewController
-                    self.navigationController?.pushViewController(vc, animated: true)
+                    if ans.msg == "Ended process"{
+                        let storyboard = UIStoryboard(name:"Main", bundle: nil)
+                        let vc = storyboard.instantiateViewController(withIdentifier: "verificaCorreo") as UIViewController
+                        
+                        let siguientePantalla = vc as! VerificationViewController
+                        
+                        siguientePantalla.user = newUser
+                        siguientePantalla.code2verify = code
+                        siguientePantalla.email = correo_U.text ?? " "
+                        
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    } else {
+                        let alert = UIAlertController(title: "Intente de nuevo", message: "No se pudo crear el usuario", preferredStyle: .alert)
+                        
+                        alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler:  nil))
+                    }
+
                     
                 }catch{
                     let alert = UIAlertController(title: "Intente de nuevo", message: "No se pudo crear el usuario", preferredStyle: .alert)
@@ -269,16 +326,16 @@ class SignUpViewController: UIViewController {
     }
     
 
-    
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+
+        
     }
-    */
+     */
 
 }
