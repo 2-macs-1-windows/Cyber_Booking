@@ -1483,7 +1483,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="j31-y4-EUC" kind="show" id="YlF-OT-qB9"/>
+                                    <action selector="sendEmailButtonTappedWithSender:" destination="JzV-jV-pX4" eventType="touchUpInside" id="Khg-bD-cVy"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Verifica tu correo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2AF-7H-MYK">
@@ -1509,12 +1509,18 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                 <buttonConfiguration key="configuration" style="plain" title="Volver a enviar el correo">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="reenviarCodigo:" destination="JzV-jV-pX4" eventType="touchUpInside" id="wEB-Xp-jKx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iaG-at-NaR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ug3-bo-kgf"/>
+                    <connections>
+                        <outlet property="codeTextF" destination="eG8-Dq-Qy9" id="1aM-sP-4vD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MT9-9m-LSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1523,9 +1529,9 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
         <!--Confirmation Controller-->
         <scene sceneID="dVg-TZ-MmX">
             <objects>
-                <viewController id="j31-y4-EUC" customClass="confirmationController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="confView" id="j31-y4-EUC" customClass="confirmationController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cnx-Kb-Ova">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMM-Cj-nSc">
