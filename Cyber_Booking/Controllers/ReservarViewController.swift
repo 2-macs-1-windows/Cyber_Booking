@@ -19,17 +19,20 @@ class ReservarViewController: UIViewController {
     
     // --- TextField outlets ---
     @IBOutlet weak var salonTextField: UITextField!
-    @IBOutlet weak var duracionTextField: UITextField!
-    @IBOutlet weak var fechaHoraTextField: UITextField!
+    @IBOutlet weak var horaFinTextField: UITextField!
+    // @IBOutlet weak var duracionTextField: UITextField!
+    @IBOutlet weak var horaInicioTextField: UITextField!
+    
     
     // --- lista de opciones ---
     var salones = [Space]()
-    let duraciones = ["1 hora", "2 horas", "3 horas", "4 horas"]
+    // let duraciones = ["1 hora", "2 horas", "3 horas", "4 horas"]
     
     // --- PickerViews de las opciones ---
     var salonPickerView = UIPickerView()
-    var duracionPickerView = UIPickerView()
-    let fechaHoraPicker = UIDatePicker()
+    // var duracionPickerView = UIPickerView()
+    let horaInicioPicker = UIDatePicker()
+    let horaFinPicker = UIDatePicker()
     
     // Botón de reservar
     @IBAction func didTapButton() {
@@ -53,14 +56,14 @@ class ReservarViewController: UIViewController {
         
         // tomar las opciones del pickView en el textField visualmente
         salonTextField.inputView = salonPickerView
-        duracionTextField.inputView = duracionPickerView
+        // duracionTextField.inputView = duracionPickerView
         
         // obtener las opciones internamente
         salonPickerView.delegate = self
         salonPickerView.dataSource = self
         
-        duracionPickerView.delegate = self
-        duracionPickerView.dataSource = self
+        // duracionPickerView.delegate = self
+        // duracionPickerView.dataSource = self
         
         // salones
         let url = URL(string: "http://127.0.0.1:8000/api/spaces/")
@@ -77,7 +80,7 @@ class ReservarViewController: UIViewController {
         
         // --- Agregar tag a los pickerView ---
         salonPickerView.tag = 1
-        duracionPickerView.tag = 2
+        // duracionPickerView.tag = 2
     }
 
     // --- Fecha y hora ---
@@ -94,18 +97,58 @@ class ReservarViewController: UIViewController {
     }
     
     func createDatepicker() {
-        fechaHoraPicker.preferredDatePickerStyle = .wheels
-        fechaHoraTextField.inputView = fechaHoraPicker
-        fechaHoraTextField.inputAccessoryView = createToolbar()
+        horaInicioPicker.datePickerMode = .time
+        horaInicioPicker.preferredDatePickerStyle = .wheels
+        horaInicioTextField.inputView = horaInicioPicker
+        horaInicioTextField.inputAccessoryView = createToolbar()
+        
+        horaFinPicker.datePickerMode = .time
+        horaFinPicker.preferredDatePickerStyle = .wheels
+        horaFinTextField.inputView = horaFinPicker
+        horaFinTextField.inputAccessoryView = createToolbar()
+        
+        /*
+         // Mostrar los Datepicker como calendario y asignar la opción en textField
+         fechaInicioPicker.preferredDatePickerStyle = .inline
+         fechaInicioTextField.inputView = fechaInicioPicker
+         fechaInicioTextField.inputAccessoryView = createToolbar()
+         
+         fechaFinPicker.preferredDatePickerStyle = .inline
+         fechaFinTextField.inputView = fechaFinPicker
+         fechaFinTextField.inputAccessoryView = createToolbar()
+         */
     }
     
     @objc func donePressed() {
+        /*
+         // formato de la fecha para Django
+         let dateFormatter = DateFormatter()
+         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+         
+         fechaInicio = dateFormatter.string(from: fechaInicioPicker.date) + "Z"
+         fechaFin = dateFormatter.string(from: fechaFinPicker.date) + "Z"
+         
+         dateFormatter.dateStyle = .medium
+         dateFormatter.timeStyle = .none
+         
+         // USAR LOS SWITCH
+         
+         self.fechaInicioTextField.text = dateFormatter.string(from: fechaInicioPicker.date)
+         self.view.endEditing(true)
+         
+         self.fechaFinTextField.text = dateFormatter.string(from: fechaFinPicker.date)
+         self.view.endEditing(true)
+         */
+        
         // formato de la fecha
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
+        dateFormatter.dateStyle = .none
         dateFormatter.timeStyle = .medium
         
-        self.fechaHoraTextField.text = dateFormatter.string(from: fechaHoraPicker.date)
+        self.horaInicioTextField.text = dateFormatter.string(from: horaInicioPicker.date)
+        self.view.endEditing(true)
+        
+        self.horaFinTextField.text = dateFormatter.string(from: horaFinPicker.date)
         self.view.endEditing(true)
     }
 }
@@ -125,8 +168,8 @@ extension ReservarViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         switch pickerView.tag {
         case 1:
             return salones.count
-        case 2:
-            return duraciones.count
+        // case 2:
+            //return duraciones.count
         default:
             return 1
         }
@@ -139,8 +182,8 @@ extension ReservarViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         switch pickerView.tag {
         case 1:
             return salones[row].name
-        case 2:
-            return duraciones[row]
+        // case 2:
+            // return duraciones[row]
         default:
             return "Data not found"
         }
@@ -154,9 +197,9 @@ extension ReservarViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         case 1:
             salonTextField.text = salones[row].name
             salonTextField.resignFirstResponder()
-        case 2:
-            duracionTextField.text = duraciones[row]
-            duracionTextField.resignFirstResponder()
+        //case 2:
+            //duracionTextField.text = duraciones[row]
+            //duracionTextField.resignFirstResponder()
         default:
             return
         }
