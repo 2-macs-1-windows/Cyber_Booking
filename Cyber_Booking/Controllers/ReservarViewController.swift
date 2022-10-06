@@ -14,6 +14,9 @@ import UIKit
 
 class ReservarViewController: UIViewController {
     
+    // Controladores
+    var reservaControlador = ReservaSpacesController()
+    
     // --- TextField outlets ---
     @IBOutlet weak var salonTextField: UITextField!
     @IBOutlet weak var duracionTextField: UITextField!

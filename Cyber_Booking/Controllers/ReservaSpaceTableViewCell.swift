@@ -28,7 +28,7 @@ class ReservaSpaceTableViewCell: UITableViewCell {
     
     func update(r:ReserveSpace){
         labelIcono.text = "🚪"
-        labelLugar.text = String(r.nameService)
+        labelLugar.text = String(r.service_id)
         labelFecha.text = r.booking_start
         // labelEstatus.text = String(r.active)
         
