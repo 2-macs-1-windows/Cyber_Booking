@@ -167,7 +167,7 @@ extension ReservarSoftwareViewController: UIPickerViewDelegate, UIPickerViewData
         softwareTextField.text = software[row].name
         
         // asignar el service_id como el row para la nueva reserva
-        service_id = String(row)
+        service_id = String(row + 1)
         softwareTextField.resignFirstResponder()
         
     }

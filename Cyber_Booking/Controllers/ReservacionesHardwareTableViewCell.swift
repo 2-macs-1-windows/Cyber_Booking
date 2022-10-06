@@ -28,7 +28,7 @@ class ReservacionesHardwareTableViewCell: UITableViewCell {
     
     func update(r:ReserveHw){
         iconoLabel.text = "📟"
-        nombreLabel.text = r.serviceId
+        nombreLabel.text = r.service_id
         fechaEndLabel.text = r.booking_end
         
         if r.active == 1{
