@@ -36,13 +36,13 @@ class ReservarSoftwareViewController: UIViewController {
     // Para crear nueva reserva
     var fechaInicio = ""
     var fechaFin = ""
-    var serviceId = "1"
+    var service_id = "1"
     
     // Botón de reservar
     @IBAction func didTapButton() {
                 
         // nueva reserva
-        var reservaNueva = ReserveSw(serviceId: serviceId, booking_start: fechaInicio, booking_end: fechaFin)
+        var reservaNueva = ReserveSw(service_id: service_id, booking_start: fechaInicio, booking_end: fechaFin)
         
         Task{
             do{
@@ -186,6 +186,8 @@ extension ReservarSoftwareViewController: UIPickerViewDelegate, UIPickerViewData
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         softwareTextField.text = software[row].name
+        
+        service_id = String(row)
         softwareTextField.resignFirstResponder()
         
         /*

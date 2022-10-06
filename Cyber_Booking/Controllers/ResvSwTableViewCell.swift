@@ -29,7 +29,7 @@ class ResvSwTableViewCell: UITableViewCell {
 
     func update(r:ReserveSw){
         icon.text = "💾"
-        service.text = r.serviceId
+        service.text = r.service_id
         bookinS.text = r.booking_end
 
         if r.active == 1{
