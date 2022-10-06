@@ -107,41 +107,19 @@ class ReservarViewController: UIViewController {
         horaFinTextField.inputView = horaFinPicker
         horaFinTextField.inputAccessoryView = createToolbar()
         
-        /*
-         // Mostrar los Datepicker como calendario y asignar la opción en textField
-         fechaInicioPicker.preferredDatePickerStyle = .inline
-         fechaInicioTextField.inputView = fechaInicioPicker
-         fechaInicioTextField.inputAccessoryView = createToolbar()
-         
-         fechaFinPicker.preferredDatePickerStyle = .inline
-         fechaFinTextField.inputView = fechaFinPicker
-         fechaFinTextField.inputAccessoryView = createToolbar()
-         */
     }
     
     @objc func donePressed() {
-        /*
-         // formato de la fecha para Django
-         let dateFormatter = DateFormatter()
-         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-         
-         fechaInicio = dateFormatter.string(from: fechaInicioPicker.date) + "Z"
-         fechaFin = dateFormatter.string(from: fechaFinPicker.date) + "Z"
-         
-         dateFormatter.dateStyle = .medium
-         dateFormatter.timeStyle = .none
-         
-         // USAR LOS SWITCH
-         
-         self.fechaInicioTextField.text = dateFormatter.string(from: fechaInicioPicker.date)
-         self.view.endEditing(true)
-         
-         self.fechaFinTextField.text = dateFormatter.string(from: fechaFinPicker.date)
-         self.view.endEditing(true)
-         */
+        // TODO formato de la hora :(
         
-        // formato de la fecha
+        // formato de la fecha para Django
         let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        
+        // para crear nueva reserva
+        // fechaInicio = dateFormatter.string(from: horaInicioPicker.date) + "Z"
+        // fechaFin = dateFormatter.string(from: horaFinPicker.date) + "Z"
+        
         dateFormatter.dateStyle = .none
         dateFormatter.timeStyle = .medium
         
@@ -150,6 +128,9 @@ class ReservarViewController: UIViewController {
         
         self.horaFinTextField.text = dateFormatter.string(from: horaFinPicker.date)
         self.view.endEditing(true)
+        
+        print(dateFormatter.string(from: horaInicioPicker.date) + "Z")
+        print(dateFormatter.string(from: horaFinPicker.date) + "Z")
     }
 }
 
