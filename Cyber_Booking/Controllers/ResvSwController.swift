@@ -36,6 +36,39 @@ class ReservaSwController{
         
     }
     
+    /*
+     func insertUsuario(nuevousuario:User)async throws->Void{
+             let insertURL = URL(string: baseString)!
+             var request = URLRequest(url: insertURL)
+             request.httpMethod = "POST"
+             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+             let jsonEncoder = JSONEncoder()
+             let jsonData = try? jsonEncoder.encode(nuevousuario)
+             request.httpBody = jsonData
+             let (data, response) = try await URLSession.shared.data(for: request)
+             guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else { throw ReservaError.itemNotFound}
+         }
+     */
+    
+    func insertReserva(nuevareserva:ReserveSw)async throws->Void{
+        let baseString = "http://127.0.0.1:8000/api/reserveSw/"
+        
+        let insertURL = URL(string: baseString)!
+        var request = URLRequest(url: insertURL)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let jsonEncoder = JSONEncoder()
+        let jsonData = try? jsonEncoder.encode(nuevareserva)
+        
+        print(nuevareserva)
+        request.httpBody = jsonData
+        // Imprimir el cuerpo del JSON
+        let s = String(data: jsonData!, encoding: .utf8)!
+        print(s)
+        let (data, response) = try await URLSession.shared.data(for: request)
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 201 else { throw ReservaError.itemNotFound}
+    }
+    
     func deleteReserva(registroID:Int) async throws -> Void{
         let baseString = "http://127.0.0.1:8000/delteHistResvSw/"
         

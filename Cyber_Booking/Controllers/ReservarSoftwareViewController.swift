@@ -14,6 +14,9 @@
 import UIKit
 
 class ReservarSoftwareViewController: UIViewController {
+    
+    // Controladores
+    var reservaControlador = ReservaSwController()
 
     // --- TextField outlets ---
     @IBOutlet weak var softwareTextField: UITextField!
@@ -22,8 +25,6 @@ class ReservarSoftwareViewController: UIViewController {
     @IBOutlet weak var fechaFinTextField: UITextField!
     
     // --- lista de opciones ---
-    // FALTA CONECTAR CON DB
-    // let software = ["Adobe photo", "Packet Tracer", "Andorid Studio"]
     var software = [Software]()
     
     // --- PickerViews de las opciones ---
@@ -32,9 +33,26 @@ class ReservarSoftwareViewController: UIViewController {
     let fechaInicioPicker = UIDatePicker()
     let fechaFinPicker = UIDatePicker()
     
+    // Para crear nueva reserva
+    var fechaInicio = ""
+    var fechaFin = ""
+    var serviceId = "1"
+    
     // Botón de reservar
     @IBAction func didTapButton() {
-        showAlert()
+                
+        // nueva reserva
+        var reservaNueva = ReserveSw(serviceId: serviceId, booking_start: fechaInicio, booking_end: fechaFin)
+        
+        Task{
+            do{
+                try await reservaControlador.insertReserva(nuevareserva: reservaNueva)
+                // self.updateUI()
+                showAlert()
+            }catch{
+                displayError(ReservaError.itemNotFound, title: "No se puede insertar la reserva")
+            }
+        }
     }
     
     // mostrar alerta
@@ -94,11 +112,11 @@ class ReservarSoftwareViewController: UIViewController {
     func createDatepicker() {
         
         // USAR LOS SWITCH TAL VEZ
-        fechaInicioPicker.preferredDatePickerStyle = .wheels
+        fechaInicioPicker.preferredDatePickerStyle = .inline
         fechaInicioTextField.inputView = fechaInicioPicker
         fechaInicioTextField.inputAccessoryView = createToolbar()
         
-        fechaFinPicker.preferredDatePickerStyle = .wheels
+        fechaFinPicker.preferredDatePickerStyle = .inline
         fechaFinTextField.inputView = fechaFinPicker
         fechaFinTextField.inputAccessoryView = createToolbar()
     }
@@ -106,6 +124,11 @@ class ReservarSoftwareViewController: UIViewController {
     @objc func donePressed() {
         // formato de la fecha
         let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        
+        fechaInicio = dateFormatter.string(from: fechaInicioPicker.date) + "Z"
+        fechaFin = dateFormatter.string(from: fechaFinPicker.date) + "Z"
+        
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         
@@ -175,5 +198,13 @@ extension ReservarSoftwareViewController: UIPickerViewDelegate, UIPickerViewData
             return
         }
          */
+    }
+    
+    func displayError(_ error: Error, title: String) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: error.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }
