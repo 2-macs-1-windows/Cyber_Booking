@@ -9,8 +9,6 @@ import UIKit
 
 class ReservasHardwareTableViewController: UITableViewController {
     
-    var userId:Int = 0
-    
     var reservaControlador = ReservaHwController()
     var reservas = ReservasHw()
     

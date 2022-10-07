@@ -13,7 +13,9 @@
 import UIKit
 
 class ReservarViewController: UIViewController {
-    var userId:Int = 0
+    
+    // Sacar el id del usuario como appDelegate.user_id
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     // Controladores
     var reservaControlador = ReservaSpacesController()

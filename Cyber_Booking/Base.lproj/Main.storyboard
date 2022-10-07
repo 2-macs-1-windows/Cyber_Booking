@@ -465,6 +465,9 @@
                                 <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="door.left.hand.closed" catalog="system"/>
+                                <connections>
+                                    <action selector="logoutFunc:" destination="wKd-ea-jrt" eventType="touchUpInside" id="wKS-4a-p90"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tu perfil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyL-WS-sFn">
                                 <rect key="frame" x="27" y="98" width="206" height="36"/>

@@ -8,7 +8,9 @@
 import UIKit
 
 class PerfilViewController: UIViewController {
-    var userId:Int = 0
+    
+    // Sacar el id del usuario como appDelegate.user_id 
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +19,11 @@ class PerfilViewController: UIViewController {
     }
     
 
+    @IBAction func logoutFunc(_ sender: Any) {
+        
+    }
+    
+    
     /*
     // MARK: - Navigation
 
