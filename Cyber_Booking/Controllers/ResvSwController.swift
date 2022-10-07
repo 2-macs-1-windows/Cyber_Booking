@@ -54,6 +54,9 @@ class ReservaSwController{
         let s = String(data: jsonData!, encoding: .utf8)!
         print(s)
         let (data, response) = try await URLSession.shared.data(for: request)
+        let sData = String(data: data, encoding: .utf8)!
+        print(sData)
+        print(response)
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 201 else { throw ReservaError.itemNotFound}
     }
     
