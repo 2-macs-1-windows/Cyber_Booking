@@ -1105,7 +1105,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                 <rect key="frame" x="38" y="409" width="339" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" textContentType="email"/>
                                 <connections>
                                     <action selector="textFieldDoneEditingWithSender:" destination="SXI-J3-5Dn" eventType="editingDidEndOnExit" id="WU6-Sx-2cg"/>
                                 </connections>
