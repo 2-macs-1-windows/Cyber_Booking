@@ -542,6 +542,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="y2U-3e-Gue"/>
+                    <connections>
+                        <outlet property="numEspacios" destination="4wa-Cd-dur" id="ukn-Hd-M8c"/>
+                        <outlet property="numHw" destination="4sv-lZ-5T0" id="OJO-a5-fLm"/>
+                        <outlet property="numSw" destination="bdt-41-Swc" id="99g-7x-BCw"/>
+                        <outlet property="userName" destination="Zjf-Tz-Wm5" id="SAF-zs-j3H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAo-5g-yDH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,8 +9,49 @@ import UIKit
 
 class PerfilViewController: UIViewController {
     
-    // Sacar el id del usuario como appDelegate.user_id 
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    // Textos
+        @IBOutlet weak var userName: UILabel!
+        
+        @IBOutlet weak var numEspacios: UILabel!
+        @IBOutlet weak var numHw: UILabel!
+        @IBOutlet weak var numSw: UILabel!
+        
+        // Sacar el id del usuario como appDelegate.user_id
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        // Estructura para guardar el nombre del usuario
+        struct UserData:Codable {
+            var name: String
+            var numReserveHw: Int
+            var numReserveSw: Int
+            var numReserveSpace: Int
+        }
+        
+         // Obtener el usuario
+         func fetchUsuario() async throws->UserData{
+             
+             let urlString = "http://127.0.0.1:8000/userData?id=\(await appDelegate.user_id)"
+             let baseURL = URL(string: urlString)!
+             
+             let (data, response) = try await URLSession.shared.data(from: baseURL)
+
+             guard let httpResponse = response as? HTTPURLResponse,
+                   httpResponse.statusCode == 200 else {
+             
+                 throw ReservaError.itemNotFound
+             }
+             let jsonDecoder = JSONDecoder()
+             do{
+             
+                 let usuarioData = try jsonDecoder.decode(UserData.self, from: data)
+                 print(usuarioData)
+                 return usuarioData
+             }catch let jsonError as NSError{
+                 print("JSON decode failed: \(jsonError)")
+                 throw ReservaError.decodeError
+             }
+             
+         }
     
     let userLog = "http://127.0.0.1:8000/logoutApp"
     
@@ -47,9 +88,26 @@ class PerfilViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        
+        Task {
+            do {
+                let usuario = try await fetchUsuario()
+                
+                userName.text = usuario.name
+                numEspacios.text = String(usuario.numReserveSpace)
+                numHw.text = String(usuario.numReserveHw)
+                numSw.text = String(usuario.numReserveSw)
+                
+            } catch {
+                print(error)
+            }
+        }
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+
     }
     
 
