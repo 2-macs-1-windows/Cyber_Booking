@@ -245,7 +245,7 @@
         <!--ReservationMenu-->
         <scene sceneID="chx-Gw-o2z">
             <objects>
-                <viewController title="ReservationMenu" id="tb5-La-ad3" customClass="ReservarViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReserveSpace" title="ReservationMenu" id="tb5-La-ad3" customClass="ReservarViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S1e-4d-VwT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -420,7 +420,7 @@
         <!--Edit Profile-->
         <scene sceneID="ODW-lB-HNU">
             <objects>
-                <viewController title="Edit Profile" id="1Dv-vv-t6E" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="editProfileView" title="Edit Profile" id="1Dv-vv-t6E" customClass="EditarPerfilViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TOp-5V-KYs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -442,7 +442,7 @@
         <!--ProfilePage-->
         <scene sceneID="XaK-Dz-XTF">
             <objects>
-                <viewController title="ProfilePage" id="wKd-ea-jrt" customClass="PerfilViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="perfilView" title="ProfilePage" id="wKd-ea-jrt" customClass="PerfilViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qsc-JI-J8q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -547,7 +547,7 @@
         <!--Historial de Hardware-->
         <scene sceneID="q0p-mh-Roz">
             <objects>
-                <tableViewController id="sf1-eM-xy8" customClass="ReservasHardwareTableViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="historialHw" id="sf1-eM-xy8" customClass="ReservasHardwareTableViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="D3g-TM-X1n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -633,7 +633,7 @@
         <!--Historial de espacios-->
         <scene sceneID="9AC-gF-LXX">
             <objects>
-                <tableViewController id="dFx-PN-ZH8" customClass="ReservasHistorialTableViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="historialEspacios" id="dFx-PN-ZH8" customClass="ReservasHistorialTableViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="PnB-HH-g9v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1524,7 +1524,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MT9-9m-LSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-819" y="-431"/>
+            <point key="canvasLocation" x="-830" y="-413"/>
         </scene>
         <!--Confirmation Controller-->
         <scene sceneID="dVg-TZ-MmX">
@@ -1682,7 +1682,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
         <!--ReservationMenu-->
         <scene sceneID="UgD-gl-dPu">
             <objects>
-                <viewController title="ReservationMenu" id="M5W-6w-1xx" customClass="ReservarSoftwareViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReserveSw" title="ReservationMenu" id="M5W-6w-1xx" customClass="ReservarSoftwareViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dlq-CD-bJA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1765,7 +1765,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
         <!--ReservationMenu-->
         <scene sceneID="Nsw-XG-mAm">
             <objects>
-                <viewController title="ReservationMenu" id="1C9-SI-wrC" customClass="ReservarHardwareViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="reserveHw" title="ReservationMenu" id="1C9-SI-wrC" customClass="ReservarHardwareViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JUI-i5-SHt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -9,7 +9,8 @@
 import UIKit
 
 class ReservarHardwareViewController: UIViewController {
-
+    var userId:Int = 0
+    
     // Controladores
     var reservaControlador = ReservaHwController()
     

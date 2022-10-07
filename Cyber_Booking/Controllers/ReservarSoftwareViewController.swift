@@ -9,6 +9,7 @@
 import UIKit
 
 class ReservarSoftwareViewController: UIViewController {
+    var userId:Int = 0
     
     // Controladores
     var reservaControlador = ReservaSwController()

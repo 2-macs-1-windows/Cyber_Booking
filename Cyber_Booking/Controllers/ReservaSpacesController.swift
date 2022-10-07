@@ -6,12 +6,17 @@
 //
 
 import Foundation
+import UIKit
 
 class ReservaSpacesController{
-    let baseURL = URL(string: "http://127.0.0.1:8000/resvSp")!
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     // Obtener las reservas
     func fetchReservas() async throws->ReservasSpaces{
+        let urlString = "http://127.0.0.1:8000/resvSp?user_id=\(await appDelegate.user_id)"
+        let baseURL = URL(string: urlString)!
+        
         let (data, response) = try await URLSession.shared.data(from: baseURL)
 
         guard let httpResponse = response as? HTTPURLResponse,

@@ -13,6 +13,8 @@ class loginViewController: UIViewController {
     @IBOutlet weak var correoTextField: UITextField!
     @IBOutlet weak var passTextField: UITextField!
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     struct logUser:Codable{
         var correo:String
         var contra:String
@@ -20,6 +22,7 @@ class loginViewController: UIViewController {
     
     struct answer: Codable {
         var msg: String
+        var id: Int?
     }
     
     let userListURL = "http://127.0.0.1:8000/getUsuariosApp"
@@ -69,7 +72,7 @@ class loginViewController: UIViewController {
         do{
         
             let reservas = try jsonDecoder.decode(answer.self, from: data)
-            
+            print(reservas.id ?? -1)
             return reservas
             
         }catch let jsonError as NSError{
@@ -81,12 +84,14 @@ class loginViewController: UIViewController {
     }
     
     // iniciar sesión 
-func Back2Home() {
+    func Back2Home() {
         let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "mainTabBarController") as! UITabBarController
         
         nextViewController.modalPresentationStyle = .fullScreen
         // self es la vista 1, sobre ella presenta "siguienteVista"
+    
         self.present(nextViewController, animated:true, completion:nil)
+        
     }
     
     // función que cierra el teclado al apretar "intro"
@@ -126,6 +131,8 @@ func Back2Home() {
                                 let is_logIn = try await sendLoginData()
                                 
                                 if is_logIn.msg == "Accesado"{
+                                    
+                                    appDelegate.user_id = is_logIn.id ?? -1
                                     
                                     Back2Home()
                                     

@@ -16,6 +16,8 @@ class VerificationViewController: UIViewController{
     
     var email:String = " "
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     var user:User = User(name: "", last_name: "", email: "", phone: 1, is_admin: false, is_superadmin: false, password: "12345", verified_email: false, is_Tec: false, date_created: "", is_active: true)
 
     
@@ -23,6 +25,7 @@ class VerificationViewController: UIViewController{
     
     struct answer: Codable {
         var msg: String
+        var id: Int?
     }
     
     // Enviar correo con código --------------------------------------
@@ -54,7 +57,7 @@ class VerificationViewController: UIViewController{
     }
     
     // INSERTAR USUARIO --------------------------------------
-    func insertUsuario(nuevousuario:User)async throws->Void{
+    func insertUsuario(nuevousuario:User)async throws->answer{
         let insertURL = URL(string: baseString)!
         var request = URLRequest(url: insertURL)
         request.httpMethod = "POST"
@@ -64,6 +67,19 @@ class VerificationViewController: UIViewController{
         request.httpBody = jsonData
         let (data, response) = try await URLSession.shared.data(for: request)
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else { throw ReservaError.itemNotFound}
+        
+        let jsonDecoder = JSONDecoder()
+        do{
+        
+            let reservas = try jsonDecoder.decode(answer.self, from: data)
+            
+            return reservas
+            
+        }catch let jsonError as NSError{
+            
+            print("JSON decode failed: \(jsonError)")
+            throw ReservaError.decodeError
+        }
     }
     
     
@@ -116,7 +132,9 @@ class VerificationViewController: UIViewController{
             Task{
                 do{
                     
-                    try await insertUsuario(nuevousuario: user)
+                    let response = try await insertUsuario(nuevousuario: user)
+                    
+                    appDelegate.user_id = response.id ?? -1
                     
                     let storyboard = UIStoryboard(name:"Main", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "confView") as UIViewController

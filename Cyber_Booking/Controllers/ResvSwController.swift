@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum ReservaError:Error, LocalizedError{
     case itemNotFound
@@ -13,10 +14,15 @@ enum ReservaError:Error, LocalizedError{
 }
 
 class ReservaSwController{
-    let baseURL = URL(string: "http://127.0.0.1:8000/resvSw")!
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     // Obtener todas las reservas
     func fetchReservas() async throws->ReservasSw{
+        let urlString = "http://127.0.0.1:8000/resvSw?user_id=\(await appDelegate.user_id)"
+        
+        let baseURL = URL(string: urlString)!
+        
         let (data, response) = try await URLSession.shared.data(from: baseURL)
 
         guard let httpResponse = response as? HTTPURLResponse,

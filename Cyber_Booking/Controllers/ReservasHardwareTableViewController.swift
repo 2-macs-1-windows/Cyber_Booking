@@ -9,6 +9,8 @@ import UIKit
 
 class ReservasHardwareTableViewController: UITableViewController {
     
+    var userId:Int = 0
+    
     var reservaControlador = ReservaHwController()
     var reservas = ReservasHw()
     
@@ -19,6 +21,15 @@ class ReservasHardwareTableViewController: UITableViewController {
             do{
                 let reservas = try await reservaControlador.fetchReservas()
                 updateUI(with: reservas)
+                
+                if reservas.isEmpty{
+                    let alert = UIAlertController(title: "Sin reservas", message: "Aún no ha realizado ninguna reservación", preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler:  nil))
+                    
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
             }catch{
                 displayError(ReservaError.itemNotFound, title: "No se pudo acceder a las reservas")
             }

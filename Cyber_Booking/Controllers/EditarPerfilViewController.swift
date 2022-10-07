@@ -1,13 +1,14 @@
 //
-//  PerfilViewController.swift
+//  EditarPerfilViewController.swift
 //  Cyber_Booking
 //
-//  Created by Victoria Estefania Vazquez Morales on 31/8/22.
+//  Created by Victoria Estefania Vazquez Morales on 6/10/22.
 //
 
 import UIKit
 
-class PerfilViewController: UIViewController {
+class EditarPerfilViewController: UIViewController {
+    
     var userId:Int = 0
     
     override func viewDidLoad() {
