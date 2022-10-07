@@ -34,9 +34,26 @@ class ReservarViewController: UIViewController {
     let horaInicioPicker = UIDatePicker()
     let horaFinPicker = UIDatePicker()
     
+    // para crear nueva reserva
+    var horaInicio = ""
+    var horaFin = ""
+    var service_id = "1"
+    
     // Botón de reservar
     @IBAction func didTapButton() {
-        showAlert()
+        // nueva reserva
+        let reservaNueva = ReserveSpace(service_id: service_id, booking_start: horaInicio, booking_end: horaFin)
+        
+        // Insertar la nueva reserva en el servidor
+        Task{
+            do{
+                try await reservaControlador.insertReserva(nuevareserva: reservaNueva)
+                // self.updateUI()
+                showAlert()
+            }catch{
+                displayError(ReservaError.itemNotFound, title: "No se puede insertar la reserva")
+            }
+        }
     }
     
     // mostrar alerta
@@ -117,8 +134,11 @@ class ReservarViewController: UIViewController {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         
         // para crear nueva reserva
-        // fechaInicio = dateFormatter.string(from: horaInicioPicker.date) + "Z"
-        // fechaFin = dateFormatter.string(from: horaFinPicker.date) + "Z"
+        horaInicio = dateFormatter.string(from: horaInicioPicker.date) + "Z"
+        horaFin = dateFormatter.string(from: horaFinPicker.date) + "Z"
+        
+        // print(dateFormatter.string(from: horaInicioPicker.date) + "Z")
+        // print(dateFormatter.string(from: horaFinPicker.date) + "Z")
         
         dateFormatter.dateStyle = .none
         dateFormatter.timeStyle = .medium
@@ -129,8 +149,6 @@ class ReservarViewController: UIViewController {
         self.horaFinTextField.text = dateFormatter.string(from: horaFinPicker.date)
         self.view.endEditing(true)
         
-        print(dateFormatter.string(from: horaInicioPicker.date) + "Z")
-        print(dateFormatter.string(from: horaFinPicker.date) + "Z")
     }
 }
 
@@ -177,12 +195,23 @@ extension ReservarViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         switch pickerView.tag {
         case 1:
             salonTextField.text = salones[row].name
+            
+            service_id = String(row + 1)
             salonTextField.resignFirstResponder()
         //case 2:
             //duracionTextField.text = duraciones[row]
             //duracionTextField.resignFirstResponder()
         default:
             return
+        }
+    }
+    
+    // Alerta de error
+    func displayError(_ error: Error, title: String) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: error.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
 }
