@@ -1,15 +1,15 @@
 //
-//  PerfilViewController.swift
+//  EditarPerfilViewController.swift
 //  Cyber_Booking
 //
-//  Created by Victoria Estefania Vazquez Morales on 31/8/22.
+//  Created by Victoria Estefania Vazquez Morales on 6/10/22.
 //
 
 import UIKit
 
-class PerfilViewController: UIViewController {
+class EditarPerfilViewController: UIViewController {
     
-    // Sacar el id del usuario como appDelegate.user_id 
+    // Sacar el id del usuario como appDelegate.user_id
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
@@ -19,11 +19,6 @@ class PerfilViewController: UIViewController {
     }
     
 
-    @IBAction func logoutFunc(_ sender: Any) {
-        
-    }
-    
-    
     /*
     // MARK: - Navigation
 

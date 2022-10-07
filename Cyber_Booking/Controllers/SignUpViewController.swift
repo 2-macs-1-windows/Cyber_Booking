@@ -16,6 +16,7 @@ class SignUpViewController: UIViewController {
     
     struct answer: Codable {
         var msg: String
+
     }
     
     // Outlet del ScrollView

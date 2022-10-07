@@ -9,7 +9,10 @@
 import UIKit
 
 class ReservarHardwareViewController: UIViewController {
-
+    
+    // Sacar el id del usuario como appDelegate.user_id
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     // Controladores
     var reservaControlador = ReservaHwController()
     
