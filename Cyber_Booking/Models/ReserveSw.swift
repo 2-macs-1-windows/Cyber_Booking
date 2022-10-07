@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import UIKit
 // Estructura de información de ReservaSpace
 
 struct ReserveSw:Codable {
@@ -21,7 +21,7 @@ struct ReserveSw:Codable {
     
     init(service_id:String, booking_start: String, booking_end:String){
             self.id = 1234
-            self.user_id = 1 // CAMBIAR
+            self.user_id = appDelegate.user_id // CAMBIAR
             self.service_id = service_id
             self.created_at = "hoy"
             self.booking_start = booking_start
