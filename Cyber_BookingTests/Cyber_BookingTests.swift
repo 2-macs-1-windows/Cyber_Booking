@@ -22,6 +22,7 @@ final class Cyber_BookingTests: XCTestCase {
                 
                 sut.loadViewIfNeeded()
         
+        
     }
     
     override func tearDownWithError() throws {
@@ -32,8 +33,8 @@ final class Cyber_BookingTests: XCTestCase {
         // Se prueba que el usuario pueda iniciar sesión
         
         // given
-        sut.correoTextField.text! = "admin@admin.com"
-        sut.passTextField.text! = "adminAdmin#1"
+        sut.correoTextField.text! = "a01654095@tec.mx"
+        sut.passTextField.text! = "vickyVicky#1"
         
         //when
         sut.makeLogin(sut.loginButton)
@@ -41,10 +42,13 @@ final class Cyber_BookingTests: XCTestCase {
         print(sut.correoTextField.text ?? "")
         print(sut.passTextField.text ?? "")
         
+        
         //then
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-        
+            print("user_id: \(self.sut.appDelegate.user_id)")
+            
             XCTAssertTrue(self.sut.appDelegate.user_id != -1, " User_id = \(self.sut.appDelegate.user_id)")
+
         }
         
     }

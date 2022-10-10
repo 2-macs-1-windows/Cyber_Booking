@@ -1493,7 +1493,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="sendEmailButtonTappedWithSender:" destination="JzV-jV-pX4" eventType="touchUpInside" id="Khg-bD-cVy"/>
+                                    <action selector="sendEmailButtonTapped:" destination="JzV-jV-pX4" eventType="touchUpInside" id="6tY-Wi-zaO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Verifica tu correo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2AF-7H-MYK">
