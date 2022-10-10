@@ -193,6 +193,7 @@ class SignUpViewController: UIViewController {
     // Verificación de campos
     
     @IBAction func verificarYmandar(_ sender: UIButton) {
+        sender.isUserInteractionEnabled = false
         
         verifyEmail()
         verificaPassword()
@@ -282,9 +283,13 @@ class SignUpViewController: UIViewController {
                     alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler:  nil))
                     
                 }
+                
+                sender.isUserInteractionEnabled = true
             }
             
         }
+        
+        sender.isUserInteractionEnabled = true
     }
     
     

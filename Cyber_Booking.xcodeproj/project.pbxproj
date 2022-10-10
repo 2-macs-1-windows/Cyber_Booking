@@ -39,10 +39,21 @@
 		6815F04C28EA13C300A9DE41 /* ResvSwTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815F04B28EA13C300A9DE41 /* ResvSwTableViewCell.swift */; };
 		6815F04E28EA373300A9DE41 /* ResvSwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815F04D28EA373300A9DE41 /* ResvSwController.swift */; };
 		686CE90428EFDCE500F2CEB0 /* EditarPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686CE90328EFDCE500F2CEB0 /* EditarPerfilViewController.swift */; };
+		68BC841A28F37BBD0015FF13 /* Cyber_BookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC841928F37BBD0015FF13 /* Cyber_BookingTests.swift */; };
 		D930242128C1B9750006A168 /* confirmationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D930242028C1B9750006A168 /* confirmationController.swift */; };
 		D944992928EA452D0000E186 /* ReservasHardwareTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944992828EA452D0000E186 /* ReservasHardwareTableViewController.swift */; };
 		D944992B28EA46130000E186 /* ReservacionesHardwareTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944992A28EA46130000E186 /* ReservacionesHardwareTableViewCell.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		68BC841B28F37BBD0015FF13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A45F32E28B7F45200A7B1AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A45F33528B7F45200A7B1AC;
+			remoteInfo = Cyber_Booking;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3A29182628E69ACC0083585E /* ReservaSpaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservaSpaceTableViewCell.swift; sourceTree = "<group>"; };
@@ -79,6 +90,8 @@
 		6815F04B28EA13C300A9DE41 /* ResvSwTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResvSwTableViewCell.swift; sourceTree = "<group>"; };
 		6815F04D28EA373300A9DE41 /* ResvSwController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResvSwController.swift; sourceTree = "<group>"; };
 		686CE90328EFDCE500F2CEB0 /* EditarPerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarPerfilViewController.swift; sourceTree = "<group>"; };
+		68BC841728F37BBD0015FF13 /* Cyber_BookingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Cyber_BookingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		68BC841928F37BBD0015FF13 /* Cyber_BookingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cyber_BookingTests.swift; sourceTree = "<group>"; };
 		D930242028C1B9750006A168 /* confirmationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmationController.swift; sourceTree = "<group>"; };
 		D944992828EA452D0000E186 /* ReservasHardwareTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservasHardwareTableViewController.swift; sourceTree = "<group>"; };
 		D944992A28EA46130000E186 /* ReservacionesHardwareTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservacionesHardwareTableViewCell.swift; sourceTree = "<group>"; };
@@ -92,6 +105,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		68BC841428F37BBD0015FF13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -99,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				3A45F33828B7F45200A7B1AC /* Cyber_Booking */,
+				68BC841828F37BBD0015FF13 /* Cyber_BookingTests */,
 				3A45F33728B7F45200A7B1AC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				3A45F33628B7F45200A7B1AC /* Cyber_Booking.app */,
+				68BC841728F37BBD0015FF13 /* Cyber_BookingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,6 +192,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		68BC841828F37BBD0015FF13 /* Cyber_BookingTests */ = {
+			isa = PBXGroup;
+			children = (
+				68BC841928F37BBD0015FF13 /* Cyber_BookingTests.swift */,
+			);
+			path = Cyber_BookingTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,6 +220,24 @@
 			productReference = 3A45F33628B7F45200A7B1AC /* Cyber_Booking.app */;
 			productType = "com.apple.product-type.application";
 		};
+		68BC841628F37BBD0015FF13 /* Cyber_BookingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68BC841F28F37BBD0015FF13 /* Build configuration list for PBXNativeTarget "Cyber_BookingTests" */;
+			buildPhases = (
+				68BC841328F37BBD0015FF13 /* Sources */,
+				68BC841428F37BBD0015FF13 /* Frameworks */,
+				68BC841528F37BBD0015FF13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68BC841C28F37BBD0015FF13 /* PBXTargetDependency */,
+			);
+			name = Cyber_BookingTests;
+			productName = Cyber_BookingTests;
+			productReference = 68BC841728F37BBD0015FF13 /* Cyber_BookingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,11 +245,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					3A45F33528B7F45200A7B1AC = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					68BC841628F37BBD0015FF13 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 3A45F33528B7F45200A7B1AC;
 					};
 				};
 			};
@@ -219,6 +271,7 @@
 			projectRoot = "";
 			targets = (
 				3A45F33528B7F45200A7B1AC /* Cyber_Booking */,
+				68BC841628F37BBD0015FF13 /* Cyber_BookingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -231,6 +284,13 @@
 				3A45F34628B7F45400A7B1AC /* LaunchScreen.storyboard in Resources */,
 				3A45F34328B7F45400A7B1AC /* Assets.xcassets in Resources */,
 				3A45F34128B7F45200A7B1AC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68BC841528F37BBD0015FF13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +336,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		68BC841328F37BBD0015FF13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68BC841A28F37BBD0015FF13 /* Cyber_BookingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		68BC841C28F37BBD0015FF13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A45F33528B7F45200A7B1AC /* Cyber_Booking */;
+			targetProxy = 68BC841B28F37BBD0015FF13 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3A45F33F28B7F45200A7B1AC /* Main.storyboard */ = {
@@ -468,6 +544,52 @@
 			};
 			name = Release;
 		};
+		68BC841D28F37BBD0015FF13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HQFHBBH893;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.A01654095.Cyber-BookingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cyber_Booking.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cyber_Booking";
+			};
+			name = Debug;
+		};
+		68BC841E28F37BBD0015FF13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HQFHBBH893;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.A01654095.Cyber-BookingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cyber_Booking.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cyber_Booking";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -485,6 +607,15 @@
 			buildConfigurations = (
 				3A45F34B28B7F45400A7B1AC /* Debug */,
 				3A45F34C28B7F45400A7B1AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68BC841F28F37BBD0015FF13 /* Build configuration list for PBXNativeTarget "Cyber_BookingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68BC841D28F37BBD0015FF13 /* Debug */,
+				68BC841E28F37BBD0015FF13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

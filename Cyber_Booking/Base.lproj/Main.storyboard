@@ -1147,6 +1147,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                     <navigationItem key="navigationItem" id="LPH-rI-Su8"/>
                     <connections>
                         <outlet property="correoTextField" destination="w2x-VU-Pab" id="Qnp-g2-syS"/>
+                        <outlet property="loginButton" destination="L7Q-6g-up3" id="MGk-dP-s9Y"/>
                         <outlet property="passTextField" destination="SQT-Fy-iLt" id="DJg-Tb-WXX"/>
                     </connections>
                 </viewController>

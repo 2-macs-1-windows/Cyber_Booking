@@ -13,6 +13,8 @@ class loginViewController: UIViewController {
     @IBOutlet weak var correoTextField: UITextField!
     @IBOutlet weak var passTextField: UITextField!
     
+    @IBOutlet weak var loginButton: UIButton!
+    
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     struct logUser:Codable{
@@ -106,7 +108,9 @@ class loginViewController: UIViewController {
     }
     
 
-    @IBAction func makeLogin(_ sender: UIButton) {
+    @IBAction func makeLogin(_ sender: UIButton){
+        
+        sender.isUserInteractionEnabled = false
         
         if correoTextField.text == "" || passTextField.text == "" {
             
@@ -168,6 +172,8 @@ class loginViewController: UIViewController {
                     alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler:  nil))
                     
                     self.present(alert, animated: true, completion: nil)            }
+                
+                sender.isUserInteractionEnabled = true
             }
         }
         
