@@ -3,4 +3,70 @@
    uuid = "595D7CD8-4BDF-47F8-ADC4-06F5BC19FC90"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6FE44269-F867-464C-976A-1EE1615633B5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cyber_BookingTests/Cyber_BookingTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "Cyber_BookingTests"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FEA27CF5-3005-451E-9B6C-E247CF26B228"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cyber_Booking/Controllers/VerificationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "sendEmailButtonTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FEA27CF5-3005-451E-9B6C-E247CF26B228 - 52db1d1b9601e37b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cyber_Booking.VerificationViewController.sendEmailButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "Cyber_Booking"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Estefy/GitHub/Cyber_Booking/Cyber_Booking/Controllers/VerificationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "1984">
+               </Location>
+               <Location
+                  uuid = "FEA27CF5-3005-451E-9B6C-E247CF26B228 - e56ac39583553ed3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable () async -&gt; () in Cyber_Booking.VerificationViewController.sendEmailButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "Cyber_Booking"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Estefy/GitHub/Cyber_Booking/Cyber_Booking/Controllers/VerificationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

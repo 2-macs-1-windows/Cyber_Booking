@@ -99,6 +99,8 @@ class VerificationViewController: UIViewController{
         
         code2verify = Int.random(in: 100000..<999999)
         
+        sender.isUserInteractionEnabled = false
+        
         Task{
             do{
                 let ans = try await enviarCorreo()
@@ -120,12 +122,15 @@ class VerificationViewController: UIViewController{
                 alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler:  nil))
                 
             }
+            
+            sender.isUserInteractionEnabled = true
         }
         
     }
     
-    @IBAction func sendEmailButtonTapped(sender: AnyObject) {
+    @IBAction func sendEmailButtonTapped(_ sender: UIButton) {
         
+        sender.isUserInteractionEnabled = false
         
         if String(code2verify) == codeTextF.text && codeTextF.text != ""{
             
@@ -149,6 +154,8 @@ class VerificationViewController: UIViewController{
                     self.present(alert, animated: true, completion: nil)
                     
                 }
+                
+                sender.isUserInteractionEnabled = true
             }
             
 
