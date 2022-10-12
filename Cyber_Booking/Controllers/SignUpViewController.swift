@@ -34,6 +34,7 @@ class SignUpViewController: UIViewController {
     var is_passMatch:Bool = false
     var is_validTel:Bool = false
     var is_regEmail:Bool = false
+    var is_validNamAp:Bool = false
     
     struct emailCheck: Codable {
         var msg: String
@@ -45,6 +46,20 @@ class SignUpViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         registerForKeyboardNotifications()
+    }
+    
+    //------------Verificar nombre y apellido -------------
+    func verificarNomAp() {
+        let validName = "^[a-zA-ZÀ-ÿñÑ]+$"
+        
+        if(nombre_U.text?.range(of: validName, options: .regularExpression) == nil || apellido_U.text?.range(of: validName, options: .regularExpression) == nil){
+            
+            is_validNamAp = false
+
+        } else {
+            
+            is_validNamAp = true
+        }
     }
     
     func emailPattern()->Bool{
@@ -117,7 +132,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func verificarTel(_ sender: UITextField) {
-        let validTel = "[0-9]"
+        let validTel = "^[0-9]+$"
         
         if(telefono_U.text?.range(of: validTel, options: .regularExpression) == nil){
             let alert = UIAlertController(title: "Verifique su teléfono", message: "El número de teléfono debe contener solo dígitos", preferredStyle: .alert)
@@ -198,6 +213,7 @@ class SignUpViewController: UIViewController {
         verifyEmail()
         verificaPassword()
         checkMatchingPass()
+        verificarNomAp()
         
         if(nombre_U.text == "" ||
            apellido_U.text == "" ||
@@ -213,7 +229,14 @@ class SignUpViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
             
             
-        } else if (!aceptaPoliticas.isOn){
+        } else if  !is_validNamAp{
+            let alert = UIAlertController(title: "Caracteres inválidos", message: "El nombre y el apellido deben contener solo letras", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler:  nil))
+            
+            self.present(alert, animated: true, completion: nil)
+            
+        }else if (!aceptaPoliticas.isOn){
             let alert = UIAlertController(title: "Términos y condiciones", message: "Favor de aceptar los términos y condiciones", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Hecho", style: .cancel, handler:  nil))
