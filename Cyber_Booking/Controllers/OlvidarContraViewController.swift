@@ -17,7 +17,7 @@ class OlvidarContraViewController: UIViewController {
     var is_regEmail:Bool = false
     
     let userListURL = "http://127.0.0.1:8000/getUsuariosApp"
-    let sendEmail = "http://127.0.0.1:8000/enviarMail"
+    let sendEmail = "http://127.0.0.1:8000/enviarMailContra"
     
     struct emailCheck: Codable {
         var msg: String

@@ -104,14 +104,15 @@ class RestableceContraViewController: UIViewController {
                     
                     let alert = UIAlertController(title: "Cambio exitoso", message: "Su contraseña ha sido cambiada con éxito", preferredStyle: .alert)
                     
-                    alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler:  nil))
+                    alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler: { _ in
+                        
+                        self.navigationController?.popToRootViewController(animated:true)
+                        
+                    }))
                     
                     self.present(alert, animated: true, completion: nil)
                     
-                    let storyboard = UIStoryboard(name:"Main", bundle: nil)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "login_") as UIViewController
-                    vc.modalPresentationStyle = .fullScreen
-                    self.present(vc, animated:true, completion:nil)
+                    
 
                     
                 }catch{
