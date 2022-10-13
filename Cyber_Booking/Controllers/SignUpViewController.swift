@@ -183,7 +183,7 @@ class SignUpViewController: UIViewController {
         }
         
         
-    }
+     }
     
     func checkMatchingPass(){
         
