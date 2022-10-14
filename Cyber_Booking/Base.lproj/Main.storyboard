@@ -537,17 +537,11 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9V2-ng-Ndx">
-                                <rect key="frame" x="109" y="499" width="197" height="87"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MLM-jT-KKX" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="41" y="476" width="332" height="326"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Gráficas">
-                                    <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="WsB-5l-EZH" kind="show" id="Qxk-dK-COS"/>
-                                </connections>
-                            </button>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rar-Cj-smb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -557,6 +551,7 @@
                         <outlet property="numEspacios" destination="4wa-Cd-dur" id="ukn-Hd-M8c"/>
                         <outlet property="numHw" destination="4sv-lZ-5T0" id="OJO-a5-fLm"/>
                         <outlet property="numSw" destination="bdt-41-Swc" id="99g-7x-BCw"/>
+                        <outlet property="pieChart" destination="MLM-jT-KKX" id="08w-55-uvo"/>
                         <outlet property="userName" destination="Zjf-Tz-Wm5" id="SAF-zs-j3H"/>
                     </connections>
                 </viewController>
@@ -571,14 +566,30 @@
                     <view key="view" contentMode="scaleToFill" id="Gw3-04-8iZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ga8-TK-7m5">
+                                <rect key="frame" x="20" y="123" width="374" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N4W-H1-c7o">
+                                <rect key="frame" x="20" y="379" width="374" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="kUV-9A-8se"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="PBg-Xt-sjW"/>
+                    <connections>
+                        <outlet property="chart1" destination="ga8-TK-7m5" id="cp5-gM-6xN"/>
+                        <outlet property="chart2" destination="N4W-H1-c7o" id="DPr-C1-6gw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bt8-rq-lG8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6438" y="-1754"/>
+            <point key="canvasLocation" x="6437.68115942029" y="-1754.4642857142856"/>
         </scene>
         <!--Historial de Hardware-->
         <scene sceneID="q0p-mh-Roz">

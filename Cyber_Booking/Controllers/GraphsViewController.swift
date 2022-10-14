@@ -8,59 +8,73 @@
 import UIKit
 import Charts
 
-class GraphsViewController: UIViewController {
+class GraphsViewController: UIViewController, ChartViewDelegate {
+    
+    
+    @IBOutlet weak var chart1: UIView!
+    @IBOutlet weak var chart2: UIView!
+    
+    var barChart = BarChartView()
+    var pieChart = PieChartView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        createChart()
         // Do any additional setup after loading the view.
         
-        
+        barChart.delegate = self
     }
     
-    private func createChart() {
-        // Create bar chart
-        let barChart = BarChartView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         
-        // Configure axis
+        barChart.frame = CGRect(x: 0,
+                                y: 0,
+                                width: self.chart1.frame.size.width,
+                                height: self.chart1.frame.size.height)
         
+        //barChart.center = view.center
         
-        // Configure legend
+        view.addSubview(barChart)
         
-        
-        // Supply data
-        var entries = [BarChartDataEntry()]
+        // Data
+        var entries = [BarChartDataEntry]()
         
         for x in 0..<10 {
-            entries.append(
-                BarChartDataEntry(
-                    x: Double(x),
-                    y: Double.random(in: 0...30)
-                )
-            )
+            entries.append(BarChartDataEntry(x: Double(x), y: Double(x)))
         }
         
-        let set = BarChartDataSet(entries: entries, label: "Cost")
+        let set = BarChartDataSet(entries: entries)
+        set.colors = ChartColorTemplates.vordiplom()
+        
         let data = BarChartData(dataSet: set)
         
         barChart.data = data
         
-        view.addSubview(barChart)
+        // PIE
+        /*
+        pieChart.frame = CGRect(x: 0,
+                               y: 0,
+                               width: self.chart2.frame.size.width,
+                               height: self.chart2.frame.size.height)
         
-        // Center the chart
-        barChart.center = view.center
+        //pieChart.center = view.center
         
+        view.addSubview(pieChart)
+        
+        // Data
+        var entriesPie = [PieChartDataEntry]()
+        
+        for x in 0..<3 {
+            entriesPie.append(PieChartDataEntry(value: Double(x)))
+        }
+        
+        let setPie = PieChartDataSet(entries: entries)
+        setPie.colors = ChartColorTemplates.vordiplom()
+        
+        let dataPie = PieChartData(dataSet: setPie)
+        
+        pieChart.data = data
+         */
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

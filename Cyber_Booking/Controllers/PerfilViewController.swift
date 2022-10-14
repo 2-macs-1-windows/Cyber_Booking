@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import Charts
 
-class PerfilViewController: UIViewController {
+class PerfilViewController: UIViewController, ChartViewDelegate {
+    
+    // Chart
+    @IBOutlet weak var pieChart: PieChartView!
     
     // Textos
         @IBOutlet weak var userName: UILabel!
@@ -30,7 +34,7 @@ class PerfilViewController: UIViewController {
          // Obtener el usuario
          func fetchUsuario() async throws->UserData{
              
-             let urlString = "http://127.0.0.1:8000/userData?id=\(await appDelegate.user_id)"
+             let urlString = "http://127.0.0.1:8000/userData?id=\(appDelegate.user_id)"
              let baseURL = URL(string: urlString)!
              
              let (data, response) = try await URLSession.shared.data(from: baseURL)
@@ -87,6 +91,51 @@ class PerfilViewController: UIViewController {
         
     }
     
+    // Chart
+    func setUpPieChart(_ usuario:UserData) {
+        pieChart.chartDescription.enabled = true
+        pieChart.drawHoleEnabled = false
+        pieChart.rotationAngle = 0
+        pieChart.rotationEnabled = false
+        pieChart.isUserInteractionEnabled = false
+        
+        var entries: [PieChartDataEntry] = Array()
+        
+        entries.append(PieChartDataEntry(value: Double(usuario.numReserveSpace), data: "Espacios"))
+        entries.append(PieChartDataEntry(value: Double(usuario.numReserveHw), data: "Hardware"))
+        entries.append(PieChartDataEntry(value: Double(usuario.numReserveSw), data: "Software"))
+        
+        print(entries)
+        
+        let dataSet = PieChartDataSet(entries: entries, label: "Reservaciones hechas")
+        
+        dataSet.colors = [.green, .red, .blue]
+        
+        let data = PieChartData(dataSet: dataSet)
+        
+        let l = pieChart.legend
+        l.horizontalAlignment = .right
+        l.verticalAlignment = .top
+        l.orientation = .vertical
+        l.xEntrySpace = 7
+        l.yEntrySpace = 0
+        l.yOffset = 0
+        // chartView.legend = l
+               
+       let pFormatter = NumberFormatter()
+       pFormatter.numberStyle = .percent
+       pFormatter.maximumFractionDigits = 1
+       pFormatter.multiplier = 1
+       pFormatter.percentSymbol = " %"
+       data.setValueFormatter(DefaultValueFormatter(formatter: pFormatter))
+       
+       data.setValueFont(.systemFont(ofSize: 20, weight: .bold))
+       data.setValueTextColor(.white)
+       
+       pieChart.data = data
+        
+    }
+    
     override func viewDidLoad() {
         
         Task {
@@ -97,6 +146,8 @@ class PerfilViewController: UIViewController {
                 numEspacios.text = String(usuario.numReserveSpace)
                 numHw.text = String(usuario.numReserveHw)
                 numSw.text = String(usuario.numReserveSw)
+                
+                setUpPieChart(usuario)
                 
             } catch {
                 print(error)
