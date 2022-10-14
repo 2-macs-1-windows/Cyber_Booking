@@ -425,19 +425,158 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EditProfile" translatesAutoresizingMaskIntoConstraints="NO" id="4qc-l2-jza">
-                                <rect key="frame" x="0.0" y="88" width="414" height="712"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i33-ur-GxD">
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nmz-Hz-GXP">
+                                        <rect key="frame" x="50" y="0.0" width="314" height="721"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Editar Perfil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qtb-tz-JMg">
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="42.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="31"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vx5-yf-zr4">
+                                                <rect key="frame" x="0.0" y="52.5" width="314" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" red="0.066666662690000003" green="0.1843137443" blue="0.50980395079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oNk-JD-Tm9">
+                                                <rect key="frame" x="0.0" y="90" width="314" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yks-w1-BKC">
+                                                <rect key="frame" x="0.0" y="134" width="314" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" red="0.066666662690000003" green="0.1843137443" blue="0.50980395079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jce-ZY-dHI">
+                                                <rect key="frame" x="0.0" y="171.5" width="314" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="family-name"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teléfono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ox-GC-HUG">
+                                                <rect key="frame" x="0.0" y="215.5" width="314" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" red="0.066666662690000003" green="0.1843137443" blue="0.50980395079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="75x-dR-Z5W">
+                                                <rect key="frame" x="0.0" y="253" width="314" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="tel"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvc-7A-Mze">
+                                                <rect key="frame" x="0.0" y="297" width="314" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" red="0.066666662690000003" green="0.1843137443" blue="0.50980395079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZh-aW-yCt">
+                                                <rect key="frame" x="0.0" y="334.5" width="314" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="new-password"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmar contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cd-LP-Fx9">
+                                                <rect key="frame" x="0.0" y="378.5" width="314" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" red="0.066666662690000003" green="0.1843137443" blue="0.50980395079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pry-jS-iK0">
+                                                <rect key="frame" x="0.0" y="416" width="314" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="new-password"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtR-s6-cn0">
+                                                <rect key="frame" x="0.0" y="460" width="314" height="45.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUx-ZM-JKf">
+                                                <rect key="frame" x="0.0" y="515.5" width="314" height="59.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="59.5" id="cqD-Rd-jxU"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Guardar cambios">
+                                                            <attributes>
+                                                                <font key="NSFont" size="20" name="AvenirNext-DemiBold"/>
+                                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <color key="baseBackgroundColor" red="0.074509806930000005" green="0.20392158630000001" blue="0.48627454040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="guardarCambios:" destination="1Dv-vv-t6E" eventType="touchUpInside" id="ewg-qX-c9b"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EI-dK-Ixt">
+                                                <rect key="frame" x="0.0" y="585" width="314" height="39"/>
+                                                <color key="tintColor" red="0.69452722293814428" green="0.04139769302941889" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Borrar cuenta">
+                                                            <attributes>
+                                                                <font key="NSFont" size="18" name="AvenirNext-DemiBold"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="borrarCuenta:" destination="1Dv-vv-t6E" eventType="touchUpInside" id="Xhs-fF-i5H"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bgz-du-AKR">
+                                                <rect key="frame" x="0.0" y="634" width="314" height="87"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Bgz-du-AKR" firstAttribute="top" secondItem="Nmz-Hz-GXP" secondAttribute="top" constant="634" id="S4x-pk-add"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Nmz-Hz-GXP" firstAttribute="bottom" secondItem="tO3-Qj-q0h" secondAttribute="bottom" id="0dD-zg-zH4"/>
+                                    <constraint firstItem="Nmz-Hz-GXP" firstAttribute="top" secondItem="SR8-Ik-cHF" secondAttribute="top" id="15C-vv-ue7"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nmz-Hz-GXP" secondAttribute="trailing" constant="50" id="DFA-XM-kvh"/>
+                                    <constraint firstItem="Nmz-Hz-GXP" firstAttribute="centerX" secondItem="i33-ur-GxD" secondAttribute="centerX" id="IbM-7i-0pW"/>
+                                    <constraint firstItem="Nmz-Hz-GXP" firstAttribute="leading" secondItem="tO3-Qj-q0h" secondAttribute="leading" constant="50" id="UWL-1D-i3N"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nmz-Hz-GXP" secondAttribute="bottom" id="Wwp-yj-3nq"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="SR8-Ik-cHF"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="tO3-Qj-q0h"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IAM-G4-zLF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="i33-ur-GxD" firstAttribute="bottom" secondItem="IAM-G4-zLF" secondAttribute="bottom" id="Ddz-IV-XKu"/>
+                            <constraint firstItem="i33-ur-GxD" firstAttribute="top" secondItem="IAM-G4-zLF" secondAttribute="top" id="YFO-Yc-j8P"/>
+                            <constraint firstItem="i33-ur-GxD" firstAttribute="centerX" secondItem="TOp-5V-KYs" secondAttribute="centerX" id="dnY-m1-jPr"/>
+                            <constraint firstItem="i33-ur-GxD" firstAttribute="leading" secondItem="IAM-G4-zLF" secondAttribute="leading" id="grS-xw-ZYb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SRF-H0-0n6"/>
+                    <connections>
+                        <outlet property="apellidoTxtField" destination="jce-ZY-dHI" id="oXM-Ks-Ngh"/>
+                        <outlet property="confContraTxtField" destination="pry-jS-iK0" id="fOz-Ma-wDk"/>
+                        <outlet property="contraTxtField" destination="CZh-aW-yCt" id="uuG-Mv-Hcm"/>
+                        <outlet property="nombreTxtField" destination="oNk-JD-Tm9" id="AEV-xD-zF7"/>
+                        <outlet property="telefonoTxtField" destination="75x-dR-Z5W" id="V9V-s3-10x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oag-0z-Eah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6438" y="-1029"/>
+            <point key="canvasLocation" x="6437.68115942029" y="-1029.2410714285713"/>
         </scene>
         <!--ProfilePage-->
         <scene sceneID="XaK-Dz-XTF">
@@ -1026,6 +1165,86 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
             </objects>
             <point key="canvasLocation" x="531.8840579710145" y="-1977.4553571428571"/>
         </scene>
+        <!--Restablece Contra View Controller-->
+        <scene sceneID="OXv-vK-Tnq">
+            <objects>
+                <viewController storyboardIdentifier="restContra" id="EEm-9P-mHF" customClass="RestableceContraViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dHs-Il-EzM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="restableceContra" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gy6-BU-7Hp">
+                                <rect key="frame" x="40" y="48" width="334" height="814"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduzca su nueva contraseña" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fte-Tm-UmH">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="82"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña nueva" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRh-2k-goM">
+                                        <rect key="frame" x="0.0" y="97" width="334" height="25"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                        <color key="textColor" red="0.074509806930000005" green="0.20392158630000001" blue="0.48627454040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HEt-lT-I6s">
+                                        <rect key="frame" x="0.0" y="137" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verifique contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSC-bX-iCP">
+                                        <rect key="frame" x="0.0" y="186" width="334" height="25"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                        <color key="textColor" red="0.074509806930000005" green="0.20392158630000001" blue="0.48627454040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HAZ-Rg-c0d">
+                                        <rect key="frame" x="0.0" y="226" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJR-cf-l7x">
+                                        <rect key="frame" x="0.0" y="275" width="334" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="r2j-Hh-jEK"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Enviar">
+                                            <fontDescription key="titleFontDescription" name="Avenir-Medium" family="Avenir" pointSize="23"/>
+                                            <color key="baseBackgroundColor" red="0.066666662690000003" green="0.1843137443" blue="0.50980395079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="cambioContra:" destination="EEm-9P-mHF" eventType="touchUpInside" id="RjV-WK-uZ4"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10N-9j-9bR">
+                                        <rect key="frame" x="0.0" y="340" width="334" height="474"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jJL-aW-DD2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gy6-BU-7Hp" firstAttribute="top" secondItem="jJL-aW-DD2" secondAttribute="top" id="2aG-IL-tce"/>
+                            <constraint firstItem="gy6-BU-7Hp" firstAttribute="centerX" secondItem="dHs-Il-EzM" secondAttribute="centerX" id="FBu-xa-Z5M"/>
+                            <constraint firstItem="gy6-BU-7Hp" firstAttribute="leading" secondItem="jJL-aW-DD2" secondAttribute="leading" constant="40" id="QSL-e8-5yW"/>
+                            <constraint firstItem="gy6-BU-7Hp" firstAttribute="bottom" secondItem="jJL-aW-DD2" secondAttribute="bottom" id="RCA-ck-z6V"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XeU-dE-hmG"/>
+                    <connections>
+                        <outlet property="contraTxtField" destination="HEt-lT-I6s" id="GjB-G1-aKY"/>
+                        <outlet property="verifContraTxtField" destination="HAZ-Rg-c0d" id="jk3-iz-W8J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="maL-yS-jiq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2546.376811594203" y="-1199.3303571428571"/>
+        </scene>
         <!--password-->
         <scene sceneID="lGH-oG-qRh">
             <objects>
@@ -1034,50 +1253,118 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Si te encuentras registrado, obtendrás una contrasaña temporal para iniciar sesión y restablecerla desde tu perfil." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBJ-TA-vxG">
-                                <rect key="frame" x="29" y="169" width="357" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Introduce tu correo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1F-LN-vRc">
-                                <rect key="frame" x="41" y="285" width="333" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
-                                <color key="textColor" name="AccentColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese el correo registrado" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rqt-pI-fMi">
-                                <rect key="frame" x="41" y="323" width="333" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" textContentType="email"/>
-                                <connections>
-                                    <action selector="textFieldDoneEditingWithSender:" destination="vZj-6n-P82" eventType="editingDidEndOnExit" id="wjw-LZ-YWj"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4b-51-wmJ">
-                                <rect key="frame" x="47" y="403" width="321" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Enviar">
-                                    <fontDescription key="titleFontDescription" name="Avenir-Medium" family="Avenir" pointSize="23"/>
-                                    <color key="baseBackgroundColor" name="AccentColor"/>
-                                </buttonConfiguration>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contraseña temporal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeK-i0-aRg">
-                                <rect key="frame" x="29" y="98" width="357" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="32"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSV-gF-5Xa">
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="cT5-e8-3aI">
+                                        <rect key="frame" x="30" y="0.0" width="354" height="770"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cambio de contraseña" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeK-i0-aRg">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="44"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="32"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" editable="NO" text="Si te encuentras registrado, obtendrás un código para proceder a reestablecer tu contraseña." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBJ-TA-vxG">
+                                                <rect key="frame" x="0.0" y="59" width="354" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="U1N-UO-lVd"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduce tu correo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1F-LN-vRc">
+                                                <rect key="frame" x="0.0" y="130" width="354" height="25"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                                <color key="textColor" name="AccentColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese el correo registrado" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rqt-pI-fMi">
+                                                <rect key="frame" x="0.0" y="170" width="354" height="34.5"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                                <connections>
+                                                    <action selector="textFieldDoneEditingWithSender:" destination="vZj-6n-P82" eventType="editingDidEndOnExit" id="wjw-LZ-YWj"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4b-51-wmJ">
+                                                <rect key="frame" x="0.0" y="219.5" width="354" height="45.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Enviar">
+                                                    <fontDescription key="titleFontDescription" name="Avenir-Medium" family="Avenir" pointSize="23"/>
+                                                    <color key="baseBackgroundColor" name="AccentColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="sendEmail:" destination="vZj-6n-P82" eventType="touchUpInside" id="ha9-RW-fgK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax1-aY-FvT">
+                                                <rect key="frame" x="0.0" y="280" width="354" height="34.5"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Reenviar correo"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduce tu código" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jb7-ew-2Xx">
+                                                <rect key="frame" x="0.0" y="329.5" width="354" height="25"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                <color key="textColor" red="0.074509806930000005" green="0.20392158630000001" blue="0.48627454040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="center" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bmh-Ui-Cmh">
+                                                <rect key="frame" x="0.0" y="369.5" width="354" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
+                                                <connections>
+                                                    <action selector="textFieldDoneEditingWithSender:" destination="vZj-6n-P82" eventType="editingDidEnd" id="7pr-Fa-qph"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGW-GH-KXE">
+                                                <rect key="frame" x="0.0" y="418.5" width="354" height="45.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Comprobar">
+                                                    <fontDescription key="titleFontDescription" name="Avenir-Medium" family="Avenir" pointSize="23"/>
+                                                    <color key="baseBackgroundColor" name="AccentColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="verifCode:" destination="vZj-6n-P82" eventType="touchUpInside" id="Dd5-RG-MzV"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGz-9d-5yB">
+                                                <rect key="frame" x="0.0" y="479" width="354" height="291"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="cT5-e8-3aI" secondAttribute="bottom" id="2KO-f5-Fab"/>
+                                    <constraint firstItem="cT5-e8-3aI" firstAttribute="top" secondItem="htd-ht-FeM" secondAttribute="top" id="HXA-dT-hHC"/>
+                                    <constraint firstItem="cT5-e8-3aI" firstAttribute="bottom" secondItem="9OK-E6-qx0" secondAttribute="bottom" id="VXH-pI-FDW"/>
+                                    <constraint firstAttribute="trailing" secondItem="cT5-e8-3aI" secondAttribute="trailing" constant="30" id="Wro-NC-kJm"/>
+                                    <constraint firstItem="cT5-e8-3aI" firstAttribute="centerX" secondItem="nSV-gF-5Xa" secondAttribute="centerX" id="Xnp-EE-dD6"/>
+                                    <constraint firstItem="cT5-e8-3aI" firstAttribute="leading" secondItem="9OK-E6-qx0" secondAttribute="leading" constant="30" id="jwL-M9-x1F"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="htd-ht-FeM"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="9OK-E6-qx0"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WCy-xa-AiC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nSV-gF-5Xa" firstAttribute="bottom" secondItem="WCy-xa-AiC" secondAttribute="bottom" id="6Rl-2f-wZZ"/>
+                            <constraint firstItem="nSV-gF-5Xa" firstAttribute="centerX" secondItem="Eef-5n-7Nf" secondAttribute="centerX" id="Y1e-c6-Xga"/>
+                            <constraint firstItem="nSV-gF-5Xa" firstAttribute="leading" secondItem="WCy-xa-AiC" secondAttribute="leading" id="fMx-ha-qxw"/>
+                            <constraint firstItem="nSV-gF-5Xa" firstAttribute="top" secondItem="WCy-xa-AiC" secondAttribute="top" id="lI7-kk-xmC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ngs-o5-n62"/>
+                    <connections>
+                        <outlet property="codigoTxtField" destination="bmh-Ui-Cmh" id="RtE-cy-cMr"/>
+                        <outlet property="correoTxtField" destination="Rqt-pI-fMi" id="Y4w-MP-c7m"/>
+                        <outlet property="scrollView" destination="nSV-gF-5Xa" id="uxH-mj-U1L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1C-Mc-bXf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1086,7 +1373,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
         <!--login_-->
         <scene sceneID="JYz-9S-QEh">
             <objects>
-                <viewController storyboardIdentifier="login" title="login_" id="SXI-J3-5Dn" customClass="loginViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login_" title="login_" id="SXI-J3-5Dn" customClass="loginViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YIm-Fy-tjR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1896,7 +2183,6 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
     </scenes>
     <resources>
         <image name="Deloitte" width="1280" height="278.5"/>
-        <image name="EditProfile" width="297" height="586"/>
         <image name="Logo" width="313.5" height="310.5"/>
         <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="door.left.hand.closed" catalog="system" width="108" height="128"/>

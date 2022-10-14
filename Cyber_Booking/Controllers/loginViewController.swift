@@ -120,6 +120,8 @@ class loginViewController: UIViewController {
             
             self.present(alert, animated: true, completion: nil)
             
+            sender.isUserInteractionEnabled = true
+            
             
         } else {
             
@@ -158,7 +160,7 @@ class loginViewController: UIViewController {
                         }
                         
                     } else {
-                        let alert = UIAlertController(title: "Usuario no registrado", message: "Favor de realizar el registro", preferredStyle: .alert)
+                        let alert = UIAlertController(title: "Verifique sus datos", message: "El correo o la contraseña son incorrectos", preferredStyle: .alert)
                         
                         alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler:  nil))
                         
