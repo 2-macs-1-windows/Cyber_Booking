@@ -676,6 +676,11 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MLM-jT-KKX" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="41" y="476" width="332" height="326"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rar-Cj-smb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -685,12 +690,45 @@
                         <outlet property="numEspacios" destination="4wa-Cd-dur" id="ukn-Hd-M8c"/>
                         <outlet property="numHw" destination="4sv-lZ-5T0" id="OJO-a5-fLm"/>
                         <outlet property="numSw" destination="bdt-41-Swc" id="99g-7x-BCw"/>
+                        <outlet property="pieChart" destination="MLM-jT-KKX" id="08w-55-uvo"/>
                         <outlet property="userName" destination="Zjf-Tz-Wm5" id="SAF-zs-j3H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAo-5g-yDH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5516" y="-1029"/>
+            <point key="canvasLocation" x="5515.9420289855079" y="-1029.2410714285713"/>
+        </scene>
+        <!--Graphs View Controller-->
+        <scene sceneID="RSc-uD-eGJ">
+            <objects>
+                <viewController id="WsB-5l-EZH" customClass="GraphsViewController" customModule="Cyber_Booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gw3-04-8iZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ga8-TK-7m5">
+                                <rect key="frame" x="20" y="123" width="374" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N4W-H1-c7o">
+                                <rect key="frame" x="20" y="379" width="374" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kUV-9A-8se"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PBg-Xt-sjW"/>
+                    <connections>
+                        <outlet property="chart1" destination="ga8-TK-7m5" id="cp5-gM-6xN"/>
+                        <outlet property="chart2" destination="N4W-H1-c7o" id="DPr-C1-6gw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bt8-rq-lG8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6437.68115942029" y="-1754.4642857142856"/>
         </scene>
         <!--Historial de Hardware-->
         <scene sceneID="q0p-mh-Roz">
@@ -1597,7 +1635,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                                         <accessibility key="accessibilityConfiguration" identifier="Contra"/>
                                                         <string key="toolTip">Debe tener por lo menos 10 caracteres de longitud, incluir 1 mayúscula, 1 minúscula, 1 número y un caracter especial (#?¿!¡@$ %^&amp;*-_)</string>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
+                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" textContentType="password"/>
                                                         <connections>
                                                             <action selector="textFieldDoneEditingWithSender:" destination="o44-RJ-jr7" eventType="editingDidEndOnExit" id="5Uc-QL-lys"/>
                                                         </connections>
@@ -1628,7 +1666,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                                         <rect key="frame" x="8" y="32.5" width="367" height="34"/>
                                                         <accessibility key="accessibilityConfiguration" identifier="confContra"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
+                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" textContentType="password"/>
                                                         <connections>
                                                             <action selector="textFieldDoneEditingWithSender:" destination="o44-RJ-jr7" eventType="editingDidEndOnExit" id="FkY-1p-YP6"/>
                                                         </connections>

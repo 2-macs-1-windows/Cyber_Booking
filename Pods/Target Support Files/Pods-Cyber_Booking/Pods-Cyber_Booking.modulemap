@@ -1,0 +1,6 @@
+framework module Pods_Cyber_Booking {
+  umbrella header "Pods-Cyber_Booking-umbrella.h"
+
+  export *
+  module * { export * }
+}

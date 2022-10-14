@@ -14,6 +14,11 @@ import UIKit
 
 class ReservarViewController: UIViewController {
     
+    struct answer: Codable {
+        var msg: String
+
+    }
+    
     // Sacar el id del usuario como appDelegate.user_id
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -51,6 +56,9 @@ class ReservarViewController: UIViewController {
         Task{
             do{
                 try await reservaControlador.insertReserva(nuevareserva: reservaNueva)
+                
+                try await enviarCorreo()
+                
                 // self.updateUI()
                 showAlert()
             }catch{
@@ -101,6 +109,34 @@ class ReservarViewController: UIViewController {
         // --- Agregar tag a los pickerView ---
         salonPickerView.tag = 1
         // duracionPickerView.tag = 2
+    }
+    
+    // Enviar correo
+    func enviarCorreo() async throws->answer{
+        let insertURL = URL(string: "http://127.0.0.1:8000/emailSP")!
+        var request = URLRequest(url: insertURL)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let jsonEncoder = JSONEncoder()
+        let jsonData = try? jsonEncoder.encode(["user_id":appDelegate.user_id])
+        request.httpBody = jsonData
+        let (data, response) = try await URLSession.shared.data(for: request)
+
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else { throw ReservaError.itemNotFound}
+        
+        let jsonDecoder = JSONDecoder()
+        do{
+        
+            let reservas = try jsonDecoder.decode(answer.self, from: data)
+            
+            return reservas
+            
+        }catch let jsonError as NSError{
+            
+            print("JSON decode failed: \(jsonError)")
+            throw ReservaError.decodeError
+        }
+        
     }
 
     // --- Fecha y hora ---
