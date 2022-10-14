@@ -109,14 +109,16 @@ class ReservasHistorialTableViewController: UITableViewController {
                 do{
                     let registroEliminar = reservasSpaces[indexPath.row].id
                     try await self.reservaControlador.deleteReserva(registroID: registroEliminar)
+                    
+                    reservasSpaces.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
                     // self.updateUI()
                 }catch{
                     displayError(ReservaError.itemNotFound, title: "No se puede eliminar")
                 }
             }
             
-            reservasSpaces.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            
             
         } else if editingStyle == .insert {
             

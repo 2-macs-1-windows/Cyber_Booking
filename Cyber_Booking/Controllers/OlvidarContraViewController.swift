@@ -28,8 +28,6 @@ class OlvidarContraViewController: UIViewController {
 
     }
     
-    
-    
     // función que cierra el teclado al apretar "intro"
     @IBAction func textFieldDoneEditing(sender:UITextField){
         sender.resignFirstResponder()
