@@ -27,7 +27,6 @@
 		3AD196F328E5F405003CE871 /* ReserveSw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD196F228E5F405003CE871 /* ReserveSw.swift */; };
 		3AD196F528E5F846003CE871 /* ReservasSpacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD196F428E5F846003CE871 /* ReservasSpacesTableViewController.swift */; };
 		3AD855CA28DEC7F2001DB2F9 /* OlvidarContraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD855C928DEC7F2001DB2F9 /* OlvidarContraViewController.swift */; };
-		3AE2163F28F77F4F00ECAAAE /* GraphsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2163E28F77F4F00ECAAAE /* GraphsViewController.swift */; };
 		6805014E28C00E5000270A07 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6805014D28C00E5000270A07 /* SignUpViewController.swift */; };
 		6805015028C0128D00270A07 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6805014F28C0128D00270A07 /* VerificationViewController.swift */; };
 		6805015228C03F9A00270A07 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6805015128C03F9A00270A07 /* loginViewController.swift */; };
@@ -42,8 +41,8 @@
 		6815F04E28EA373300A9DE41 /* ResvSwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815F04D28EA373300A9DE41 /* ResvSwController.swift */; };
 		686CE90428EFDCE500F2CEB0 /* EditarPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686CE90328EFDCE500F2CEB0 /* EditarPerfilViewController.swift */; };
 		68BC841A28F37BBD0015FF13 /* Cyber_BookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BC841928F37BBD0015FF13 /* Cyber_BookingTests.swift */; };
-		BD4D8D8B3BD5D37365033189 /* Pods_Cyber_BookingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37155253BB645DF502830320 /* Pods_Cyber_BookingTests.framework */; };
 		68F088DC28F7BFA00040FFFB /* RestableceContraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F088DB28F7BFA00040FFFB /* RestableceContraViewController.swift */; };
+		BD4D8D8B3BD5D37365033189 /* Pods_Cyber_BookingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37155253BB645DF502830320 /* Pods_Cyber_BookingTests.framework */; };
 		D930242128C1B9750006A168 /* confirmationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D930242028C1B9750006A168 /* confirmationController.swift */; };
 		D944992928EA452D0000E186 /* ReservasHardwareTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944992828EA452D0000E186 /* ReservasHardwareTableViewController.swift */; };
 		D944992B28EA46130000E186 /* ReservacionesHardwareTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944992A28EA46130000E186 /* ReservacionesHardwareTableViewCell.swift */; };
@@ -83,7 +82,6 @@
 		3AD196F228E5F405003CE871 /* ReserveSw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveSw.swift; sourceTree = "<group>"; };
 		3AD196F428E5F846003CE871 /* ReservasSpacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservasSpacesTableViewController.swift; sourceTree = "<group>"; };
 		3AD855C928DEC7F2001DB2F9 /* OlvidarContraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlvidarContraViewController.swift; sourceTree = "<group>"; };
-		3AE2163E28F77F4F00ECAAAE /* GraphsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsViewController.swift; sourceTree = "<group>"; };
 		4734DED30F6FF28B15BA56AC /* Pods-Cyber_BookingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cyber_BookingTests.release.xcconfig"; path = "Target Support Files/Pods-Cyber_BookingTests/Pods-Cyber_BookingTests.release.xcconfig"; sourceTree = "<group>"; };
 		6805014D28C00E5000270A07 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6805014F28C0128D00270A07 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
@@ -100,9 +98,9 @@
 		686CE90328EFDCE500F2CEB0 /* EditarPerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarPerfilViewController.swift; sourceTree = "<group>"; };
 		68BC841728F37BBD0015FF13 /* Cyber_BookingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Cyber_BookingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68BC841928F37BBD0015FF13 /* Cyber_BookingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cyber_BookingTests.swift; sourceTree = "<group>"; };
+		68F088DB28F7BFA00040FFFB /* RestableceContraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestableceContraViewController.swift; sourceTree = "<group>"; };
 		8EC44A5F788B18AFD52263CA /* Pods-Cyber_BookingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cyber_BookingTests.debug.xcconfig"; path = "Target Support Files/Pods-Cyber_BookingTests/Pods-Cyber_BookingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B7154B1EB9FAF27D31BFD449 /* Pods-Cyber_Booking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cyber_Booking.debug.xcconfig"; path = "Target Support Files/Pods-Cyber_Booking/Pods-Cyber_Booking.debug.xcconfig"; sourceTree = "<group>"; };
-		68F088DB28F7BFA00040FFFB /* RestableceContraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestableceContraViewController.swift; sourceTree = "<group>"; };
 		D930242028C1B9750006A168 /* confirmationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmationController.swift; sourceTree = "<group>"; };
 		D944992828EA452D0000E186 /* ReservasHardwareTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservasHardwareTableViewController.swift; sourceTree = "<group>"; };
 		D944992A28EA46130000E186 /* ReservacionesHardwareTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservacionesHardwareTableViewCell.swift; sourceTree = "<group>"; };
@@ -213,7 +211,6 @@
 				D944992A28EA46130000E186 /* ReservacionesHardwareTableViewCell.swift */,
 				3A68F0F228ECDB4C001B0D75 /* ReservarHardwareViewController.swift */,
 				686CE90328EFDCE500F2CEB0 /* EditarPerfilViewController.swift */,
-				3AE2163E28F77F4F00ECAAAE /* GraphsViewController.swift */,
 				68F088DB28F7BFA00040FFFB /* RestableceContraViewController.swift */,
 			);
 			path = Controllers;
@@ -235,7 +232,6 @@
 				8EC44A5F788B18AFD52263CA /* Pods-Cyber_BookingTests.debug.xcconfig */,
 				4734DED30F6FF28B15BA56AC /* Pods-Cyber_BookingTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -423,7 +419,6 @@
 				680BE6DC28EB8D1D00646BD7 /* ReservaSpacesController.swift in Sources */,
 				6805015C28C04A9500270A07 /* ReservarViewController.swift in Sources */,
 				6815F04C28EA13C300A9DE41 /* ResvSwTableViewCell.swift in Sources */,
-				3AE2163F28F77F4F00ECAAAE /* GraphsViewController.swift in Sources */,
 				6805015028C0128D00270A07 /* VerificationViewController.swift in Sources */,
 				3A29182728E69ACC0083585E /* ReservaSpaceTableViewCell.swift in Sources */,
 				3AD196F528E5F846003CE871 /* ReservasSpacesTableViewController.swift in Sources */,

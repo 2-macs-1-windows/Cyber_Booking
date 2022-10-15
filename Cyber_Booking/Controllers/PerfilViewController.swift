@@ -141,6 +141,7 @@ class PerfilViewController: UIViewController, ChartViewDelegate {
         Task {
             do {
                 let usuario = try await fetchUsuario()
+                // updateUI(with: usuario) FALTA
                 
                 userName.text = usuario.name
                 numEspacios.text = String(usuario.numReserveSpace)
@@ -160,6 +161,15 @@ class PerfilViewController: UIViewController, ChartViewDelegate {
         
 
     }
+    
+    /*
+    func updateUI(with reservas:ReservasSpaces){
+        DispatchQueue.main.async {
+            self.reservasSpaces = reservas
+            self.tableView.reloadData()
+        }
+    }
+     */
     
 
     @IBAction func logoutFunc(_ sender: Any) {
