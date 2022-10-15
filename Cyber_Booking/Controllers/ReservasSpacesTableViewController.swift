@@ -25,6 +25,9 @@ class ReservasHistorialTableViewController: UITableViewController {
         
         Task{
             do{
+                
+                try await reservaControlador.updateHistorial(user_id: appDelegate.user_id)
+                
                 let reservas = try await reservaControlador.fetchReservas()
                 updateUI(with: reservas)
                 
