@@ -47,10 +47,22 @@ class ReservarSoftwareViewController: UIViewController {
             do{
                 
                 print("Service id: \(service_id)")
-                try await reservaControlador.insertReserva(nuevareserva: reservaNueva)
+                let ans = try await reservaControlador.insertReserva(nuevareserva: reservaNueva)
+                print("----\(ans.msg)-----")
+                
+                if ans.msg == "reservado"{
+                    showAlert()
+                } else {
+                    
+                    let alert = UIAlertController(title: "Horario ocupado", message: "Favor de seleccionar otro rango de horario", preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel))
+                    
+                    present(alert, animated: true)
+                }
+                         
                 
                 // self.updateUI()
-                showAlert()
             }catch{
                 displayError(ReservaError.itemNotFound, title: "No se puede insertar la reserva")
             }
@@ -127,10 +139,10 @@ class ReservarSoftwareViewController: UIViewController {
     @objc func donePressed() {
         // formato de la fecha para Django
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
-        fechaInicio = dateFormatter.string(from: fechaInicioPicker.date) + "Z"
-        fechaFin = dateFormatter.string(from: fechaFinPicker.date) + "Z"
+        fechaInicio = dateFormatter.string(from: fechaInicioPicker.date)// + "Z"
+        fechaFin = dateFormatter.string(from: fechaFinPicker.date)// + "Z"
         
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
