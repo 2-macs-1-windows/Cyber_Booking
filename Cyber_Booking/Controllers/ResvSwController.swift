@@ -47,6 +47,7 @@ class ReservaSwController{
     func insertReserva(nuevareserva:ReserveSw)async throws->Void{
         let baseString = "http://127.0.0.1:8000/api/reserveSw/"
         
+        print("service_id: \(nuevareserva.service_id)")
         let insertURL = URL(string: baseString)!
         var request = URLRequest(url: insertURL)
         request.httpMethod = "POST"

@@ -40,12 +40,15 @@ class ReservarSoftwareViewController: UIViewController {
     @IBAction func didTapButton() {
                 
         // nueva reserva
-        let reservaNueva = ReserveSw(service_id: service_id, booking_start: fechaInicio, booking_end: fechaFin)
         
+        let reservaNueva = ReserveSw(service_id: service_id, booking_start: fechaInicio, booking_end: fechaFin)
         // Insertar la nueva reserva en el servidor
         Task{
             do{
+                
+                print("Service id: \(service_id)")
                 try await reservaControlador.insertReserva(nuevareserva: reservaNueva)
+                
                 // self.updateUI()
                 showAlert()
             }catch{
@@ -82,6 +85,7 @@ class ReservarSoftwareViewController: UIViewController {
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
               if error == nil {
             do {
+                
                 self.software = try JSONDecoder().decode([Software].self, from: data!)
             } catch {
                 print("Parse error")
