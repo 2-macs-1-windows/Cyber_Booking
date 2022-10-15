@@ -15,8 +15,12 @@ class RservacionesSwTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         Task{
             do{
+                try await reservaControlador.updateHistorial(user_id: appDelegate.user_id)
+                
                 let reservas = try await reservaControlador.fetchReservas()
                 updateUI(with: reservas)
                 
@@ -106,14 +110,15 @@ class RservacionesSwTableViewController: UITableViewController {
                 do{
                     let registroEliminar = reservas[indexPath.row].id
                     try await self.reservaControlador.deleteReserva(registroID: registroEliminar)
+                    
+                    reservas.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
                     // self.updateUI()
                 }catch{
                     displayError(ReservaError.itemNotFound, title: "No se puede eliminar")
                 }
             }
             
-            reservas.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
             
         } else if editingStyle == .insert {
             

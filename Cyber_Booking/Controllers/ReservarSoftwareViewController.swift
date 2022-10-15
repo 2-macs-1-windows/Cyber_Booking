@@ -14,7 +14,7 @@ class ReservarSoftwareViewController: UIViewController {
         var msg: String
 
     }
-    
+
     // Sacar el id del usuario como appDelegate.user_id
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -45,17 +45,30 @@ class ReservarSoftwareViewController: UIViewController {
     @IBAction func didTapButton() {
                 
         // nueva reserva
+
         let reservaNueva = ReserveSw(service_id: service_id, booking_start: fechaInicio, booking_end: fechaFin)
-        
         // Insertar la nueva reserva en el servidor
         Task{
             do{
-                try await reservaControlador.insertReserva(nuevareserva: reservaNueva)
-                
-                try await enviarCorreo()
-                
+
+                print("Service id: \(service_id)")
+                let ans = try await reservaControlador.insertReserva(nuevareserva: reservaNueva)
+                print("----\(ans.msg)-----")
+
+                if ans.msg == "reservado"{
+                    try await enviarCorreo()
+                    showAlert()
+                } else {
+
+                    let alert = UIAlertController(title: "Horario ocupado", message: "Favor de seleccionar otro rango de horario", preferredStyle: .alert)
+
+                    alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel))
+
+                    present(alert, animated: true)
+                }
+
+
                 // self.updateUI()
-                showAlert()
             }catch{
                 displayError(ReservaError.itemNotFound, title: "No se puede insertar la reserva")
             }
@@ -90,6 +103,7 @@ class ReservarSoftwareViewController: UIViewController {
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
               if error == nil {
             do {
+
                 self.software = try JSONDecoder().decode([Software].self, from: data!)
             } catch {
                 print("Parse error")
@@ -115,22 +129,22 @@ class ReservarSoftwareViewController: UIViewController {
         let (data, response) = try await URLSession.shared.data(for: request)
 
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else { throw ReservaError.itemNotFound}
-        
+
         let jsonDecoder = JSONDecoder()
         do{
-        
+
             let reservas = try jsonDecoder.decode(answer.self, from: data)
-            
+
             return reservas
-            
+
         }catch let jsonError as NSError{
-            
+
             print("JSON decode failed: \(jsonError)")
             throw ReservaError.decodeError
         }
-        
+
     }
-    
+
     // --- Fecha y hora ---
     func createToolbar() -> UIToolbar {
         // toolbar
@@ -159,10 +173,10 @@ class ReservarSoftwareViewController: UIViewController {
     @objc func donePressed() {
         // formato de la fecha para Django
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
-        fechaInicio = dateFormatter.string(from: fechaInicioPicker.date) + "Z"
-        fechaFin = dateFormatter.string(from: fechaFinPicker.date) + "Z"
+        fechaInicio = dateFormatter.string(from: fechaInicioPicker.date)// + "Z"
+        fechaFin = dateFormatter.string(from: fechaFinPicker.date)// + "Z"
         
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none

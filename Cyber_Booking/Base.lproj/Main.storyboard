@@ -1189,23 +1189,23 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HEt-lT-I6s">
-                                        <rect key="frame" x="0.0" y="137" width="334" height="34"/>
+                                        <rect key="frame" x="0.0" y="137" width="334" height="206.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verifique contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSC-bX-iCP">
-                                        <rect key="frame" x="0.0" y="186" width="334" height="25"/>
+                                        <rect key="frame" x="0.0" y="358.5" width="334" height="25"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                         <color key="textColor" red="0.074509806930000005" green="0.20392158630000001" blue="0.48627454040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HAZ-Rg-c0d">
-                                        <rect key="frame" x="0.0" y="226" width="334" height="34"/>
+                                        <rect key="frame" x="0.0" y="398.5" width="334" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJR-cf-l7x">
-                                        <rect key="frame" x="0.0" y="275" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="447.5" width="334" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="r2j-Hh-jEK"/>
                                         </constraints>
@@ -1220,7 +1220,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10N-9j-9bR">
-                                        <rect key="frame" x="0.0" y="340" width="334" height="474"/>
+                                        <rect key="frame" x="0.0" y="512.5" width="334" height="301.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
