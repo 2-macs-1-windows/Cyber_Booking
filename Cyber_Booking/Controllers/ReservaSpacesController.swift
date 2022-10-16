@@ -10,6 +10,11 @@ import UIKit
 
 class ReservaSpacesController{
     
+    struct answer: Codable {
+            var msg: String
+            var id: Int?
+        }
+    
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     // Obtener las reservas
@@ -38,8 +43,8 @@ class ReservaSpacesController{
     }
     
     // Insertar nueva reserva
-    func insertReserva(nuevareserva:ReserveSpace)async throws->Void{
-        let baseString = "http://127.0.0.1:8000/api/reserveSpace/"
+    func insertReserva(nuevareserva:ReserveSpace)async throws->answer{
+        let baseString = "http://127.0.0.1:8000/createReserveSpace"
         
         let insertURL = URL(string: baseString)!
         var request = URLRequest(url: insertURL)
@@ -54,7 +59,14 @@ class ReservaSpacesController{
         let s = String(data: jsonData!, encoding: .utf8)!
         print(s)
         let (data, response) = try await URLSession.shared.data(for: request)
-        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 201 else { throw ReservaError.itemNotFound}
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else { throw ReservaError.itemNotFound}
+        
+        let jsonDecoder = JSONDecoder()
+        do {
+            let ans = try jsonDecoder.decode(answer.self, from: data)
+            
+            return ans
+        }
     }
     
     // Eliminar reserva
