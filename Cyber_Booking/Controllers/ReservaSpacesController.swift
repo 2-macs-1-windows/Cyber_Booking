@@ -11,9 +11,9 @@ import UIKit
 class ReservaSpacesController{
     
     struct answer: Codable {
-        var msg: String
-        var id: Int?
-    }
+            var msg: String
+            var id: Int?
+        }
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
