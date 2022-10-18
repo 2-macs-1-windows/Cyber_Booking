@@ -143,10 +143,8 @@ class PerfilViewController: UIViewController, ChartViewDelegate {
                 let usuario = try await fetchUsuario()
                 // updateUI(with: usuario) FALTA
                 
-                userName.text = usuario.name
-                numEspacios.text = String(usuario.numReserveSpace)
-                numHw.text = String(usuario.numReserveHw)
-                numSw.text = String(usuario.numReserveSw)
+                // falta función
+                updateStats(u: usuario)
                 
                 setUpPieChart(usuario)
                 
@@ -162,14 +160,58 @@ class PerfilViewController: UIViewController, ChartViewDelegate {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        Task {
+            do {
+                let usuario = try await fetchUsuario()
+                // updateUI(with: usuario) FALTA
+                
+                // falta función
+                updateStats(u: usuario)
+                
+                setUpPieChart(usuario)
+                
+            } catch {
+                print(error)
+            }
+        }
+        
+    }
+    
     /*
+     ----------------------------------
+     
     func updateUI(with reservas:ReservasSpaces){
         DispatchQueue.main.async {
             self.reservasSpaces = reservas
             self.tableView.reloadData()
         }
     }
+     -----------------------------------
+     func update(r:ReserveSpace){
+         labelIcono.text = "🚪"
+         labelLugar.text = String(r.service_id)
+         labelFecha.text = r.booking_start
+         // labelEstatus.text = String(r.active)
+         
+         if r.active == 1{
+             labelEstatus.text = "Activa"
+             labelEstatus.textColor = myGreen
+         }
+         else {
+             labelEstatus.text = "Inactiva"
+             labelEstatus.textColor = myRed
+         }
+     }
      */
+    
+    func updateStats(u:UserData){
+        // formato
+        userName.text = u.name
+        numEspacios.text = String(u.numReserveSpace)
+        numHw.text = String(u.numReserveHw)
+        numSw.text = String(u.numReserveSw)
+    }
     
 
     @IBAction func logoutFunc(_ sender: Any) {
