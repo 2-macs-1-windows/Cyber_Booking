@@ -15,7 +15,7 @@ class ReservaHwController{
     // Obtener reservas
     func fetchReservas() async throws->ReservasHw{
         
-        let urlString = "http://127.0.0.1:8000/resvHw?user_id=\(await appDelegate.user_id)"
+        let urlString = "http://20.89.70.3:8000/resvHw?user_id=\(await appDelegate.user_id)"
         
         let baseURL = URL(string: urlString)!
         
@@ -41,7 +41,7 @@ class ReservaHwController{
     
     // Insertar nueva reserva
     func insertReserva(nuevareserva:ReserveHw)async throws->answer{
-        let baseString = "http://127.0.0.1:8000/hacerReservarHw"
+        let baseString = "http://20.89.70.3:8000/hacerReservarHw"
         
         let insertURL = URL(string: baseString)!
         var request = URLRequest(url: insertURL)
@@ -74,7 +74,7 @@ class ReservaHwController{
     
     // Eliminar reserva
     func deleteReserva(registroID:Int) async throws -> Void{
-        let baseString = "http://127.0.0.1:8000/delteHistResvHw/"
+        let baseString = "http://20.89.70.3:8000/delteHistResvHw/"
         
         let deleteString = baseString + String(registroID) + "/"
         let deleteURL = URL(string: deleteString)!
@@ -86,7 +86,7 @@ class ReservaHwController{
     }
     
     func updateHistorial(user_id:Int) async throws -> Void{
-        let baseString = "http://127.0.0.1:8000/actualizarEdos"
+        let baseString = "http://20.89.70.3:8000/actualizarEdos"
         
         let insertURL = URL(string: baseString)!
         var request = URLRequest(url: insertURL)

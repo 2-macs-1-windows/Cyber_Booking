@@ -23,7 +23,7 @@ class ReservaSwController{
     
     // Obtener todas las reservas
     func fetchReservas() async throws->ReservasSw{
-        let urlString = "http://127.0.0.1:8000/resvSw?user_id=\(await appDelegate.user_id)"
+        let urlString = "http://20.89.70.3:8000/resvSw?user_id=\(await appDelegate.user_id)"
         
         let baseURL = URL(string: urlString)!
         
@@ -49,7 +49,7 @@ class ReservaSwController{
     
     // Insertar nueva reserva
     func insertReserva(nuevareserva:ReserveSw)async throws->answer{
-        let baseString = "http://127.0.0.1:8000/hacerReservarSw"
+        let baseString = "http://20.89.70.3:8000/hacerReservarSw"
         
         print("service_id: \(nuevareserva.service_id)")
         let insertURL = URL(string: baseString)!
@@ -86,7 +86,7 @@ class ReservaSwController{
     
     // Eliminar reserva
     func deleteReserva(registroID:Int) async throws -> Void{
-        let baseString = "http://127.0.0.1:8000/delteHistResvSw/"
+        let baseString = "http://20.89.70.3:8000/delteHistResvSw/"
         
         let deleteString = baseString + String(registroID) + "/"
         let deleteURL = URL(string: deleteString)!
@@ -98,7 +98,7 @@ class ReservaSwController{
     }
     
     func updateHistorial(user_id:Int) async throws -> Void{
-        let baseString = "http://127.0.0.1:8000/actualizarEdos"
+        let baseString = "http://20.89.70.3:8000/actualizarEdos"
         
         let insertURL = URL(string: baseString)!
         var request = URLRequest(url: insertURL)

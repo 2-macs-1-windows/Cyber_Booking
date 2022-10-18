@@ -16,8 +16,8 @@ class OlvidarContraViewController: UIViewController {
     var code:Int = Int.random(in: 100000..<999999)
     var is_regEmail:Bool = false
     
-    let userListURL = "http://127.0.0.1:8000/getUsuariosApp"
-    let sendEmail = "http://127.0.0.1:8000/enviarMailContra"
+    let userListURL = "http://20.89.70.3:8000/getUsuariosApp"
+    let sendEmail = "http://20.89.70.3:8000/enviarMailContra"
     
     struct emailCheck: Codable {
         var msg: String

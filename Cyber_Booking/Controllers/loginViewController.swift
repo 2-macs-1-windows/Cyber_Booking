@@ -27,8 +27,8 @@ class loginViewController: UIViewController {
         var id: Int?
     }
     
-    let userListURL = "http://127.0.0.1:8000/getUsuariosApp"
-    let userLog = "http://127.0.0.1:8000/LoginApp"
+    let userListURL = "http://20.89.70.3:8000/getUsuariosApp"
+    let userLog = "http://20.89.70.3:8000/LoginApp"
     
     
     func getTodosUsuarios() async throws->answer{

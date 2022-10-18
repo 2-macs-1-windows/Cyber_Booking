@@ -19,7 +19,7 @@ class ReservaSpacesController{
     
     // Obtener las reservas
     func fetchReservas() async throws->ReservasSpaces{
-        let urlString = "http://127.0.0.1:8000/resvSp?user_id=\(await appDelegate.user_id)"
+        let urlString = "http://20.89.70.3:8000/resvSp?user_id=\(await appDelegate.user_id)"
         let baseURL = URL(string: urlString)!
         
         let (data, response) = try await URLSession.shared.data(from: baseURL)
@@ -44,7 +44,7 @@ class ReservaSpacesController{
     
     // Insertar nueva reserva
     func insertReserva(nuevareserva:ReserveSpace)async throws->answer{
-        let baseString = "http://127.0.0.1:8000/createReserveSpace"
+        let baseString = "http://20.89.70.3:8000/createReserveSpace"
         
         let insertURL = URL(string: baseString)!
         var request = URLRequest(url: insertURL)
@@ -71,7 +71,7 @@ class ReservaSpacesController{
     
     // Eliminar reserva
     func deleteReserva(registroID:Int) async throws -> Void{
-        let baseString = "http://127.0.0.1:8000/delteHistResvSpace/"
+        let baseString = "http://20.89.70.3:8000/delteHistResvSpace/"
         
         let deleteString = baseString + String(registroID) + "/"
         let deleteURL = URL(string: deleteString)!
@@ -83,7 +83,7 @@ class ReservaSpacesController{
     }
     
     func updateHistorial(user_id:Int) async throws -> Void{
-        let baseString = "http://127.0.0.1:8000/actualizarEdos"
+        let baseString = "http://20.89.70.3:8000/actualizarEdos"
         
         let insertURL = URL(string: baseString)!
         var request = URLRequest(url: insertURL)

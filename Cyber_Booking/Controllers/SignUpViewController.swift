@@ -8,9 +8,9 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-    let baseString = "http://127.0.0.1:8000/registrarUsApp"
-    let userListURL = "http://127.0.0.1:8000/getUsuariosApp"
-    let sendEmail = "http://127.0.0.1:8000/enviarMail"
+    let baseString = "http://20.89.70.3:8000/registrarUsApp"
+    let userListURL = "http://20.89.70.3:8000/getUsuariosApp"
+    let sendEmail = "http://20.89.70.3:8000/enviarMail"
     
     let code:Int = Int.random(in: 100000..<999999)
     

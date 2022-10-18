@@ -34,7 +34,7 @@ class PerfilViewController: UIViewController, ChartViewDelegate {
          // Obtener el usuario
          func fetchUsuario() async throws->UserData{
              
-             let urlString = "http://127.0.0.1:8000/userData?id=\(appDelegate.user_id)"
+             let urlString = "http://20.89.70.3:8000/userData?id=\(appDelegate.user_id)"
              let baseURL = URL(string: urlString)!
              
              let (data, response) = try await URLSession.shared.data(from: baseURL)
@@ -57,7 +57,7 @@ class PerfilViewController: UIViewController, ChartViewDelegate {
              
          }
     
-    let userLog = "http://127.0.0.1:8000/logoutApp"
+    let userLog = "http://20.89.70.3:8000/logoutApp"
     
     struct answer: Codable {
         var msg: String

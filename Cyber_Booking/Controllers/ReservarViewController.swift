@@ -60,10 +60,10 @@ class ReservarViewController: UIViewController {
                 print(ans.msg)
                 
                 if ans.msg == "reservado" {
-                    try await enviarCorreo()
-                    
-                    // self.updateUI()
                     showAlert()
+                    
+                    try await enviarCorreo()
+                    // self.updateUI()
                 } else {
                     let alert = UIAlertController(title: "Horario ocupado", message: "Favor de seleccionar otro rango de horario", preferredStyle: .alert)
                     
@@ -105,7 +105,7 @@ class ReservarViewController: UIViewController {
         // duracionPickerView.dataSource = self
         
         // salones
-        let url = URL(string: "http://127.0.0.1:8000/api/spaces/")
+        let url = URL(string: "http://20.89.70.3:8000/api/spaces/")
         
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
               if error == nil {
@@ -124,7 +124,7 @@ class ReservarViewController: UIViewController {
     
     // Enviar correo
     func enviarCorreo() async throws->answer{
-        let insertURL = URL(string: "http://127.0.0.1:8000/emailSP")!
+        let insertURL = URL(string: "http://20.89.70.3:8000/emailSP")!
         var request = URLRequest(url: insertURL)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")

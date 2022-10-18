@@ -56,8 +56,10 @@ class ReservarSoftwareViewController: UIViewController {
                 print("----\(ans.msg)-----")
 
                 if ans.msg == "reservado"{
-                    try await enviarCorreo()
                     showAlert()
+                    
+                    try await enviarCorreo()
+                   
                 } else {
 
                     let alert = UIAlertController(title: "Horario ocupado", message: "Favor de seleccionar otro rango de horario", preferredStyle: .alert)
@@ -98,7 +100,7 @@ class ReservarSoftwareViewController: UIViewController {
         softwarePickerView.dataSource = self
         
         // Opciones de software desde el servidor
-        let url = URL(string: "http://127.0.0.1:8000/api/software/")
+        let url = URL(string: "http://20.89.70.3:8000/api/software/")
         
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
               if error == nil {
@@ -119,7 +121,7 @@ class ReservarSoftwareViewController: UIViewController {
 
     // Enviar correo
     func enviarCorreo() async throws->answer{
-        let insertURL = URL(string: "http://127.0.0.1:8000/emailSW")!
+        let insertURL = URL(string: "http://20.89.70.3:8000/emailSW")!
         var request = URLRequest(url: insertURL)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")

@@ -10,7 +10,7 @@ import UIKit
 class RestableceContraViewController: UIViewController {
     
     var email:String = ""
-    let sendEmail = "http://127.0.0.1:8000/recurperarContra"
+    let sendEmail = "http://20.89.70.3:8000/recurperarContra"
     
     @IBOutlet weak var contraTxtField: UITextField!
     @IBOutlet weak var verifContraTxtField: UITextField!

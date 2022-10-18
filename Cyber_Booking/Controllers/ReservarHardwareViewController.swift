@@ -56,8 +56,10 @@ class ReservarHardwareViewController: UIViewController {
 
                 // self.updateUI()
                 if ans.msg == "reservado"{
-                    try await enviarCorreo()
+                    
                     showAlert()
+                    
+                    try await enviarCorreo()
 
                 } else {
 
@@ -97,7 +99,7 @@ class ReservarHardwareViewController: UIViewController {
         hardwarePickerView.dataSource = self
         
         // hardwares
-        let url = URL(string: "http://127.0.0.1:8000/api/hardware/")
+        let url = URL(string: "http://20.89.70.3:8000/api/hardware/")
         
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
               if error == nil {
@@ -118,7 +120,7 @@ class ReservarHardwareViewController: UIViewController {
 
     // Enviar correo
     func enviarCorreo() async throws->answer{
-        let insertURL = URL(string: "http://127.0.0.1:8000/emailHW")!
+        let insertURL = URL(string: "http://20.89.70.3:8000/emailHW")!
         var request = URLRequest(url: insertURL)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")

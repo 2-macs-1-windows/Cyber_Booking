@@ -100,7 +100,7 @@ class EditarPerfilViewController: UIViewController {
     
     //------------ Obtener datos del usuario -------------
     func getUserData() async throws->usuario{
-        let urlString = "http://127.0.0.1:8000/getUser?id=\( appDelegate.user_id)"
+        let urlString = "http://20.89.70.3:8000/getUser?id=\( appDelegate.user_id)"
         
         let baseURL = URL(string: urlString)!
         
@@ -126,7 +126,7 @@ class EditarPerfilViewController: UIViewController {
     
     //------------ Actualizar datos del usuario -------------
     func setUserInfo() async throws->answer{
-        var setUser = "http://127.0.0.1:8000/editUser"
+        var setUser = "http://20.89.70.3:8000/editUser"
         let insertURL = URL(string: setUser)!
         var request = URLRequest(url: insertURL)
         request.httpMethod = "POST"
@@ -264,7 +264,7 @@ class EditarPerfilViewController: UIViewController {
     
     
     func eliminarUsuario() async throws->answer{
-        var setUser = "http://127.0.0.1:8000/noUserApp"
+        let setUser = "http://20.89.70.3:8000/noUserApp"
         let insertURL = URL(string: setUser)!
         var request = URLRequest(url: insertURL)
         request.httpMethod = "POST"
