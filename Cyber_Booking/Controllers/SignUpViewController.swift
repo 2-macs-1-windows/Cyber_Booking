@@ -131,15 +131,11 @@ class SignUpViewController: UIViewController {
         
     }
     
-    @IBAction func verificarTel(_ sender: UITextField) {
+    func verificarTel() {
         let validTel = "^[0-9]+$"
         
         if(telefono_U.text?.range(of: validTel, options: .regularExpression) == nil){
-            let alert = UIAlertController(title: "Verifique su teléfono", message: "El número de teléfono debe contener solo dígitos", preferredStyle: .alert)
             
-            alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler:  nil))
-            
-            self.present(alert, animated: true, completion: nil)
             is_validTel = false
         } else {
             is_validTel = true
@@ -214,6 +210,7 @@ class SignUpViewController: UIViewController {
         verificaPassword()
         checkMatchingPass()
         verificarNomAp()
+        verificarTel()
         
         if(nombre_U.text == "" ||
            apellido_U.text == "" ||
