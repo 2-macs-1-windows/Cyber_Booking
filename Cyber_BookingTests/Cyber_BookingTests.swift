@@ -64,8 +64,11 @@ final class Cyber_BookingTests: XCTestCase {
     }
     
     func setValues(){
-        sut.correoTextField.text! = "ad@ad.com" // Credenciales incorrectas
-        sut.passTextField.text! = "asdasdads"
+        sut.correoTextField.text! = "a01654095@tec.mx" // Credenciales incorrectas
+        sut.passTextField.text! = "adminAdmin#1"
+        
+        //sut.correoTextField.text! = "admin@admin.com" // Credenciales correctas
+        //sut.passTextField.text! = "adminAdmin#1"
     }
     
     func getId()->Int{
