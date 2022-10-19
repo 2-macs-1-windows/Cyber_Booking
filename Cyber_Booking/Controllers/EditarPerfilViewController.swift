@@ -153,6 +153,11 @@ class EditarPerfilViewController: UIViewController {
         
     }
     
+    // función que cierra el teclado al apretar "intro"
+    @IBAction func textFieldDoneEditing(sender:UITextField){
+        sender.resignFirstResponder()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

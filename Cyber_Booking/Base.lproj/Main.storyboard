@@ -497,6 +497,9 @@ Concientización</string>
                                                 <rect key="frame" x="0.0" y="90" width="314" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                <connections>
+                                                    <action selector="textFieldDoneEditingWithSender:" destination="1Dv-vv-t6E" eventType="editingDidEndOnExit" id="iPA-oL-qS9"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yks-w1-BKC">
                                                 <rect key="frame" x="0.0" y="134" width="314" height="27.5"/>
@@ -508,6 +511,9 @@ Concientización</string>
                                                 <rect key="frame" x="0.0" y="171.5" width="314" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="family-name"/>
+                                                <connections>
+                                                    <action selector="textFieldDoneEditingWithSender:" destination="1Dv-vv-t6E" eventType="editingDidEndOnExit" id="O2Y-a5-yxo"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teléfono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ox-GC-HUG">
                                                 <rect key="frame" x="0.0" y="215.5" width="314" height="27.5"/>
@@ -519,6 +525,9 @@ Concientización</string>
                                                 <rect key="frame" x="0.0" y="253" width="314" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="tel"/>
+                                                <connections>
+                                                    <action selector="textFieldDoneEditingWithSender:" destination="1Dv-vv-t6E" eventType="editingDidEndOnExit" id="cKb-GD-ZUt"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvc-7A-Mze">
                                                 <rect key="frame" x="0.0" y="297" width="314" height="27.5"/>
@@ -530,6 +539,9 @@ Concientización</string>
                                                 <rect key="frame" x="0.0" y="334.5" width="314" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="new-password"/>
+                                                <connections>
+                                                    <action selector="textFieldDoneEditingWithSender:" destination="1Dv-vv-t6E" eventType="editingDidEndOnExit" id="OuK-XY-0UV"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmar contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cd-LP-Fx9">
                                                 <rect key="frame" x="0.0" y="378.5" width="314" height="27.5"/>
@@ -541,6 +553,9 @@ Concientización</string>
                                                 <rect key="frame" x="0.0" y="416" width="314" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="new-password"/>
+                                                <connections>
+                                                    <action selector="textFieldDoneEditingWithSender:" destination="1Dv-vv-t6E" eventType="editingDidEndOnExit" id="OqF-Wx-veE"/>
+                                                </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtR-s6-cn0">
                                                 <rect key="frame" x="0.0" y="460" width="314" height="45.5"/>
@@ -665,7 +680,7 @@ Concientización</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="USUARIO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjf-Tz-Wm5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjf-Tz-Wm5">
                                 <rect key="frame" x="115" y="189" width="206" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="31"/>
@@ -691,21 +706,21 @@ Concientización</string>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wa-Cd-dur">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wa-Cd-dur">
                                 <rect key="frame" x="35" y="403" width="94" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sv-lZ-5T0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sv-lZ-5T0">
                                 <rect key="frame" x="160" y="403" width="94" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdt-41-Swc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdt-41-Swc">
                                 <rect key="frame" x="282" y="403" width="94" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
@@ -1275,16 +1290,16 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                 <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="cT5-e8-3aI">
-                                        <rect key="frame" x="30" y="0.0" width="354" height="770.5"/>
+                                        <rect key="frame" x="30" y="0.0" width="354" height="770"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cambio de contraseña" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeK-i0-aRg">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="43.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="32"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" editable="NO" text="Si te encuentras registrado, obtendrás un código para proceder a reestablecer tu contraseña." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBJ-TA-vxG">
-                                                <rect key="frame" x="0.0" y="59" width="354" height="56"/>
+                                                <rect key="frame" x="0.0" y="58.5" width="354" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="U1N-UO-lVd"/>
                                                 </constraints>
@@ -1293,13 +1308,13 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduce tu correo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1F-LN-vRc">
-                                                <rect key="frame" x="0.0" y="130" width="354" height="25"/>
+                                                <rect key="frame" x="0.0" y="129.5" width="354" height="25"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                                 <color key="textColor" name="AccentColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese el correo registrado" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rqt-pI-fMi">
-                                                <rect key="frame" x="0.0" y="170" width="354" height="34.5"/>
+                                                <rect key="frame" x="0.0" y="169.5" width="354" height="34.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                                                 <connections>
@@ -1307,7 +1322,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4b-51-wmJ">
-                                                <rect key="frame" x="0.0" y="219.5" width="354" height="45.5"/>
+                                                <rect key="frame" x="0.0" y="219" width="354" height="45.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Enviar">
                                                     <fontDescription key="titleFontDescription" name="Avenir-Medium" family="Avenir" pointSize="23"/>
@@ -1318,19 +1333,19 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax1-aY-FvT">
-                                                <rect key="frame" x="0.0" y="280" width="354" height="34.5"/>
+                                                <rect key="frame" x="0.0" y="279.5" width="354" height="34.5"/>
                                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Reenviar correo"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduce tu código" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jb7-ew-2Xx">
-                                                <rect key="frame" x="0.0" y="329.5" width="354" height="25"/>
+                                                <rect key="frame" x="0.0" y="329" width="354" height="25"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                                 <color key="textColor" red="0.074509806930000005" green="0.20392158630000001" blue="0.48627454040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="center" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese el código" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bmh-Ui-Cmh">
-                                                <rect key="frame" x="0.0" y="369.5" width="354" height="34.5"/>
+                                                <rect key="frame" x="0.0" y="369" width="354" height="34.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
                                                 <connections>
@@ -1338,7 +1353,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGW-GH-KXE">
-                                                <rect key="frame" x="0.0" y="419" width="354" height="45.5"/>
+                                                <rect key="frame" x="0.0" y="418.5" width="354" height="45.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Comprobar">
                                                     <fontDescription key="titleFontDescription" name="Avenir-Medium" family="Avenir" pointSize="23"/>
@@ -1349,7 +1364,7 @@ busca el florecimiento humano a través del liderazgo, el emprendimiento y la in
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGz-9d-5yB">
-                                                <rect key="frame" x="0.0" y="479.5" width="354" height="291"/>
+                                                <rect key="frame" x="0.0" y="479" width="354" height="291"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                         </subviews>
