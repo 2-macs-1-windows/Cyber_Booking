@@ -11,6 +11,7 @@ import XCTest
 final class Cyber_BookingTests: XCTestCase {
     
     var sut:loginViewController!
+    var userId:Int = -1
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -18,9 +19,11 @@ final class Cyber_BookingTests: XCTestCase {
         //Instanciar el viewController donde se hace la prueba
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 
-                sut = storyboard.instantiateViewController(withIdentifier: "login") as? loginViewController
+        sut = storyboard.instantiateViewController(withIdentifier: "login_") as? loginViewController
                 
-                sut.loadViewIfNeeded()
+        sut.loadViewIfNeeded()
+        
+        setValues()
         
         
     }
@@ -29,28 +32,45 @@ final class Cyber_BookingTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testLogin() {
+    func testLogin() async throws{
         // Se prueba que el usuario pueda iniciar sesión
         
+        let expectation = XCTestExpectation(description: "User loged in")
+        
         // given
-        sut.correoTextField.text! = "a01654095@tec.mx"
-        sut.passTextField.text! = "vickyVicky#1"
         
         //when
-        sut.makeLogin(sut.loginButton)
         
-        print(sut.correoTextField.text ?? "")
-        print(sut.passTextField.text ?? "")
-        
-        
-        //then
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            print("user_id: \(self.sut.appDelegate.user_id)")
+        do{
+            let ans = try await sut.sendLoginData()
+            print(ans.msg)
             
-            XCTAssertTrue(self.sut.appDelegate.user_id != -1, " User_id = \(self.sut.appDelegate.user_id)")
-
+            if ans.msg == "Accesado"{
+                expectation.fulfill()
+                userId = ans.id ?? -1
+            }
+            
+        }catch{
+            XCTFail()
         }
         
+        wait(for: [expectation], timeout: 5.0)
+        print("------------ \(userId) ----------")
+        
+        //then
+        XCTAssertTrue(userId != -1)
+        // si el userId es diferente de -1, es que se obtuvo el id del usuario que hace login y es un entero >= 0
+        
     }
+    
+    func setValues(){
+        sut.correoTextField.text! = "ad@ad.com" // Credenciales incorrectas
+        sut.passTextField.text! = "asdasdads"
+    }
+    
+    func getId()->Int{
+        return appDelegate.user_id
+    }
+    
     
 }
