@@ -71,9 +71,4 @@ final class Cyber_BookingTests: XCTestCase {
         //sut.passTextField.text! = "adminAdmin#1"
     }
     
-    func getId()->Int{
-        return appDelegate.user_id
-    }
-    
-    
 }
